@@ -159,8 +159,8 @@ let prevClass = null;
 const sideBarBuilder = (selectedClass) => {
     if (prevClass !== selectedClass) {
         const nav = document.querySelector(`aside > .sideBarContainer > .${selectedClass}`);
-        nav.classList.replace('displayNoneClass', 'displayBlockClass');
-        if (prevNav) prevNav.classList.replace('displayBlockClass', 'displayNoneClass');
+        nav.classList.remove('displayNoneClass');
+        if (prevNav) prevNav.classList.add('displayNoneClass');
         prevNav = nav;
         prevClass = selectedClass;
     }
