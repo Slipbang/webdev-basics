@@ -29203,6 +29203,18 @@ rootCommit(1) &lt;- commit2 &lt;- commit3 &lt;- commit4
                         <p>Origin - имя удаленного репозитория по-умолчанию</p>
                         <p>После клонирования удаленного репозитория можно проверить в нем все ветки, включая те, что находятся в удаленных репозиториях:</p>
                         <pre>git branch -a</pre>
+                        <p>Для создания собственного репозитория в GitHub, в своей учетной записи заходим в:</p>
+                        <code>&gt; Repositories &gt; New</code>
+                        <p>Заполняем <code>Repository name, Description</code> и тд, кликаем <code>Create repository</code>.</p>
+                        <p>Далее по полученной ссылке привязываем свой локальный УЖЕ ИНИЦИАЛИЗИРОВАННЫЙ репозиторий к удаленному:</p>
+                        <pre>
+git remote add origin https://guthub.com/&lt;user-name&gt;/&lt;project-name&gt;.git
+git branch -M main
+git push -u origin main
+                        </pre>
+                        <p>Чтобы иметь возможность пушить изменения нужен либо access токен, либо если IDE позволяет - зайти со своего аккаунта GitHub в IDE(например в WebStorm).</p>
+                        <p>Так же на самом GitHub в репозитории можно создавать файлы: <code>&gt; Add File &gt; Create new file &gt;</code>.
+                            При создании файла можно записать имя с расширением и содержимое файла</p>
                     </div>
                 </section>
 
@@ -29219,14 +29231,6 @@ rootCommit(1) &lt;- commit2 &lt;- commit3 &lt;- commit4
                         <pre>git push -u origin &lt;branch&gt;</pre>
                         <p>При этом название локальной ветки и удаленной могут отличаться, но как правило они одинаковы</p>
                         <p>После первого связывающего пуша, можно использовать обычный <code>git push</code> и <code>git pull</code>.</p>
-                    </div>
-                </section>
-
-                <section>
-                    <h4 id="gitObjects">Объекты Git и их содержимое</h4>
-
-                    <div>
-
                     </div>
                 </section>
             </section>
