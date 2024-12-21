@@ -1685,7 +1685,7 @@ footer a {
     color: white;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1055px) {
     aside {
         transform: translateX(-100%);
     }
