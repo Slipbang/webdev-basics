@@ -29,6 +29,6 @@ jobs:
       - name: Send dispatch to main-repo
         run: |
           curl -X POST \
-            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.MY_PERSONAL_TOKEN }}" \
             -d '{"event_type": "frontend-changes"}' \
             https://api.github.com/repos/Slipbang/albion-online-data-server/dispatches
