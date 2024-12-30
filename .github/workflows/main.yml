@@ -1,4 +1,20 @@
-name: Deploy to Render
+#name: Deploy to Render
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#jobs:
+#  deploy:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Trigger Render Deploy Hook
+#        run: |
+#          curl -X POST https://api.render.com/deploy/srv-ctpagfjqf0us73ea0b6g?key=2iyt1OnIB0Y
+
+name: Notify Main Repo on Push
 
 on:
   push:
@@ -6,10 +22,13 @@ on:
       - main
 
 jobs:
-  deploy:
+  notify-main-repo:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Trigger Render Deploy Hook
+      - name: Send dispatch to main-repo
         run: |
-          curl -X POST https://api.render.com/deploy/srv-ctpagfjqf0us73ea0b6g?key=2iyt1OnIB0Y
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -d '{"event_type": "frontend-changes"}' \
+            https://api.github.com/repos/Slipbang/albion-online-data-server/dispatches
