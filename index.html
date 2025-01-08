@@ -12,7 +12,7 @@
     <!--    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">-->
     <!--    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">-->
     <!-- SEO -->
-    <meta name="description" content="Test web page">
+    <meta name="description" content="Web Development Workbook: Definitions, code examples, core concepts, and practice exercises for learning HTML, CSS, JavaScript, and other technologies.">
     <meta name="keywords" content="html, css, js, react, typeScript">
     <meta name="author" content="Slipbang">
     <!-- For mobile devices -->
@@ -27,7 +27,10 @@
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
 
-    <!-- External scripts files -->
+    <!-- Local scripts -->
+    <script src="./scripts/UI.js" defer></script>
+    <script src="./scripts/scripts.js" defer></script>
+    <script src="./scripts/OOPclasses.js" defer></script>
 
 </head>
 <body>
@@ -162,7 +165,7 @@ const getDate = () =&gt; new Date;
                 <hr>
                 <p>Пример метаданных вебстраницы</p>
                 <div class="smallScreenContainer">
-                    <img src="./images/meta.png" alt="Just image">
+                    <img src="./images/meta.png" alt="meta">
                 </div>
                 <p>Тэг "meta" нужен для установки кодировки документа. Так же с помощью этого тега и атрибута "name" и
                     "content" можно описать различную SEO информацию, "name" задает тип данных, описание, ключевые
@@ -227,8 +230,7 @@ const getDate = () =&gt; new Date;
                     (<code>&lt;тэг&gt;</code>...<code>&lt;/тэг&gt;</code> и <code>&lt;тэг&gt;</code>)</p>
             </section>
 
-            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/xXCOXsBzm48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    -->
+            <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/xXCOXsBzm48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             <section>
                 <h4 id="lists">Списки</h4>
                 <p>Непронумерованные списки задаются тэгом "ul", каждый отдельный элемент списка задается тегом "li"</p>
@@ -28861,6 +28863,1519 @@ app.use(cors()); // обязательно с вызовом cors
         <section id="devToolsNav">
             <h2 id="devToolsHeaderLink">Dev Tools</h2>
 
+            <section id="webpackNav">
+                <h3 id="webpackBasicsLink">Основы Webpack</h3>
+
+                <section>
+                    <h4 id="webpackIntro">Введение. Инициализацния проекта и обозначение проблемы</h4>
+
+                    <div>
+                        <p>Мануал по <a href="https://webpack.js.org/guides/" target="_blank">Webpack</a></p>
+                        <p>Установка Webpack:</p>
+                        <pre>npm install webpack webpack-cli --save-dev</pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="configurationOpt_env_prodVebBundle">Конфигурация. Опции конфигурации. Переменные окружения. Prod/dev сборка</h4>
+
+                    <div>
+                        <p>Мануал <a href="https://webpack.js.org/configuration/" target="_blank">конфигурации</a></p>
+                        <p>Минимальная конфигурация webpack.config.js:</p>
+                        <pre>
+// webpack.config.js
+
+const path = require('path');
+
+module.exports = (env) => {
+    return {
+        mode: env.mode ?? 'development',
+        entry: path.resolve(__dirname, 'src', 'index.js'),
+        output: {
+            filename: '[name].[contenthash].bundle.js',
+            path: path.resolve(__dirname, 'build'),
+            clean: true,
+        },
+    }
+};
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="htmlScriptsPlugins">HTML и скрипты. Плагины</h4>
+
+                    <div>
+                        <p>Установка готового webpack плагина:</p>
+                        <pre>npm i -D html-webpack-plugin</pre>
+                        <pre>
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
+
+module.exports = (env) => {
+    return {
+        mode: env.mode ?? 'development',
+        entry: path.resolve(__dirname, 'src', 'index.js'),
+        output: {
+            filename: '[name].[contenthash].bundle.js',
+            path: path.resolve(__dirname, 'build'),
+            clean: true,
+        },
+        plugins: [
+            new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html')}),
+            new webpack.ProgressPlugin(), // для прода лучше не использовать
+        ],
+    }
+};
+                        </pre>
+                        <p>Список + документация <a href="https://webpack.js.org/plugins/" target="_blank">Webpack плагинов</a></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="loaders_typescript_regularExpressions">Лоадеры. Поддержка TypesCript. Регулярные выражения</h4>
+
+                    <div>
+                        <p>Лоадеры (loaders) в Webpack — это преобразователи, которые обрабатывают файлы других типов
+                            (например, CSS, изображения, TypeScript, JSON) и превращают их в модули, которые могут быть включены в JavaScript.
+                            Webpack изначально понимает только JavaScript и JSON, поэтому для обработки других типов файлов необходимы лоадеры.
+                            В общих словах лоадеры представляют из себя определенную цепочку обработчиков, через которые проходят файлы с тем или иным расширением.</p>
+
+                        <p>Установка TypeScript для Webpack:</p>
+                        <pre>npm install --save-dev typescript ts-loader</pre>
+                        <p>Документация для настройки <a href="https://webpack.js.org/guides/typescript/">TypeScript</a></p>
+                        <p>Пример webpack.config.js с TS:</p>
+                        <pre>
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
+
+module.exports = (env) => {
+    return {
+        mode: env.mode ?? 'development',
+        entry: path.resolve(__dirname, 'src', 'index.ts'),
+        output: {
+            path: path.resolve(__dirname, 'build'),
+            filename: '[name].[contenthash].bundle.js',
+            clean: true,
+        },
+        plugins: [
+            new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html')}),
+            new webpack.ProgressPlugin(),
+        ],
+        module: {
+            rules: [
+                {
+                    test: /\.tsx?$/, // проверка расширений с помощью регулярки
+                    use: 'ts-loader',
+                    exclude: /node_modules/,
+                },
+            ],
+        },
+        resolve: {
+            extensions: ['.tsx', '.ts', '.js'],
+        },
+    }
+};
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="tsWebpackConfig">Webpack конфиг на TypeScript</h4>
+
+                    <div>
+                        <p>Документация для <a href="https://webpack.js.org/configuration/configuration-languages/">webpack.config.ts</a></p>
+                        <p>Пример:</p>
+                        <pre>
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpack from 'webpack';
+
+type TMode = 'production' | 'development';
+
+interface IEncVariables {
+    mode: TMode;
+}
+
+export default (env: IEncVariables) => {
+    const config: webpack.Configuration = {
+        mode: env.mode ?? 'development',
+        entry: path.resolve(__dirname, 'src', 'index.ts'),
+        output: {
+            path: path.resolve(__dirname, 'build'),
+            filename: '[name].[contenthash].bundle.js',
+            clean: true,
+        },
+        plugins: [
+            new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html')}),
+            new webpack.ProgressPlugin(),
+        ],
+        module: {
+            rules: [
+                {
+                    test: /\.tsx?$/,
+                    use: 'ts-loader',
+                    exclude: /node_modules/,
+                },
+            ],
+        },
+        resolve: {
+            extensions: ['.tsx', '.ts', '.js'],
+        },
+    }
+
+    return config;
+};
+                        </pre>
+                        <p>При использовании ts все импорты можно перевести на ESM синтаксис.</p>
+                        <p>В tsconfig.json дополнительно можно поставить флаги "esModuleInterop": true и "allowSyntheticDefaultImports": true.</p>
+                        <p><code>esModuleInterop</code> позволяет работать с пакетами, которые используют CommonJS как с обычными пакетами с помощью import,
+                            <code>allowSyntheticDefaultImports</code> активирует у ts-loader или babel-loader функцию генерации дефолтных импортов для библиотек,
+                            которые их не имеют, благорадя этому можно писать не <code>import * as React from 'react'</code>, а <code>import React from 'react'</code></p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="devServer_watchMode_sourceMaps">DevServer. Watch режим. Source maps</h4>
+
+                    <div>
+                        <p><a href="https://webpack.js.org/guides/development/" target="_blank">Документация</a> для поднятия DevServer, watch режима и webpack-dev-middleware.</p>
+                        <p>DevServer удобно использовать на стадии разработки, позволяет поднимать на локалке сервер с hot reaload.</p>
+                        <p>Итоговый webpack.config.ts:</p>
+                        <pre>
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpack from 'webpack';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+
+type TMode = 'production' | 'development';
+
+interface IEncVariables {
+    mode: TMode;
+    port: number;
+}
+
+export default (env: IEncVariables) => {
+    const isDev = env.mode === 'development';
+
+    const config: webpack.Configuration = {
+        ...
+        ...
+
+        devtool: isDev ? 'inline-source-map' : false,
+        devServer: isDev ? {
+            port: env.port ?? 3000,
+            open: true,
+        } : undefined,
+    }
+
+    return config;
+};
+                        </pre>
+                        <p>Импорт "type { Configuration as DevServerConfiguration }" нужен для протаскивания типа переменной
+                            devServer для webpack.Configuration, иначе TS будет выбрасывать ошибку при компиляции!!!</p>
+                        <p>Source Map в Webpack — это файл, который служит для сопоставления минифицированного или транслированного
+                            кода (например, после сборки или транспиляции) с исходным кодом. Source Map позволяет разработчикам отлаживать код,
+                            видя оригинальные строки, файлы и столбцы из исходных файлов, вместо трудно читаемого собранного кода.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="react_JSX">React. JSX. Стили. CSS + препроцессоры (SCSS)</h4>
+
+                    <div>
+                        <p>При работе с react принципиальных различий нет. Преднастроенного выше пресета webpack.config.ts хватит,
+                            чтобы установить react/react-dom и работать.</p>
+                        <p>Для того чтобы работать с CSS требуется добавить css-loader и style-loader:</p>
+                        <pre>
+...
+rules: [
+    {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+        exclude: /node_modules/,
+    },
+    {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+    },
+],
+...
+                        </pre>
+                        <p>Документация <a href="https://webpack.js.org/loaders/css-loader/" target="_blank">css-loader</a>:</p>
+                        <pre>npm install --save-dev css-loader</pre>
+                        <p>Документация <a href="https://webpack.js.org/loaders/style-loader/" target="_blank">style-loader</a>:</p>
+                        <pre>npm install --save-dev style-loader</pre>
+
+                        <p>В случае если нужен css препроцессор, нужно установить sass-loader:</p>
+                        <pre>
+...
+module: {
+    rules: [
+        {
+            test: /\.s[ac]ss$/i,
+            use: [
+                // Creates `style` nodes from JS strings
+                "style-loader",
+                // Translates CSS into CommonJS
+                "css-loader",
+                // Compiles Sass to CSS
+                "sass-loader",
+            ],
+        },
+        {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/,
+        },
+    ],
+},
+...
+                        </pre>
+                        <p>Документация <a href="https://webpack.js.org/loaders/sass-loader/" target="_blank">sass-loader</a>:</p>
+                        <pre>npm install sass-loader sass webpack --save-dev</pre>
+
+                        <p>Для того чтобы webpack создавал отдельные минифицированные css файлы нужно использовать mini-css-extract-plugin.</p>
+                        <p>Документация <a href="https://webpack.js.org/plugins/mini-css-extract-plugin/" target="_blank">mini-css-extract-plugin</a>:</p>
+                        <pre>npm install --save-dev mini-css-extract-plugin</pre>
+                        <p>И так же вместо style-loader нужно использовать MiniCssExtractPlugin.loader:</p>
+                        <pre>
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import webpack from 'webpack';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
+type TMode = 'production' | 'development';
+
+interface IEncVariables {
+    mode: TMode;
+    port: number;
+}
+
+export default (env: IEncVariables) => {
+    const isDev = env.mode === 'development';
+
+    const config: webpack.Configuration = {
+        mode: env.mode ?? 'development',
+        entry: path.resolve(__dirname, 'src', 'index.tsx'),
+        output: {
+            path: path.resolve(__dirname, 'build'),
+            filename: '[name].[contenthash].bundle.js',
+            clean: true,
+        },
+        plugins: [
+            new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html')}),
+            new webpack.ProgressPlugin(),
+            new MiniCssExtractPlugin({
+                filename: 'css/[name].[contenthash].css',
+                chunkFilename: 'css/[name].[contenthash].css'
+            }),
+        ],
+        module: {
+            rules: [
+                {
+                    test: /\.s[ac]ss$/i,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        "css-loader",
+                        "sass-loader",
+                    ],
+                },
+                {
+                    test: /\.tsx?$/,
+                    use: 'ts-loader',
+                    exclude: /node_modules/,
+                },
+            ],
+        },
+
+        ...
+    }
+
+    return config;
+};
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="decomposition_reusableConfiguration">Декомпозиция. Переиспользуемая конфигурация</h4>
+
+                    <div>
+                        <p>Под декомпозицией подразумевается инкапсуляция параметров возвращаемой в webpack.config.js/ts конфигурации при помощи функций в отдельных файлах:</p>
+                        <div class="smallScreenContainer">
+                            <img src="./images/webpackConfigDecomposition.png" style="max-width: 400px" alt="webpackConfigDecomposition">
+                        </div>
+                        <p>Config возвращаемый в webpack.config.js/ts вызывает билдер функцию buildWebpack, которая содержит в себе конфигурационный скелет:</p>
+                        <pre>
+import webpack from "webpack";
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import {buildDevServer} from "./buildDevServer";
+import {buildLoaders} from "./buildLoaders";
+import {buildPlugins} from "./buildPlugins";
+import {buildResolver} from "./buildResolver";
+import {IBuildOptions} from "./types/types";
+
+export function buildWebpack(options: IBuildOptions): webpack.Configuration {
+    const {mode, paths} = options;
+    const isDev = mode === 'development';
+
+    return {
+        mode: mode ?? 'development',
+        entry: paths.entry,
+        output: {
+            path: paths.output,
+            filename: '[name].[contenthash].bundle.js',
+            clean: true,
+        },
+        plugins: <code>buildPlugins(options)</code>,
+        module: {
+            rules: <code>buildLoaders()</code>,
+        },
+        resolve: <code>buildResolver(options)</code>,
+        devtool: isDev ? 'inline-source-map' : false,
+        devServer: isDev ? <code>buildDevServer(options)</code>  : undefined,
+    }
+}
+                        </pre>
+                        <p>И каждый параметр в свою очередь вызывает соответсвующую builder функцию:</p>
+                        <pre>
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import {IBuildOptions} from "./types/types";
+
+export function <code>buildDevServer</code>({port}: IBuildOptions): DevServerConfiguration {
+    return {
+        port: port ?? 3000,
+        open: true,
+    }
+}
+
+//----------------------------------------------------------------------------------
+
+import {ModuleOptions} from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
+export function <code>buildLoaders</code>(): ModuleOptions['rules'] {
+    const scssLoader = {
+        test: /\.s[ac]ss$/i,
+        use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader",
+            "sass-loader",
+        ],
+    };
+
+    const tsLoader = {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+    };
+
+    return [
+        scssLoader,
+        tsLoader,
+    ];
+}
+
+//---------------------------------------------------------------------------------
+
+import webpack, {Configuration} from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import {IBuildOptions} from "./types/types";
+
+export function <code>buildPlugins</code>({mode, paths}: IBuildOptions): Configuration['plugins'] {
+    const isDev = mode === 'development';
+
+    const plugins: Configuration['plugins'] = [
+        new HtmlWebpackPlugin({ template: paths.html}),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash].css',
+            chunkFilename: 'css/[name].[contenthash].css'
+        }),
+    ]
+
+    if (isDev) plugins.push(new webpack.ProgressPlugin());
+
+    return plugins;
+}
+
+//--------------------------------------------------------------------------------------
+
+import {Configuration} from "webpack";
+import {IBuildOptions} from "./types/types";
+
+export function <code>buildResolver</code>(options: IBuildOptions): Configuration['resolve'] {
+    return {
+        extensions: ['.tsx', '.ts', '.js'],
+    };
+}
+
+//--------------------------------------------------------------------------------------
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="styleIsolation_cssMidules">Изоляция стилей. CSS modules</h4>
+
+                    <div>
+                        <p>Для того чтобы не было css коллизий используются css модули.</p>
+                        <p>Документация <a href="https://webpack.js.org/loaders/css-loader/#modules" target="_blank">webpack css модулей</a></p>
+                        <p>Модули точно такие же как преднастроенные модули в react, так же в названии через точку указывается
+                            fileName.module.ext и имеют такой же классовый синтаксис:</p>
+                        <pre>
+//App.module.scss
+.button {
+    padding: 5px;
+    margin: 5px;
+
+    span {
+        color: red;
+        font-size: 16px;
+    }
+}
+
+.button:hover {
+    background: green;
+}
+
+.button:active {
+    background: blue;
+}
+
+.value {
+    font-size: 50px;
+}
+                        </pre>
+                        <p>В настройках лоадера добавляются следующие параметры:</p>
+                        <pre>
+import {ModuleOptions} from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import {IBuildOptions} from "./types/types";
+
+export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
+    const isDev = mode === 'development';
+<code>
+    const cssModuleLoader = {
+        loader: 'css-loader',
+        options: {
+            modules: {
+                localIdentName: isDev ? '[path][name]__[local]' : '[hash:base64:8]'
+            },
+        }
+    }
+</code>
+    const scssLoader = {
+        test: /\.s[ac]ss$/i,
+        use: [
+            isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            <code>cssModuleLoader,</code>
+            "sass-loader",
+        ],
+    };
+
+    const tsLoader = {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+    };
+
+    return [
+        scssLoader,
+        tsLoader,
+    ];
+}
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="routing_lasyChunks_bundleSize_codeSplit">Роутинг. Ленивые чанки. Размер бандла и код сплитинг</h4>
+
+                    <div>
+                        <p>Роутинг очевидно обеспечивает react-router-dom, устанавливаем требуемую версию RRD:</p>
+                        <pre>npm i react-router-dom</pre>
+                        <p>И как обычно интегрируем в приложение:</p>
+                        <pre>
+import {createRoot} from "react-dom/client";
+import {App} from "./components/App";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {LazyAbout} from "./pages/About/About.lazy";
+import {LazyShop} from "./pages/Shop/Shop.lazy";
+import {Suspense} from "react";
+
+const root = document.getElementById('root');
+
+if (!root) {
+    throw new Error('No root found');
+}
+
+const container = createRoot(root);
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: &lt;App /&gt;,
+        children: [
+            {
+                path: '/about',
+                element: &lt;Suspense fallback={'loading...'}&gt;&lt;LazyAbout /&gt;&lt;/Suspense&gt;
+            },
+            {
+                path: '/shop',
+                element: &lt;Suspense fallback={'loading...'}&gt;&lt;LazyShop /&gt;&lt;/Suspense&gt;
+            }
+        ]
+    }
+]);
+
+//либо облегченным путем: container.render(&lt;BrowserRouter&gt;&lt;App/&gt;&lt;/BrowserRouter&gt;);
+
+container.render(&lt;RouterProvider router={router} /&gt;);
+                        </pre>
+
+                        <p>Так же требуется интегрировать в код &lt;Outlet&gt; для рендера ссылочных компонентов.</p>
+
+                        <p>Чтобы при развернутой локалке работали чанки, нужно в DevServer добавить опцию historyApiFallBack с флагом:</p>
+                        <pre>
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import {IBuildOptions} from "./types/types";
+
+export function buildDevServer({port}: IBuildOptions): DevServerConfiguration {
+    return {
+        port: port ?? 3000,
+        open: true,
+        <code>historyApiFallback: true,</code>
+    }
+}
+                        </pre>
+                        <p>Чтобы сделать чанки ленивыми, делаем lazy реэкспорт:</p>
+                        <pre>
+//About.tsx
+const About = () => {
+    return (&lt;h1&gt;About&lt;/h1&gt;)
+}
+
+export default About;
+
+//----------------------------------------------------
+
+//About.lazy.tsx
+import {lazy} from "react";
+
+export const LazyAbout = lazy(() => import('./About'));
+                        </pre>
+                        <p>Для легкой инспекции чанков можно использовать плагин <a href="https://github.com/webpack-contrib/webpack-bundle-analyzer">Webpack Bundle Analyzer</a></p>
+                        <pre>npm install --save-dev webpack-bundle-analyzer</pre>
+                        <p>Использовать как обычный плагин:</p>
+                        <pre>
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+...
+plugins: [
+    new BundleAnalyzerPlugin(),
+]
+...
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="alias_moduleResolving">Алиасы(псевдонимы) и резолвинг модулей</h4>
+
+                    <div>
+                        <p>Алиасы для путей особенно полезны в том случае, когда в проекте присутствует глубокая вложенность компонентов
+                            и нужно импортировать компоненты с далеко расположенных уровней.</p>
+                        <p>Настройка:</p>
+                        <pre>
+import {Configuration} from "webpack";
+import {IBuildOptions} from "./types/types";
+
+export function buildResolver(options: IBuildOptions): Configuration['resolve'] {
+    return {
+        extensions: ['.tsx', '.ts', '.js'],
+        alias: {
+            '@': options.paths.src, // параметр src: path.resolve(__dirname, 'src'),
+        }
+    };
+}
+                        </pre>
+                        <p>В случае если проект на TypeScript в tsconfig.json обязательно нужно добавить следующие параметры:</p>
+                        <pre>
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    <code>"baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }</code>
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
+                        </pre>
+                        <p>Впоследствии импортировать можно следующим образом:</p>
+                        <pre>
+...
+import {LazyAbout} from "@/pages/About/About.lazy";
+import {LazyShop} from "@/pages/Shop/Shop.lazy";
+import {App} from "@/components/App";
+...
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="assetsWork">Работа с асетами (картинки, шрифты, иконки и тд)</h4>
+
+                    <div>
+                        <p>Для того чтобы обработать png/jpg/jpeg файлы требуется следующий
+                            <a href="https://webpack.js.org/guides/asset-management/#loading-images" target="_blank">webpack loader</a>:</p>
+                        <pre>
+export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
+    ...
+
+    const assetLoader = {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        exclude: /node_modules/,
+    }
+
+    ...
+
+    return [..., assetLoader, ...];
+}
+                        </pre>
+                        <p>Чтобы TypeScript не выдавал ошибки и показывал свойства, так же необходимо объявить модули:</p>
+                        <pre>
+// global.d.ts
+// модули для картинок, можно добавить еще расширений:
+declare module '*.png';
+declare module '*.jpg';
+declare module '*.jpeg';
+
+// модули для svg иконок
+declare module "*.svg" {
+    import React from "react";
+    const SVG: React.VFC&lt;React.SVGProps&lt;SVGSVGElement&gt;&gt;
+    export default SVG;
+}
+                        </pre>
+                        <p>Теперь импортированные картинки(и svg) можно использовать для передачи их в scr для img тега</p>
+                        <pre>
+import imageExample from '@/assets/imageExample.png';
+...
+&lt;img width={300} src={imageExample} alt="imageExample"/&gt;
+...
+                        </pre>
+                        <p>В случае если требуется использовать svg в компонентном стиле (<code>&lt;Svg /&gt;</code>), нужно установить и подключить
+                            <a href="https://react-svgr.com/docs/webpack/" target="_blank">svgrLoader</a>:</p>
+                        <pre>npm install --save-dev @svgr/webpack</pre>
+                        <p>Использование в buildLoaders:</p>
+                        <pre>
+export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
+    ...
+
+    const svgrLoader = {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        use: [
+            {
+                loader: '@svgr/webpack',
+                options: {
+                    icon: true,
+                    svgoConfig: {
+                        plugins: [
+                            {
+                                name: 'convertColors',
+                                params: {
+                                    currentColor: true,
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+    }
+
+    return [..., svgrLoader];
+}
+                        </pre>
+                        <p>В данном svgrLoader так же используется плагин, который позволяет применять цвет из color атрибута (color: 'red' и тд)</p>
+                        <p>В итоге svg можно использовать следующим образом:</p>
+                        <pre>
+import UlbiIcon from '@/assets/app-image.svg';
+import styles from './App.module.scss';
+...
+&lt;UlbiIcon className={styles.icon} width={50} height={50} /&gt;
+...
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="globalBundleVariables_treeShaking">Глобальные переменные сборки. Tree shaking</h4>
+
+                    <div>
+                        <p>У webpack есть дефолтный плагин DefinePlugin, он позволяет сделать любую переменную глобально-доступной:</p>
+                        <pre>
+export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): Configuration['plugins'] {
+    const isDev = mode === 'development';
+
+    const plugins: Configuration['plugins'] = [
+        new HtmlWebpackPlugin({ template: paths.html}),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash].css',
+            chunkFilename: 'css/[name].[contenthash].css'
+        }),
+        <code>new DefinePlugin({
+            __PLATFORM__: JSON.stringify(platform),
+        })</code>
+    ]
+
+    if (isDev) plugins.push(new webpack.ProgressPlugin());
+    if (analyzer) plugins.push(new BundleAnalyzerPlugin());
+
+    return plugins;
+}
+                        </pre>
+                        <p>В качестве аргумента DefinePlugin функции мы передаем объект, где ключ это имя глобальной переменной
+                            и застрингованное(JSON.stringify()) значение передается извне через опции и далее можно передать через ENV.</p>
+                        <p>В случае если применяется TypeScript, нужно также сделать объявление константы в d.ts файле:</p>
+                        <pre>declare const __PLATFORM__: 'mobile' | 'desktop';</pre>
+                        <p>Tree shaking это механизм удаления неиспользуемых частей кода, удобно когда для разных версий приложения
+                            неиспользуемый код удаляется и итоговый бандл становится меньше. Базовый функционал webpack.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="bundlingSpeedUp">Ускорение сборки. Вынос проверки типов в отдельный процесс</h4>
+
+                    <div>
+                        <p>В случае если сборка бандла занимает слишком много времени, для ускорения сборки можно вынести проверку типов в отдельный процесс.</p>
+                        <p>Для этого в tsLoader можно добавить следующие параметры:</p>
+                        <pre>
+export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
+    ...
+
+    const tsLoader = {
+        test: /\.tsx?$/,
+        use: {
+            loader: 'ts-loader',
+            <code>options: {
+                transpileOnly: true,
+            }</code>
+        },
+        exclude: /node_modules/,
+    }
+
+    ...
+
+    return [..., tsLoader, ...];
+}
+                        </pre>
+                        <p>Данная настройка убирает проверку типов из основного процесса сборки, и для того чтобы вернуть проверку,
+                            но уже в отдельном процессе требуется установить
+                            плагин <a href="https://github.com/TypeStrong/fork-ts-checker-webpack-plugin" target="_blank">ForkTsCheckerWebpackPlugin</a>:</p>
+                        <pre>npm install --save-dev fork-ts-checker-webpack-plugin</pre>
+                        <p>Интегрируется в проект как обычно:</p>
+                        <pre>
+export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): Configuration['plugins'] {
+    ...
+
+    const plugins: Configuration['plugins'] = [
+        ...,
+        new ForkTsCheckerWebpackPlugin(),
+    ]
+
+    ...
+
+    return plugins;
+}
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="HMR">HMR (Hot Module Replacement)</h4>
+
+                    <div>
+                        <p><a href="https://webpack.js.org/guides/hot-module-replacement/" target="_blank">HMR</a> - механизм обновления
+                            контента на странице без перезагрузки страницы, по своей сути улучшение hot reload.</p>
+                        <p>Полезно в случае, если надо часто дебажить формы, селектора, инпуты и т.д.</p>
+                        <p>Для того чтобы подключить HMR в случае, если в проекте нет фреймворков(React/Vue/Angular/ect), достаточно в DevServer подключить hot флаг:</p>
+                        <pre>
+export function buildDevServer({port}: IBuildOptions): DevServerConfiguration {
+    return {
+        port: port ?? 3000,
+        open: true,
+        historyApiFallback: true,
+        <code>hot: true,</code>
+    }
+}
+                        </pre>
+                        <p>В случае же если фреймворки все-таки используются, нужно установить соответсвующий фреймворку плагин:</p>
+                        <p><a href="https://github.com/pmmmwh/react-refresh-webpack-plugin" target="_blank">react-refresh-webpack-plugin</a> для React:</p>
+                        <pre>
+npm install -D @pmmmwh/react-refresh-webpack-plugin react-refresh
+// если есть TypeScript то так же нужно установить типы (un-official integration):
+npm install -D react-refresh-typescript
+                        </pre>
+                        <p>Настройка в проекте с tsLoader:</p>
+                        <pre>
+import {ModuleOptions} from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import {IBuildOptions} from "./types/types";
+import ReactRefreshTypeScript from 'react-refresh-typescript';
+
+export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
+    ...
+
+    const tsLoader = {
+        test: /\.tsx?$/,
+        use: {
+            loader: 'ts-loader',
+            options: {
+                transpileOnly: true,
+                getCustomTransformers: () => ({
+                    before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+                })
+            }
+        },
+        exclude: /node_modules/,
+    }
+
+    ...
+
+    return [..., tsLoader, ...];
+}
+                        </pre>
+                        <p>Так же нужно добавить плагин:</p>
+                        <pre>
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import {IBuildOptions} from "./types/types";
+import {BundleAnalyzerPlugin} from "webpack-bundle-analyzer";
+import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+
+export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): Configuration['plugins'] {
+    const isDev = mode === 'development';
+
+    const plugins: Configuration['plugins'] = [
+        new HtmlWebpackPlugin({ template: paths.html}),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[contenthash].css',
+            chunkFilename: 'css/[name].[contenthash].css'
+        }),
+        new DefinePlugin({
+            __PLATFORM__: JSON.stringify(platform),
+        }),
+        new ForkTsCheckerWebpackPlugin(),
+    ]
+
+    if (isDev) {
+        plugins.push(new webpack.ProgressPlugin(), new ReactRefreshWebpackPlugin());
+    }
+    if (analyzer) plugins.push(new BundleAnalyzerPlugin());
+
+    return plugins;
+}
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="copyPlugin">Favicon + copy plugin</h4>
+
+                    <div>
+                        <p>Чтобы подключить favicon нужно в HtmlWebpackPlugin добавить favicon свойство, в котором указать путь до иконки:</p>
+                        <pre>
+new HtmlWebpackPlugin({
+    template: paths.html,
+    <code>favicon: path.resolve(paths.public, 'favicon.ico')</code>
+}),
+                        </pre>
+                        <p>Для копирования статических файлов можно установить и использовать <a href="https://webpack.js.org/plugins/copy-webpack-plugin/" target="_blank">CopyPlugin</a>:</p>
+                        <pre>npm install copy-webpack-plugin --save-dev</pre>
+                        <p>Подключение:</p>
+                        <pre>
+...
+import path from "path";
+import CopyPlugin from "copy-webpack-plugin";
+
+export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): Configuration['plugins'] {
+    ...
+    const isProd = mode === 'production';
+
+    const plugins: Configuration['plugins'] = [
+        ...
+    ]
+
+    if (isProd) {
+        plugins.push(
+            <code>new CopyPlugin({
+                patterns: [
+                    {from: path.resolve(paths.public, 'locales'), to: path.resolve(paths.output, 'locales')},
+                ]
+            }))</code>
+    }
+    ...
+
+    return plugins;
+}
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="babel">Babel. Создаем свой плагин</h4>
+
+                    <div>
+                        <p><a href="https://babeljs.io" target="_blank">Babel</a> — транспайлер, который преобразует код, написанный на современном JavaScript (ES6+), в совместимый
+                            с более старыми версиями JavaScript (ES5 и ниже), чтобы его можно было выполнять в различных окружениях,
+                            включая устаревшие браузеры. </p>
+
+                        <p>Чтобы Babel правильно работал с фреймворками, ему нужно установить и настроить пресеты.</p>
+                        <p>Установка babel для webpack + установка требуемых пресетов:</p>
+                        <pre>
+// установка Babel
+npm install --save-dev babel-loader @babel/core
+
+// react preset
+npm install --save-dev @babel/preset-react
+
+// typescript preset
+npm install --save-dev @babel/preset-typescript
+                        </pre>
+                        <p>Замена tsLoader на babelLoader + добавление установленных пресетов в массив presets:</p>
+                        <pre>
+export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
+    const isDev = mode === 'development';
+
+    ...
+
+    const babelLoader = {
+        test: /\.tsx?$/, // поставить требуемое расширение файла!!!
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: [ // пресеты
+                    '@babel/preset-env',
+                    '@babel/preset-typescript',
+                    [ // react пресет нужно дополнительно настроить
+                        '@babel/preset-react',
+                        {
+                            runtime: isDev ? 'automatic' : 'classic',
+                        }
+                    ],
+                ]
+            }
+        }
+    }
+
+    ...
+
+    return [
+        ...
+        // tsLoader,
+        babelLoader,
+        ...
+    ];
+}
+                        </pre>
+                        <p>Все настройки которые передаются в presets можно вынести в babel.config.json например если конфиг так же нужен для jest:</p>
+                        <pre>
+// babel.config.json
+{
+        "presets": [
+            "@babel/preset-env",
+            "@babel/preset-typescript",
+            [
+                "@babel/preset-react",
+                {
+                    "runtime": "automatic",
+                }
+            ],
+        ]
+    }
+}
+                        </pre>
+                        <p>babelLoader так же желательно декомпозировать из webpack buildLoader файла тк этот лоадер может тоже сильно разрастись.</p>
+                        <p>Для babelLoader так же можно написать свой плагин, рассмотрим пример
+                            с <a href="https://www.npmjs.com/package/@types/babel__core">babel__core</a> библиотекой:</p>
+                        <pre>
+// устанавливаем babel__core
+npm i -D @types/babel__core
+
+//------------------------------------------------------------
+
+import {PluginItem} from "@babel/core";
+
+export function removeDataTestIdBabelPlugin(): PluginItem {
+    return {
+        visitor: {
+            Program(path, state) {
+                const forbiddenProps = state.opts.props || [];
+
+                path.traverse({
+                    JSXIdentifier(current) {
+                        const nodeName = current.node.name;
+
+                        if (forbiddenProps.includes(nodeName)) {
+                            current.parentPath.remove();
+                        }
+                    }
+                })
+            }
+        }
+    }
+}
+                        </pre>
+                        <p>Подключаем плагин к babelLoader:</p>
+                        <pre>
+import {IBuildOptions} from "../types/types";
+import {removeDataTestIdBabelPlugin} from "./removeDataTestIdBabelPlugin";
+
+export function buildBabelLoader({mode}: IBuildOptions) {
+    const isDev = mode === 'development';
+    const isProd = mode === 'production';
+
+    const plugins = [];
+
+    if (isProd) {
+        plugins.push([
+            removeDataTestIdBabelPlugin,
+            {
+                props: ['data-testid']
+            }
+        ])
+    }
+
+    return {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: [
+                    '@babel/preset-env',
+                    '@babel/preset-typescript',
+                    [
+                        '@babel/preset-react',
+                        {
+                            runtime: isDev ? 'automatic' : 'classic',
+                        }
+                    ],
+                ],
+                plugins: plugins.length ? plugins : undefined,
+
+            }
+        }
+    }
+}
+                        </pre>
+                        <p>Данный плагин удаляет data-testid атрибут тегов в конечно prod билде.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="sourceMapыDetails">Source maps детальный разбор</h4>
+
+                    <div>
+                        <p>Source maps в Webpack позволяют сопоставлять скомпилированный JavaScript-код с исходным,
+                            чтобы упростить отладку и отображение ошибок в удобном виде. Это особенно полезно, когда исходный код написан на языке,
+                            который компилируется в JavaScript (например, TypeScript, CoffeeScript или ES6+).</p>
+                        <p>Допустим у нас есть код, который выдает по тем или иным причинам ошибку:</p>
+                        <div class="smallScreenContainer">
+                            <img src="./images/webpackSourceMaps.png" alt="webpackSourceMaps">
+                        </div>
+                        <p>В случае если source maps отключены devTools в Source вкладке покажет нечитаемый скомпилированный код:</p>
+                        <div class="smallScreenContainer">
+                            <img src="./images/webpackTurnedOffSourceMaps.png" alt="webpackTurnedOffSourceMaps">
+                        </div>
+                        <p>В случае же если source maps включены, код будет точно такой же как в компоненте:
+                        <div class="smallScreenContainer">
+                            <img src="./images/webpackTurnedOnSourceMaps.png" alt="webpackTurnedOnSourceMaps">
+                        </div>
+                        <p>Настройка включающая source maps - devtool:</p>
+                        <pre>
+import webpack from "webpack";
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import {buildDevServer} from "./buildDevServer";
+import {buildLoaders} from "./buildLoaders";
+import {buildPlugins} from "./buildPlugins";
+import {buildResolver} from "./buildResolver";
+import {IBuildOptions} from "./types/types";
+
+export function buildWebpack(options: IBuildOptions): webpack.Configuration {
+    const {mode, paths} = options;
+    const isDev = mode === 'development';
+
+    return {
+        mode: mode ?? 'development',
+        entry: paths.entry,
+        output: {
+            path: paths.output,
+            filename: '[name].[contenthash].bundle.js',
+            clean: true,
+        },
+        plugins: buildPlugins(options),
+        module: {
+            rules: buildLoaders(options),
+        },
+        resolve: buildResolver(options),
+        <code>devtool: isDev ? 'eval-cheap-module-source-map' : 'source-map',</code>
+        devServer: isDev ? buildDevServer(options)  : undefined,
+    }
+}
+                        </pre>
+                        <p>Возможные параметры <a href="https://webpack.js.org/configuration/devtool/" target="_blank">devtool</a>.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="monorepository">Монорепозиторий. Конфигурация проекта + workspaces</h4>
+
+                    <div>
+                        <p>Монорепозиторий во фронтенд-разработке — это подход к управлению исходным кодом, при котором все связанные
+                            проекты и их зависимости хранятся в одном репозитории. Вместо того чтобы разрабатывать и поддерживать
+                            каждую часть приложения в отдельном репозитории, разработчики объединяют их в одном месте.</p>
+
+                        <p>Основные особенности монорепозитория:</p>
+                        <ul>
+                            <li>Единое хранилище кода: Все приложения, библиотеки, утилиты, компоненты и конфигурации находятся в одном репозитории.</li>
+                            <li>Совместное управление зависимостями: Библиотеки и пакеты, используемые в нескольких частях проекта, могут обновляться централизованно.</li>
+                            <li>Упрощенная разработка: Легче отслеживать изменения, устранять конфликты и тестировать код, так как все части системы доступны в одном месте.</li>
+                            <li>Централизованная CI/CD: Единая система для автоматического тестирования, сборки и деплоя.</li>
+                        </ul>
+                        <p>Плюсы:</p>
+                        <ul>
+                            <li>Упрощенное управление зависимостями: Обновление библиотек в одном месте сразу для всех проектов.</li>
+                            <li>Единый стандарт: Общие правила форматирования, линтинга и конфигурации (например, ESLint, Prettier).</li>
+                            <li>Ускорение разработки: Легче взаимодействовать с кодом разных проектов, так как они находятся "под одной крышей".</li>
+                            <li>Согласованность версий: Упрощенная работа с совместимыми версиями пакетов.</li>
+                        </ul>
+                        <p>Минусы:</p>
+                        <ul>
+                            <li>Масштабируемость: С ростом проекта репозиторий может становиться слишком большим, усложняя клонирование и работу.</li>
+                            <li>Ограничения инструментов: Некоторые инструменты и системы контроля версий могут плохо справляться с огромными монорепозиториями.</li>
+                            <li>Риск ошибок: Неправильные изменения могут повлиять сразу на множество проектов.</li>
+                        </ul>
+                        <div class="smallScreenContainer">
+                            <img src="./images/monorepo.png" alt="monorepo">
+                        </div>
+
+                        <p>Общая структура монорепозитория выглядит следующим образом:</p>
+                        <div class="smallScreenContainer" style="max-width: 400px">
+                            <img src="./images/monorepoStructure.png" alt="monorepoStructure">
+                        </div>
+
+                        <p>Корневой package.json имеет отличную от обычного package настройку, вместо dependencies в нем настраивается массив workspaces:</p>
+                        <pre>
+// package.json
+{
+  "name": "monorepo-module-federation",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ]
+}
+                        </pre>
+                        <p>Папка services содержит микрофронтенды(отдельные фронтенд приложения):</p>
+                        <div class="smallScreenContainer" style="max-width: 400px">
+                            <img src="./images/monorepoServicesStructure.png" alt="monorepoServicesStructure">
+                        </div>
+                        <p>В корне services можно сделать tsconfig.base.json, который будет содержать общую для всех микрофронтендов конфигурацию:</p>
+                        <pre>
+// tsconfig.base.json
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
+                        </pre>
+                        <p>tsconfig.json микрофронтендов при таком подходе должны обязательно иметь extends опцию, для расширения основного tsconfig.base.json:</p>
+                        <pre>
+// tsconfig.json для "shop" мирофронтенда:
+{
+  <code>"extends": "../tsconfig.base.json",</code>
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+                        </pre>
+
+                        <p>Папка packages содержит переиспользуемый код и общая конфигурация:</p>
+                        <div class="smallScreenContainer" style="max-width: 400px">
+                            <img src="./images/monorepoPackagesStructure.png" alt="monorepoPackagesStructure">
+                        </div>
+                        <p>В директории "shared" переиспользуемый общий код(компоненты, функции и тд),
+                            а в "build-config" общие для всех микрофронтендов настройки webpack, babel и тд</p>
+                        <p>Глобально настройка webpack для монорепозиториев не отличается от настройки для стандартного приложения,
+                            за исключением требования плагина ModuleFederationPlugin, который будет рассмотрен далее,
+                            а так же желательно сделать реэкспорт кастомного buildWebpack модуля и типов:.</p>
+                        <pre>
+// ./packages/build-config/src/index.ts
+
+export {buildWebpack} from './buildWebpack';
+export type {TBuildMode, IBuildPaths, IBuildOptions, TBuildPlatform} from './types/types';
+                        </pre>
+                    </div>
+                </section>
+
+                <section>
+                    <h4 id="microServicesConfig_moduleFederation">Конфигурация микросервисов. Module federation</h4>
+
+                    <div>
+                        <p>package.json каждого микросервиса должен иметь в зависимостях содержимое директорий shared и build-config!</p>
+                        <p>Пример package.json для "shop" микросервиса(остальные имеют тот же принцип):</p>
+                        <pre>
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build:dev": "webpack --env mode=development",
+    "build:prod": "webpack --env mode=production",
+    "build:mobile": "webpack --env mode=production --env platform=mobile",
+    "build:desktop": "webpack --env mode=production --env platform=desktop"
+  },
+  "dependencies": {
+    <code>"@packages/shared": "*",
+    "@packages/build-config": "*",</code>
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/babel__core": "^7.20.3",
+    "@types/node": "^20.8.3",
+    "@types/react": "^18.2.25",
+    "@types/react-dom": "^18.2.11",
+    "@types/webpack": "^5.28.3",
+    "@types/webpack-bundle-analyzer": "^4.7.0",
+    "@types/webpack-dev-server": "^4.7.2",
+    "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "fork-ts-checker-webpack-plugin": "^9.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "sass": "^1.69.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "@svgr/webpack": "^8.1.0",
+    "react-refresh-typescript": "^2.0.9"
+  }
+}
+                        </pre>
+                        <p>А каждый webpack.config.ts/js иметь дополнительный плагин <a href="https://webpack.js.org/plugins/module-federation-plugin/" target="_blank">ModuleFederationPlugin</a>:</p>
+                        <pre>
+import path from "path";
+import webpack from 'webpack';
+import {IBuildPaths, TBuildMode, TBuildPlatform, buildWebpack, IBuildOptions} from '@packages/build-config';
+<code>import packageJson from './package.json';</code>
+
+interface IEncVariables {
+    mode?: TBuildMode;
+    port?: number;
+    analyzer?: boolean;
+    platform?: TBuildPlatform;
+    SHOP_REMOTE_URL?: string;
+    ADMIN_REMOTE_URL?: string;
+}
+
+export default (env: IEncVariables) => {
+    const paths: IBuildPaths = {
+        output: path.resolve(__dirname, 'build'),
+        entry: path.resolve(__dirname, 'src', 'index.tsx'),
+        html: path.resolve(__dirname, 'public', 'index.html'),
+        src: path.resolve(__dirname, 'src'),
+        public: path.resolve(__dirname, 'public')
+    }
+
+    const SHOP_REMOTE_URL = env.SHOP_REMOTE_URL ?? 'http://localhost:3001';
+    const ADMIN_REMOTE_URL = env.ADMIN_REMOTE_URL ?? 'http://localhost:3002';
+
+    const config: webpack.Configuration = buildWebpack({
+        port: env.port ?? 3000,
+        mode: env.mode ?? 'development',
+        paths,
+        analyzer: env.analyzer ?? false,
+        platform: env.platform ?? 'desktop',
+    });
+
+    <code>config.plugins.push(new webpack.container.ModuleFederationPlugin({
+        name: 'host',
+        filename: 'remoteEntry.js',
+        remotes: {
+            shop: `shop@${SHOP_REMOTE_URL}/remoteEntry.js`,
+            admin: `admin@${ADMIN_REMOTE_URL}/remoteEntry.js`,
+        },
+        shared: {
+            ...packageJson.dependencies,
+            react: {
+                eager: true,
+                requiredVersion: packageJson.dependencies['react'],
+            },
+            'react-router-dom': {
+                eager: true,
+                requiredVersion: packageJson.dependencies['react-router-dom'],
+            },
+            'react-dom': {
+                eager: true,
+                requiredVersion: packageJson.dependencies['react-dom'],
+            }
+        }
+    }))</code>
+
+    return config;
+};
+                        </pre>
+                        <p>Где:</p>
+                        <ul>
+                            <li>name - имя контейнера</li>
+                            <li>filename -  задаёт имя файла, который будет содержать точку входа (entry point) для модуля или микрофронтенда.</li>
+                            <li>remotes - настройка удалённых модулей (микрофронтендов или модулей), которые могут быть загружены динамически в приложение.
+                                Она позволяет подключать другие приложения или модули, предоставленные как удалённые (remote),
+                                чтобы использовать их компоненты или функциональность. </li>
+                            <li>shared - используется для указания зависимостей, которые должны быть разделяемыми (shared)
+                                между приложением и подключаемыми удалёнными модулями.</li>
+                        </ul>
+                        <p>Примечание для filename - Имя файла должно быть уникальным: Если в одном приложении подключается несколько удалённых модулей,
+                            убедитесь, что каждый из них использует уникальное имя для filename, чтобы избежать конфликтов.
+                            Если filename не указано, Webpack по умолчанию создаст файл с именем remoteEntry.js.</p>
+                        <p>shared имеет следующие опции:</p>
+                        <ul>
+                            <li><code>singleton</code> (логическое значение): Указывает, что данная зависимость должна быть единственной для всех микрофронтендов.</li>
+                            <li><code>strictVersion</code> (логическое значение): Если true, Webpack выбросит ошибку, если версии библиотеки в разных приложениях не совпадают.</li>
+                            <li><code>requiredVersion</code> (строка): Указывает требуемую версию зависимости, с которой приложение совместимо.</li>
+                            <li><code>eager</code> (логическое значение): Если true, зависимость будет загружаться сразу же при загрузке приложения, а не по запросу. Это может быть полезно для критически важных модулей.</li>
+                            <li><code>import</code> (логическое значение или строка): Если false, зависимость не будет автоматически импортироваться из node_modules. Если это строка, указывается путь для импорта.</li>
+                        </ul>
+
+                        <p>В каждом микросервисе код в index.tsx нужно переместить в bootstrap.tsx, а в самом index.tsx сделать следующий реэкспорт:</p>
+                        <pre>
+import('./bootstrap');
+export {}
+                        </pre>
+                        <p>Код в bootstrap.tsx</p>
+                        <pre>
+import {createRoot} from "react-dom/client";
+import {RouterProvider} from "react-router-dom";
+import {router} from "@/router/Router";
+
+const root = document.getElementById('root');
+
+if (!root) {
+    throw new Error('No root found');
+}
+
+const container = createRoot(root);
+
+container.render(&lt;RouterProvider router={router} /&gt;);
+                        </pre>
+                        <p>И так же необходимо декомпозировать createBrowserRouter в отдельный Router.tsx файл</p>
+                        <pre>
+import {createBrowserRouter} from "react-router-dom";
+import {App} from "@/components/App";
+import {Suspense} from "react";
+import {LazyAbout} from "@/pages/About/About.lazy";
+
+const routes = [
+    {
+        path: '/admin',
+        element: &lt;App /&gt;,
+        children: [
+            {
+                path: '/admin/about',
+                element: &lt;Suspense fallback={'loading...'}&gt;&lt;LazyAbout /&gt;&lt;/Suspense&gt;
+            },
+        ]
+    }
+]
+
+export const router = createBrowserRouter(routes);
+export default routes;
+                        </pre>
+
+                        <p>Для хостового приложения декомпозировать Router с особыми настройками для children:</p>
+                        <pre>
+import {createBrowserRouter} from "react-router-dom";
+import {App} from "@/components/App";
+
+import shopRoutes from 'shop/Router';
+import adminRoutes from 'admin/Router';
+
+export const router = createBrowserRouter([
+    {
+        path: '/',
+        element: &lt;App /&gt;,
+        children: [
+            ...shopRoutes,
+            ...adminRoutes
+        ]
+    }
+]);
+                        </pre>
+                        <p>Для shopRoutes и adminRoutes нужно объявить модули в global.d.ts, и использовать их в children массиве,
+                            это ссылки на routes из дочерних микросервисов. Т.е. дочерние микросервисы монтируются на прямую в основной хостовый,
+                            и да они при этом имеют свой отдельный порт.</p>
+
+                        <p>Весь код с <a href="https://github.com/Slipbang/monorepo-module-federation" target="_blank">monorepo-module-federation на Github</a>.</p>
+                    </div>
+                </section>
+            </section>
+
             <section id="git_githubNav">
                 <h3 id="git_github_basics">Основы Git и GitHub</h3>
 
@@ -29602,7 +31117,7 @@ services:
       - ./portainer_data:/data
     ports:
       - "8000:8000"
-      - "9000:9000" // или "9443:9443"
+      - "9000:9000" // или " 9443:9443"
     restart: always
                         </pre>
                     </div>
@@ -29624,10 +31139,5 @@ services:
     <p>Учебное пособие <a href="https://github.com/Slipbang" style="background-color: transparent" target="_blank">Slipbang</a>
     </p>
 </footer>
-
-<!-- Local scripts -->
-<script src="./scripts/UI.js"></script>
-<script src="./scripts/scripts.js"></script>
-<script src="./scripts/OOPclasses.js"></script>
 </body>
 </html>
