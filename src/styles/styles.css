@@ -32,7 +32,6 @@ body {
     padding: 0;
     width: 100%;
     background-color: #2B2B2B;
-    /*2B2B2B*/
 }
 
 header {
@@ -926,7 +925,7 @@ big p {
 }
 
 #spriteexample {
-    background-image: url("./JSImages/button2.jpg");
+    background-image: url("../assets/button2.jpg");
     background-position: -198px -112px;
     width: 157px;
     height: 60px;

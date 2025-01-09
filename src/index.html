@@ -6,7 +6,7 @@
     <!-- Document title in browser tabs -->
     <title>WebDev Basics</title>
     <!-- Document Favicon in browser tabs -->
-    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+<!--    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
     <!-- Additional approach to add favicon -->
     <!--    <link rel="apple-touch-icon" href="apple-touch-icon.png">-->
     <!--    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">-->
@@ -20,7 +20,7 @@
     <!-- Use latest version of IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- For external styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet"
@@ -28,9 +28,9 @@
 
 
     <!-- Local scripts -->
-    <script src="./scripts/UI.js" defer></script>
-    <script src="./scripts/scripts.js" defer></script>
-    <script src="./scripts/OOPclasses.js" defer></script>
+<!--    <script src="../src/scripts/UI.js" defer></script>-->
+<!--    <script src="../src/scripts/tasks.js" defer></script>-->
+<!--    <script src="../src/scripts/OOPClasses.js" defer></script>-->
 
 </head>
 <body>
@@ -165,7 +165,7 @@ const getDate = () =&gt; new Date;
                 <hr>
                 <p>Пример метаданных вебстраницы</p>
                 <div class="smallScreenContainer">
-                    <img src="./images/meta.png" alt="meta">
+                    <img src="./assets/meta.png" alt="meta">
                 </div>
                 <p>Тэг "meta" нужен для установки кодировки документа. Так же с помощью этого тега и атрибута "name" и
                     "content" можно описать различную SEO информацию, "name" задает тип данных, описание, ключевые
@@ -322,9 +322,9 @@ const getDate = () =&gt; new Date;
                     браузер не
                     может ее отрисовать по каким-то причинам()</p>
                 <p id="Billy">
-                <pre>&lt;img src="./images/imageExample.png" alt="image example"&gt;</pre>
+                <pre>&lt;img src="../src/assets/imageExample.png" alt="image example"&gt;</pre>
                 <div class="smallScreenContainer">
-                    <img src="./images/imageExample.png" alt="image example">
+                    <img src="./assets/imageExample.png" alt="image example">
                 </div>
                 <br>
                 <p>Тк вебстраница может быть просмотрена на разных устройствах, то требуется оптимизация картинок под
@@ -351,20 +351,20 @@ const getDate = () =&gt; new Date;
                 <p>Пример верстки:</p>
                 <pre>
 &lt;figure&gt;
-   &lt;img src="./images/imageExample.png" alt="Just image" /&gt;
+   &lt;img src="../src/assets/imageExample.png" alt="Just image" /&gt;
    &lt;figcaption&gt;It is a simple description for a picture above&lt;/figcaption&gt;
 &lt;/figure&gt;
         </pre>
                 <figure>
                     <div class="smallScreenContainer">
-                        <img src="./images/imageExample.png" alt="Just image">
+                        <img src="./assets/imageExample.png" alt="Just image">
                     </div>
                     <figcaption>It is a simple description for a picture above</figcaption>
                 </figure>
                 <figure class="figureExampleStyle">
-                    <img src="./images/imageExample.png" alt="Just image">
-                    <img src="./images/imageExample.png" alt="Just image">
-                    <img src="./images/imageExample.png" alt="Just image">
+                    <img src="./assets/imageExample.png" alt="Just image">
+                    <img src="./assets/imageExample.png" alt="Just image">
+                    <img src="./assets/imageExample.png" alt="Just image">
                     <figcaption>
                         <p>It is a simple description for a couple pictures above.</p>
                     </figcaption>
@@ -656,8 +656,7 @@ const getDate = () =&gt; new Date;
                 <p>К тегам содержания можно отнести: "article", "figure", а так же аудио и видео теги. Эти же теги
                     сообщают
                     о типе контента.</p>
-                <a href="./index1.html"
-                   target="_blank">Пример</a>
+                <a href="./public/flexboxExample.html" target="_blank">Пример flexbox верстки страницы.</a>
             </section>
 
             <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/N-2-kF1q6j4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -957,11 +956,11 @@ const getDate = () =&gt; new Date;
                 <p>Элемент "image" создает своеобразную кнопку из картинки:</p>
                 <pre>
 &lt;form action="formhander.php" name="simple form7" autocomplete="on"&gt;
-   &lt;input type="image" src="./images/imageExample.png" width="50" height="30" alt="just gachiimage"&gt;
+   &lt;input type="image" src="../src/assets/imageExample.png" width="50" height="30" alt="just gachiimage"&gt;
 &lt;/form&gt;
         </pre>
                 <form action="formHandler.php" name="simple form7" autocomplete="on">
-                    <input type="image" src="./images/imageExample.png" width="50"
+                    <input type="image" src="./assets/imageExample.png" width="50"
                            height="30" alt="imageExample">
                 </form>
                 <hr>
@@ -1034,19 +1033,19 @@ const getDate = () =&gt; new Date;
                     подключения:</p>
 
                 <pre>&lt;audio controls src="аудиофайл.формат"&gt;Отображаемый текст в случае невозможности воспроизведения&lt;/audio&gt;</pre>
-                <audio controls src="example.mp3">Your browser does not support the audio tag.</audio>
+                <audio preload="none" controls src="./assets/example.mp3">Your browser does not support the audio tag.</audio>
                 <pre>
 &lt;audio controls&gt;
    &lt;source src="аудиофайл.формат" type="audio/формат"&gt;
 &lt;/audio&gt;:
         </pre>
-                <audio controls>
-                    <source src="example.mp3" type="audio/mp3">
+                <audio controls preload="none">
+                    <source src="./assets/example.mp3" type="audio/mp3">
                 </audio>
 
                 <pre>&lt;video controls width="560" height="315" src="видеофайл.формат"&gt;Отображаемый текст в случае невозможности воспроизведения&lt;/video&gt;</pre>
                 <div class="smallScreenContainer">
-                    <video src="./example.mp4" muted controls></video>
+                    <video preload="none" src="./assets/example.mp4" muted controls></video>
                 </div>
                 <pre>
 &lt;video poster="preview.png" preload="auto" muted controls width="560" height="315"&gt;
@@ -1057,9 +1056,9 @@ const getDate = () =&gt; new Date;
         </pre>
                 <!-- width="560" height="315" -->
                 <div class="smallScreenContainer">
-                    <video class="smallScreenContainer" poster="./images/preview.png" preload="auto" muted controls>
+                    <video class="smallScreenContainer" poster="assets/preview.png" preload="none" muted controls>
                         <!-- <source src="example.ogg" type="video/ogg"> -->
-                        <source src="./example.mp4" type="video/mp4">
+                        <source src="./assets/example.mp4" type="video/mp4">
                         "Your browser does not support the audio tag."
                     </video>
                 </div>
@@ -1147,7 +1146,7 @@ const getDate = () =&gt; new Date;
                             документе.
                             Пример:
                             <div class="smallScreenContainer">
-                                <img src="./images/example1.png" alt="example1">
+                                <img src="./assets/example1.png" alt="example1">
                             </div>
                         </li>
                         <li>Инлайновые стили применяются непосредственно к определенному элементу. Не рекомендуется к
@@ -1170,7 +1169,7 @@ const getDate = () =&gt; new Date;
                         <li>Импорт стилей из уже существующих файлов CSS. Импорт встраивается в текущий файл CSS.
                             Пример:
                             <div class="smallScreenContainer">
-                                <img src="./images/example2.png" alt="example2">
+                                <img src="./assets/example2.png" alt="example2">
                             </div>
                         </li>
                     </ol>
@@ -2123,7 +2122,7 @@ Rage, rage against the dying of the light.
                         '';
                         display: block; clear: both; }</p>
                     <p>Если задать свойство "float" строчному элементу, то он начинает вести себя как блочный!</p>
-                    <a href="./floatExample.html" target="_blank">Примеры верстки с float.</a>
+                    <a href="./public/floatExample.html" target="_blank">Примеры верстки с float.</a>
                     <hr>
                 </section>
 
@@ -2428,7 +2427,7 @@ Rage, rage against the dying of the light.
                         "filter:
                         свойство;":</p>
                     <div class="smallScreenContainer">
-                        <img class="imagefilter" src="./images/imageExample.png" alt="пикча">
+                        <img class="imagefilter" src="./assets/imageExample.png" alt="пикча">
                     </div>
 
                     <br>
@@ -2814,7 +2813,7 @@ Rage, rage against the dying of the light.
                         отображаемой
                         области картинки:</p>
                     <div class="smallScreenContainer">
-                        <img src="./JSImages/button2.jpg" alt="button">
+                        <img src="./assets/button2.jpg" alt="button">
                     </div>
                     <pre>
 #spriteexample {
@@ -3241,7 +3240,7 @@ Rage, rage against the dying of the light.
                     <button id="modalwindow">Модальное окно</button>
                     <p>Медиа объект:</p>
                     <div class="flex-container">
-                        <img src="./images/imageExample.png" alt="imageExample" style="max-width: 170px">
+                        <img src="./assets/imageExample.png" alt="imageExample" style="max-width: 170px">
                         <div class="content">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus quam, ipsam
@@ -4077,7 +4076,7 @@ console.log(someArray2); // --> [1, 2, 3]
         </pre>
                     <p>Структура массивов</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/arrayStructure.png" style="max-width: 400px" alt="arrayStructure">
+                        <img src="./assets/arrayStructure.png" style="max-width: 400px" alt="arrayStructure">
                     </div>
                 </section>
 
@@ -4108,7 +4107,7 @@ console.log(someArray3 === someArray); //--> true
                     <h4 id="arrayVSobject">Массив против объекта</h4>
 
                     <div class="smallScreenContainer">
-                        <img src="./images/arrayVSobject.png" alt="arrayVSobject">
+                        <img src="./assets/arrayVSobject.png" alt="arrayVSobject">
                     </div>
                     <p>Отличием между массивом и объектом является прототип(__proto__). Прототип определяет применяемые
                         методы
@@ -6756,7 +6755,7 @@ promise.then((value) => console.log(value));
                         <p>Последовательность действий промиса будет такой, как показано ниже:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/promises.png" alt="promises">
+                            <img src="./assets/promises.png" alt="promises">
                         </div>
                     </div>
                 </section>
@@ -7644,7 +7643,7 @@ function submit() {
                         <p>Пример debugger:</p>
 
                         <div class="imgLongWidth">
-                            <img src="./images/debugger.png" alt="debugger" width="900">
+                            <img src="./assets/debugger.png" alt="debugger" width="900">
                         </div>
                     </div>
                 </section>
@@ -7948,7 +7947,7 @@ document
                         </p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/bom.png" alt="bom">
+                            <img src="./assets/bom.png" alt="bom">
                         </div>
                     </div>
                 </section>
@@ -10968,7 +10967,7 @@ hungry();
                         </ol>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/call-stack.png" alt="call-stack">
+                            <img src="./assets/call-stack.png" alt="call-stack">
                         </div>
                     </div>
                 </section>
@@ -14195,7 +14194,7 @@ console.log(
                         <p>Текст будет отображаться, как показано ниже:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/console-css.png" alt="console-css">
+                            <img src="./assets/console-css.png" alt="console-css">
                         </div>
 
                         <p>Примечание: К сообщениям консоли можно применять все стили CSS.</p>
@@ -14217,7 +14216,7 @@ console.dir(user);
                         <p>Объект user, отображаемый в представлении JSON:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/console-dir.png" alt="console-dir">
+                            <img src="./assets/console-dir.png" alt="console-dir">
                         </div>
                     </div>
                 </section>
@@ -14237,7 +14236,7 @@ console.log(element);
                         <p>Элемент HTML печатается в консоли:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/console-html.png" alt="console-html">
+                            <img src="./assets/console-html.png" alt="console-html">
                         </div>
                     </div>
                 </section>
@@ -14262,7 +14261,7 @@ console.table(users);
                         <p>Данные визуализируются в виде таблицы:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/console-table.png" alt="console-table">
+                            <img src="./assets/console-table.png" alt="console-table">
                         </div>
                     </div>
                 </section>
@@ -14867,7 +14866,7 @@ console.log("End"); //2
                             и объявления функций, она сохраняет их в куче.</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/heap.png" alt="heap">
+                            <img src="./assets/heap.png" alt="heap">
                         </div>
                     </div>
                 </section>
@@ -14889,7 +14888,7 @@ console.log("End"); //2
                             ниже:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/event-table.png" alt="event-table">
+                            <img src="./assets/event-table.png" alt="event-table">
                         </div>
                     </div>
                 </section>
@@ -15122,7 +15121,7 @@ observable.subscribe((value) => console.log(value));
                 </pre>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/observables.png" alt="observables">
+                            <img src="./assets/observables.png" alt="observables">
                         </div>
 
                         <p>Примечание: Observables пока не являются частью языка JavaScript, но их предлагается добавить
@@ -19841,7 +19840,7 @@ let arrayfor11 = {
                                 меняйте
                                 изображение на 2.png. Надеюсь вы догадаетесь изменить только src изображения?</p>
                             <div class="blockeventimage event9">task-9
-                                <img src="./JSImages/jojo1.png" width="150" alt="jojo1">
+                                <img src="./assets/jojo1.png" width="150" alt="jojo1">
                             </div>
                         </li>
                         <li>
@@ -19849,7 +19848,7 @@ let arrayfor11 = {
                                 меняйте
                                 изображение на 2.png.</p>
                             <div class="blockeventimage event10">task-10
-                                <img src="./JSImages/jojo1.png" width="150" alt="jojo1">
+                                <img src="./assets/jojo1.png" width="150" alt="jojo1">
                             </div>
                         </li>
                         <li>
@@ -19858,7 +19857,7 @@ let arrayfor11 = {
                                 изображение на 2.png. При уведении мыши - mouseleave - возвращайте исходное
                                 изображение.</p>
                             <div class="blockeventimage event11">task-11
-                                <img src="./JSImages/jojo1.png" alt="jojo1" width="150">
+                                <img src="./assets/jojo1.png" alt="jojo1" width="150">
                             </div>
                         </li>
                         <li>
@@ -20036,7 +20035,7 @@ let arrayfor11 = {
                                 изображения. Одно нажатие клавиши - 1px.</p>
                             <input aria-label="inputkb10" type="text" class="inputkb10">
                             <div class="blockeventimage divkb10">
-                                <img src="./JSImages/jojo1.png" width="150" height="80" alt="" id="jojoimg10">
+                                <img src="./assets/jojo1.png" width="150" height="80" alt="" id="jojoimg10">
                             </div>
                             <div class="outkb10"></div>
                         </li>
@@ -20062,7 +20061,7 @@ let arrayfor11 = {
                                 клавиш не тестируются.
                                 Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем
                                 регистре.</p>
-                            <a href="./keyboard.html" target="_blank">Верстка клавиш клавиатуры</a>
+                            <a href="./public/keyboard.html" target="_blank">Верстка клавиш клавиатуры</a>
                         </li>
                     </ol>
                 </section>
@@ -20202,15 +20201,15 @@ let arrayfor11 = {
                                 произошло событие - заменилась главная картинка.</p>
 
                             <div class="diveventmove12-wrapper">
-                                <img src="./images/1.png" alt="1" class="img-12-min active-img">
-                                <img src="./images/2.png" alt="2" class="img-12-min">
-                                <img src="./images/3.png" alt="3" class="img-12-min">
-                                <img src="./images/4.png" alt="4" class="img-12-min">
-                                <img src="./images/5.png" alt="5" class="img-12-min">
-                                <img src="./images/6.png" alt="6" class="img-12-min">
+                                <img src="./assets/1.png" alt="1" class="img-12-min active-img">
+                                <img src="./assets/2.png" alt="2" class="img-12-min">
+                                <img src="./assets/3.png" alt="3" class="img-12-min">
+                                <img src="./assets/4.png" alt="4" class="img-12-min">
+                                <img src="./assets/5.png" alt="5" class="img-12-min">
+                                <img src="./assets/6.png" alt="6" class="img-12-min">
                             </div>
                             <div class="diveventmove12-max">
-                                <img src="./images/1.png" alt="1" class="img-12-max"></div>
+                                <img src="./assets/1.png" alt="1" class="img-12-max"></div>
                             <p class="img-12-text"></p>
                             <button class="prev12">Prev</button>
                             <button class="next12">Next</button>
@@ -20282,7 +20281,7 @@ let arrayfor11 = {
                     <p>Метод JSON.parse() разбирает строку JSON, возможно с преобразованием получаемого в процессе
                         разбора
                         значения.</p>
-                    <a href="testlocalStorage.html" target="_blank">страница для тестирования LS</a>
+                    <a href="./public/testlocalStorage.html" target="_blank">страница для тестирования LS</a>
                     <div class="testLS"></div>
 
                     <ol>
@@ -21155,11 +21154,9 @@ let arrayfor11 = {
                         </li>
                         <li>
                             <p>Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action
-                                укажите
-                                1.</p>
+                                укажите 1.</p>
                             <p>Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action
-                                укажите
-                                2.</p>
+                                укажите 2.</p>
                             <p>Два запроса объедините с помощью promiseAll. Результат выведите в outpromise5 результат.
                                 Запускаться
                                 функция должна по нажатию buttpromise5.</p>
@@ -21463,10 +21460,10 @@ console.log(Rectangle.name);
                             которая потом импортируется как тэг в другой компонент или в корневой компонент</p>
                         <p>Пример:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/component.png" alt="component" style="max-height: 449px">
+                            <img src="./assets/component.png" alt="component" style="max-height: 449px">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/componentImport.png" alt="componentImport">
+                            <img src="./assets/componentImport.png" alt="componentImport">
                         </div>
                         <p>"App" является корневым компонентом тк собирает в себе все остальные компоненты и потом в
                             итоге
@@ -21523,7 +21520,7 @@ function functionName (){
                         <p>Для отображения динамических данных используются одинарные фигурные скобки {expresion}</p>
                         <p>пример:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/динамическое_отображение_данных.png" alt="dinamicData">
+                            <img src="./assets/динамическое_отображение_данных.png" alt="dinamicData">
                         </div>
                     </div>
                 </section>
@@ -21536,16 +21533,16 @@ function functionName (){
                             концепцию
                             props:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/props.png" alt="props">
+                            <img src="./assets/props.png" alt="props">
                         </div>
                         <p>Т.е. мы задаем некие атрибуты внутри тега компонента, и в файле где мы его настраиваем,
                             подключаем их
                             в скобках функции параметром "props" и потом в коде с помощью props.atribute :</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/props1.png" style="max-width: 400px" alt="props1">
+                            <img src="./assets/props1.png" style="max-width: 400px" alt="props1">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/props2.png" style="max-width: 400px" alt="props2">
+                            <img src="./assets/props2.png" style="max-width: 400px" alt="props2">
                         </div>
                     </div>
                 </section>
@@ -21560,10 +21557,10 @@ function functionName (){
                             отделенным компонентам,
                             делается это дублированием параметров в новом компоненте с параметром props:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/newComponent1.png" style="max-width: 400px" alt="newComponent">
+                            <img src="./assets/newComponent1.png" style="max-width: 400px" alt="newComponent">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/newComponent2.png" style="max-width: 400px" alt="newComponent">
+                            <img src="./assets/newComponent2.png" style="max-width: 400px" alt="newComponent">
                         </div>
                     </div>
                 </section>
@@ -21586,15 +21583,15 @@ function functionName (){
                             указывают все требуемые стили:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/childrenCard.png" style="max-width: 500px" alt="childrenCard">
+                            <img src="./assets/childrenCard.png" style="max-width: 500px" alt="childrenCard">
                         </div>
                         <br>
                         <div class="smallScreenContainer">
-                            <img src="./images/cardImport1.png" style="max-width: 500px" alt="cardImport1">
+                            <img src="./assets/cardImport1.png" style="max-width: 500px" alt="cardImport1">
                         </div>
                         <br>
                         <div class="smallScreenContainer">
-                            <img src="./images/cardImport2.png" style="max-width: 500px" alt="cardImport2">
+                            <img src="./assets/cardImport2.png" style="max-width: 500px" alt="cardImport2">
                         </div>
                     </div>
                 </section>
@@ -21607,7 +21604,7 @@ function functionName (){
                             возвращался
                             объект с методом React.createElement():</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/oldReactMethod.png" style="max-width: 500px" alt="oldReactMethod">
+                            <img src="./assets/oldReactMethod.png" style="max-width: 500px" alt="oldReactMethod">
                         </div>
                     </div>
                 </section>
@@ -21618,7 +21615,7 @@ function functionName (){
                     <div>
                         <p>При разрастании файлов компонентов их следует разместить в поддерикториях:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/fileOrganisation.png" style="max-width: 250px" alt="fileOrganisation">
+                            <img src="./assets/fileOrganisation.png" style="max-width: 250px" alt="fileOrganisation">
                         </div>
                     </div>
                 </section>
@@ -21637,7 +21634,7 @@ function functionName (){
                         <p>Все события в React начинаются на "on..."(onClick={function} f.e.) и имеют следующий вид
                             записи:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/eventListener.png" style="max-width: 500px" alt="eventListener">
+                            <img src="./assets/eventListener.png" style="max-width: 500px" alt="eventListener">
                         </div>
                         <p>В конце названий функций обработчиков событий принято писать "Handler"</p>
                     </div>
@@ -21665,7 +21662,7 @@ function functionName (){
                             количество
                             раз:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/multipleUseStateUsage1.png" style="max-width: 500px"
+                            <img src="./assets/multipleUseStateUsage1.png" style="max-width: 500px"
                                  alt="multipleUseStateUsage">
                         </div>
                         <p>Так же в useState можно передать объект и управлять несколькими состояниями одновременно, при
@@ -21674,14 +21671,14 @@ function functionName (){
                             учитывать все объекты при многократном вызове функции и считается не очень хорошей практикой
                             обновления состояния:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/multipleUseStateUsage2.png" style="max-width: 500px"
+                            <img src="./assets/multipleUseStateUsage2.png" style="max-width: 500px"
                                  alt="multipleUseStateUsage">
                         </div>
                         <p>Лучше всего будет при втором способе в качестве параметра задать функцию с prevState в
                             скобках и
                             возвратить prevState вместе с изменяемым значением:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/multipleUseStateUsage3.png" style="max-width: 500px"
+                            <img src="./assets/multipleUseStateUsage3.png" style="max-width: 500px"
                                  alt="multipleUseStateUsage">
                         </div>
                     </div>
@@ -21700,7 +21697,7 @@ function functionName (){
                             пустым содержимым между ковычками( setInputName(''); ),а в самих инпутах добавляют атрибут
                             value={inputName}:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/twoWayBinding.png" alt="twoWayBinding">
+                            <img src="./assets/twoWayBinding.png" alt="twoWayBinding">
                         </div>
                     </div>
                 </section>
@@ -21718,11 +21715,11 @@ function functionName (){
                             информацию,
                             в итоге в параметр функции родительского компонента будет записана информация:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/relativComponentData.png" alt="relativComponentData"
+                            <img src="./assets/relativComponentData.png" alt="relativComponentData"
                                  style="max-width: 350px">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/childComponentData.png" alt="childComponentData"
+                            <img src="./assets/childComponentData.png" alt="childComponentData"
                                  style="max-width: 350px">
                         </div>
                     </div>
@@ -21739,7 +21736,7 @@ function functionName (){
                             поднимают до общего родителя и потом уже опускают ее дальше по иерархии к нужному
                             компоненту</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/liftingStateUp.png" alt="liftingStateUp">
+                            <img src="./assets/liftingStateUp.png" alt="liftingStateUp">
                         </div>
                     </div>
                 </section>
@@ -21769,7 +21766,7 @@ function functionName (){
                             метода мы спокойно можем
                             применять компоненты:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dinamicData.png" alt="dinamicData">
+                            <img src="./assets/dinamicData.png" alt="dinamicData">
                         </div>
                     </div>
                 </section>
@@ -21789,7 +21786,7 @@ setArrNAme(prevArr =&gt; {
 });
             </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/addingNewArrElem.png" alt="addingNewArrElem">
+                            <img src="./assets/addingNewArrElem.png" alt="addingNewArrElem">
                         </div>
                     </div>
                 </section>
@@ -21805,7 +21802,7 @@ setArrNAme(prevArr =&gt; {
                             идентификационный номер(id). Данная концепция позволяет избежать багов и "перерендера"
                             списка:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/conceptKey.png" alt="conceptkey">
+                            <img src="./assets/conceptKey.png" alt="conceptkey">
                         </div>
                     </div>
                 </section>
@@ -21819,19 +21816,19 @@ setArrNAme(prevArr =&gt; {
                             :
                             выражение2}:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/ternaryOperator1.png" style="max-width: 430px" alt="ternaryOperator1">
+                            <img src="./assets/ternaryOperator1.png" style="max-width: 430px" alt="ternaryOperator1">
                         </div>
                         <p>или {условие && выражение1}+{условие && выражение2} возвращается то, что соответствует
                             условию:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/ternaryOperator2.png" alt="ternaryOperator2" style="max-width: 430px">
+                            <img src="./assets/ternaryOperator2.png" alt="ternaryOperator2" style="max-width: 430px">
                         </div>
                         <p>или задать переменную с базовым контентом вне "return", через оператор if(){} задать условие
                             с
                             альтернативным контентом
                             и уже через expression{} вывести эту переменную в return:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/ifExpression3.png" alt="ifExpression3">
+                            <img src="./assets/ifExpression3.png" alt="ifExpression3">
                         </div>
                     </div>
                 </section>
@@ -21847,7 +21844,7 @@ setArrNAme(prevArr =&gt; {
                             условие
                             первого:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/DBLreturn.png" alt="DBLreturn">
+                            <img src="./assets/DBLreturn.png" alt="DBLreturn">
                         </div>
                     </div>
                 </section>
@@ -21871,7 +21868,7 @@ const barFillHeigth = Math.round(props.value / props.maxValue * 100) + '%';
                             с
                             заданными переменными(динамические стили):</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dynamicStyles.png" alt="dynamicStyles">
+                            <img src="./assets/dynamicStyles.png" alt="dynamicStyles">
                         </div>
                     </div>
                 </section>
@@ -21897,7 +21894,7 @@ const barFillHeigth = Math.round(props.value / props.maxValue * 100) + '%';
                             синтаксисом
                             тернарного оператора:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/inlineStyles.png" alt="inlineStyles">
+                            <img src="./assets/inlineStyles.png" alt="inlineStyles">
                         </div>
                     </div>
                 </section>
@@ -21914,7 +21911,7 @@ const barFillHeigth = Math.round(props.value / props.maxValue * 100) + '%';
                             ={`...
                             ${ifStatement ? ...: ...}`} :</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dynamicClasses.png" alt="dynamicClasses">
+                            <img src="./assets/dynamicClasses.png" alt="dynamicClasses">
                         </div>
                     </div>
                 </section>
@@ -21974,13 +21971,13 @@ const Button = styled.button`
                             то
                             можно его создать в этом же файле:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/innerStyledComponent.png" alt="innerStyledComponent">
+                            <img src="./assets/innerStyledComponent.png" alt="innerStyledComponent">
                         </div>
                         <p>Так же для этого компонента можно устанавливать классы, которые будут добавляться при
                             каких-то
                             условиях:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dynamicPropsStyledComponents.png" alt="dynamicPropsStyledComponents">
+                            <img src="./assets/dynamicPropsStyledComponents.png" alt="dynamicPropsStyledComponents">
                         </div>
                     </div>
                 </section>
@@ -21991,7 +21988,7 @@ const Button = styled.button`
                     <div>
                         <p>Так же как и в обычном CSS в Styled Components можно использовать Media Queries:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/styledComponentsMediaQueries.png" alt="styledComponentsMediaQueries">
+                            <img src="./assets/styledComponentsMediaQueries.png" alt="styledComponentsMediaQueries">
                         </div>
                     </div>
                 </section>
@@ -22002,7 +21999,7 @@ const Button = styled.button`
                     <div>
                         <p>При данном методе нужно изменить название CSS файла и добавить '.module' перед '.css':</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/CSSModulesReact.png" alt="CSSModulesReact">
+                            <img src="./assets/CSSModulesReact.png" alt="CSSModulesReact">
                         </div>
                         <p>Далее нужно импортировать созданный файл с полным названием, но импортируется уже объект
                             "styles"(название любое,
@@ -22011,13 +22008,13 @@ const Button = styled.button`
                             с одноименным
                             свойством (относительно классов находящимся в CSS файле через точку):</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/importCSSModulesReact.png" alt="importCSSModulesReact">
+                            <img src="./assets/importCSSModulesReact.png" alt="importCSSModulesReact">
                         </div>
                         <p>Обращаться к свойству объекта можно как через точку, так и через скобки, содержимое которых
                             закрываем
                             кавычками:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/syntCSSModulesReact.png" alt="syntCSSModulesReact">
+                            <img src="./assets/syntCSSModulesReact.png" alt="syntCSSModulesReact">
                         </div>
                     </div>
                 </section>
@@ -22030,11 +22027,11 @@ const Button = styled.button`
                             синтаксис
                             обратных кавычек можно добавить следующее:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dynamicCSSModulesReact.png" alt="dynamicCSSModulesReact">
+                            <img src="./assets/dynamicCSSModulesReact.png" alt="dynamicCSSModulesReact">
                         </div>
                         <p>Для Media Queries мы используем обычный синтаксис CSS:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/mediaQueriesModulesReact.png" alt="mediaQueriesModulesReact">
+                            <img src="./assets/mediaQueriesModulesReact.png" alt="mediaQueriesModulesReact">
                         </div>
                     </div>
                 </section>
@@ -22051,7 +22048,7 @@ const Button = styled.button`
                             после чего с помощью кнопок перемещения по функциям вызова двигаться по исполняемому коду,
                             анализируя его на предмет ошибок:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/breakpointDebugg.png" alt="BreakpointDebugg">
+                            <img src="./assets/breakpointDebugg.png" alt="BreakpointDebugg">
                         </div>
                     </div>
                 </section>
@@ -22065,7 +22062,7 @@ const Button = styled.button`
                             React,
                             отображает информацию о функциях и хуках:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reactDeveloperTools.png" alt="reactDeveloperTools">
+                            <img src="./assets/reactDeveloperTools.png" alt="reactDeveloperTools">
                         </div>
                     </div>
                 </section>
@@ -22082,7 +22079,7 @@ const Button = styled.button`
                             элементов</p>
                         <p>Алтернативное решение - вернуть массивом, отделяя смежные элементы запятыми:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/returnRootElements.png" alt="returnRootElements">
+                            <img src="./assets/returnRootElements.png" alt="returnRootElements">
                         </div>
                         <p>Данный метод же имеет следующий минус - нужно к каждому элементу добавлять ключи(key).</p>
                         <p>Еще одна альтернатива - создание кастомного элемента обертку "Wrapper", который импортируется
@@ -22093,14 +22090,14 @@ const Button = styled.button`
                             div в
                             DOM структуре:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/wrapper.png" style="max-width: 350px" alt="wrapper">
+                            <img src="./assets/wrapper.png" style="max-width: 350px" alt="wrapper">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/wrapperUsage.png" alt="wrapperUsage">
+                            <img src="./assets/wrapperUsage.png" alt="wrapperUsage">
                         </div>
                         <p>Есть дефолтный метод обхода ограничения JSX - React.Fragment:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/ReactFragment.png" alt="ReactFragment">
+                            <img src="./assets/ReactFragment.png" alt="ReactFragment">
                         </div>
                         <p>В основном используются "Fragment".</p>
                     </div>
@@ -22115,11 +22112,11 @@ const Button = styled.button`
                             "порталы"</p>
                         <p>С помощью порталов можно структурировать DOM по нашему усмотрению:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/addPortal.png" alt="addPortal">
+                            <img src="./assets/addPortal.png" alt="addPortal">
                         </div>
                         <br>
                         <div class="smallScreenContainer">
-                            <img src="./images/ReactDOMcreatePortal.png" alt="ReactDOMcreatePortal">
+                            <img src="./assets/ReactDOMcreatePortal.png" alt="ReactDOMcreatePortal">
                         </div>
                     </div>
                 </section>
@@ -22153,7 +22150,7 @@ const submitHandler = (event) => {
                             строку </p>
                         <pre>a.current.value = '';</pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/RefsExample.png" alt="RefsExample">
+                            <img src="./assets/RefsExample.png" alt="RefsExample">
                         </div>
                     </div>
                 </section>
@@ -22207,7 +22204,7 @@ const submitHandler = (event) => {
                             </li>
                         </ol>
                         <div class="smallScreenContainer">
-                            <img src="./images/debouncing.png" alt="debouncing" id="useEffectExamp">
+                            <img src="./assets/debouncing.png" alt="debouncing" id="useEffectExamp">
                         </div>
                     </div>
                 </section>
@@ -22255,7 +22252,7 @@ const submitHandler = (event) => {
                         </ul>
                         <p>Пример использования useReducer при управлении формой:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/useReducer.png" alt="useReducer">
+                            <img src="./assets/useReducer.png" alt="useReducer">
                         </div>
                     </div>
                 </section>
@@ -22302,7 +22299,7 @@ const submitHandler = (event) => {
                             использовать
                             context.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/context.png" alt="context">
+                            <img src="./assets/context.png" alt="context">
                         </div>
                     </div>
                 </section>
@@ -22324,12 +22321,12 @@ const submitHandler = (event) => {
 &lt;Context.Provider/&gt;
             </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/contextComponent.png" style="max-width: 500px" alt="contextComponent">
+                            <img src="./assets/contextComponent.png" style="max-width: 500px" alt="contextComponent">
                         </div>
                         <p>и так же через точку нужно предоставить доступ компонентам через Provider в родительском
                             компоненте:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/ContextProvider.png" style="max-width: 500px" alt="ContextProvider">
+                            <img src="./assets/ContextProvider.png" style="max-width: 500px" alt="ContextProvider">
                         </div>
                         <p>Далее в компоненте, где требуются данные, мы оборачиваем JSX код следующим:</p>
                         <pre>
@@ -22345,7 +22342,7 @@ const submitHandler = (event) => {
                             информацию
                             в конечном итоге, и возвращаем весь обернутый код:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/ContextConsumer.png" alt="ContextConsumer">
+                            <img src="./assets/ContextConsumer.png" alt="ContextConsumer">
                         </div>
                     </div>
                 </section>
@@ -22364,7 +22361,7 @@ const context = useContext(ContextFile);
 context.a = ...
             </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/useContext.png" alt="useContext">
+                            <img src="./assets/useContext.png" alt="useContext">
                         </div>
                     </div>
                 </section>
@@ -22378,12 +22375,12 @@ context.a = ...
                             что
                             мы хотим передать:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dynamicContext.png" alt="dynamicContext">
+                            <img src="./assets/dynamicContext.png" alt="dynamicContext">
                         </div>
                         <p>А в том месте где нам требуется данные так же нужно применить ранее заданную переменную
                             context:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/applyingDynamicContext.png" alt="applyingDynamicContext">
+                            <img src="./assets/applyingDynamicContext.png" alt="applyingDynamicContext">
                         </div>
                     </div>
                 </section>
@@ -22397,7 +22394,7 @@ context.a = ...
                             потом
                             импортируем ее, а сами компоненты используем для отображения или обработки информации:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/customComponentContext.png" alt="customComponentContext">
+                            <img src="./assets/customComponentContext.png" alt="customComponentContext">
                         </div>
                     </div>
                 </section>
@@ -22454,11 +22451,11 @@ context.a = ...
                             этот
                             компонент особенным образом с помощью React.forwardRef((props, ref) => {return (JSX)})</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/useImperativeHandle.png" style="max-width: 500px"
+                            <img src="./assets/useImperativeHandle.png" style="max-width: 500px"
                                  alt="useImperativeHandle">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/importRef.png" style="max-width: 500px" alt="importedRef">
+                            <img src="./assets/importRef.png" style="max-width: 500px" alt="importedRef">
                         </div>
                     </div>
                 </section>
@@ -22496,7 +22493,7 @@ context.a = ...
                         <p>Для функциональных компонентов, для предотвращения ненужных переоценок можно использовать
                             React.memo() при экспорте компонента:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/ReactMemo.png" alt="ReactMemo">
+                            <img src="./assets/ReactMemo.png" alt="ReactMemo">
                         </div>
                         <p>Данный метод позволяет исполнять переоценку компонента только в том случае, если были
                             изменения
@@ -22525,7 +22522,7 @@ context.a = ...
                         <p>Внутри useCallback помещают нужный к React.memo() код первым аргументом, вторым же аргументом
                             указывают массив с зависимостями(dependencies):</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/useCallback.png" alt="useCallback">
+                            <img src="./assets/useCallback.png" alt="useCallback">
                         </div>
                         <p>Зависимости(deps) служат для того, чтобы в случае изменения какой-то переменной(записанной в
                             зависимостях) хук useCallback сделал перезапись функции и поменял требуемые значения</p>
@@ -22552,7 +22549,7 @@ context.a = ...
                             право отложить изменение состояния, в случае если параллельно идут более приоритетные
                             задачи:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/planningState.png" alt="planningState">
+                            <img src="./assets/planningState.png" alt="planningState">
                         </div>
                         <p> React гарантирует, что для одного и того же состояния порядок изменения состояния будет
                             сохранен:</p>
@@ -22572,7 +22569,7 @@ context.a = ...
                             метод
                             render() определяет то, что отображается на веб странице.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/classBasedComponents.png" alt="classBasedComponents">
+                            <img src="./assets/classBasedComponents.png" alt="classBasedComponents">
                         </div>
                     </div>
                 </section>
@@ -22597,7 +22594,7 @@ export default ComponentName;
                         <p>extends Component служит для добавления свойства props, далее это свойство употребляется так:
                             this.props.argument</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/classBasedComponent.png" alt="classBasedComponent">
+                            <img src="./assets/classBasedComponent.png" alt="classBasedComponent">
                         </div>
                         <p>Компоненты на основе классов могут работать в связке с функциональными компонентами в любой
                             наследственной последовательности.</p>
@@ -22638,7 +22635,7 @@ someMethod() {
                         <p>Там где нужно получить доступ к состоянию нужно использовать this.state.someState</p>
                         <p>чтобы вызвать нужный метод, нужно использовать this.someMethod.bind(this)</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/classBasedComponentState.png" alt="classBasedComponentState">
+                            <img src="./assets/classBasedComponentState.png" alt="classBasedComponentState">
                         </div>
                     </div>
                 </section>
@@ -22662,7 +22659,7 @@ someMethod() {
                             </li>
                         </ol>
                         <div class="smallScreenContainer">
-                            <img src="./images/lifeCycleMethods.png" alt="lifeCycleMethods">
+                            <img src="./assets/lifeCycleMethods.png" alt="lifeCycleMethods">
                         </div>
                     </div>
                 </section>
@@ -22679,7 +22676,7 @@ someMethod() {
                             и static contextType = someContextComponent (использовать два контекста нельзя)</p>
                         <p>Использование компонента в компоненте в качестве аргумента - this.context.someContext</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/classBasedComponentContext.png" alt="classBasedComponentContext">
+                            <img src="./assets/classBasedComponentContext.png" alt="classBasedComponentContext">
                         </div>
                     </div>
                 </section>
@@ -22698,7 +22695,7 @@ someMethod() {
                             ошибку,
                             отлавливать ее и обеспечивая работу приложения.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/errorBoundaries.png" alt="errorBoundaries">
+                            <img src="./assets/errorBoundaries.png" alt="errorBoundaries">
                         </div>
                     </div>
                 </section>
@@ -22713,7 +22710,7 @@ someMethod() {
                             защищенными и доступными в браузере.</p>
                         <p>Доступ к базе данных получается из Back-End приложения:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/BDconnection.png" alt="BDconnection">
+                            <img src="./assets/BDconnection.png" alt="BDconnection">
                         </div>
                     </div>
                 </section>
@@ -22727,7 +22724,7 @@ someMethod() {
                             пакетов(например axios).</p>
                         <p>Так же можно пользоваться async/await синтаксисом:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/fetchAsyncAwait.png" alt="fetchAsyncAwait">
+                            <img src="./assets/fetchAsyncAwait.png" alt="fetchAsyncAwait">
                         </div>
                     </div>
                 </section>
@@ -22744,7 +22741,7 @@ someMethod() {
                             получения запроса и после, и далее используются где-то в UI в качестве индикаторов
                             загрузки:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/fetchState.png" alt="fetchState">
+                            <img src="./assets/fetchState.png" alt="fetchState">
                         </div>
                     </div>
                 </section>
@@ -22761,7 +22758,7 @@ someMethod() {
                             будет обрабатываться в catch блоке, обновляя дополнительное состояние параметром
                             error.message:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reactTryCatch.png" alt="reactTryCatch">
+                            <img src="./assets/reactTryCatch.png" alt="reactTryCatch">
                         </div>
                     </div>
                 </section>
@@ -22782,7 +22779,7 @@ someMethod() {
                             происходило изменение этой функции при обновлении компонента, в deps же указывают внешние
                             зависимости в случае если таковые существуют.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/fetchUseEffectUseCallback.png" alt="fetchUseEffectUseCallback">
+                            <img src="./assets/fetchUseEffectUseCallback.png" alt="fetchUseEffectUseCallback">
                         </div>
                     </div>
                 </section>
@@ -22795,7 +22792,7 @@ someMethod() {
                             стандартный
                             синтаксис JavaScript:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reactPOSTfetch.png" alt="reactPOSTfetch">
+                            <img src="./assets/reactPOSTfetch.png" alt="reactPOSTfetch">
                         </div>
                     </div>
                 </section>
@@ -22813,7 +22810,7 @@ someMethod() {
                             использовать
                             это присваивая переменной при вызове кастомного хука:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/creationCustomHooks.png" alt="creationCustomHooks">
+                            <img src="./assets/creationCustomHooks.png" alt="creationCustomHooks">
                         </div>
                     </div>
                 </section>
@@ -22824,7 +22821,7 @@ someMethod() {
                     <div>
                         <p>Функции можно сделать конфигурируемыми при помощи передачи функциям параметров:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/customHooksParams.png" alt="customHooksParams">
+                            <img src="./assets/customHooksParams.png" alt="customHooksParams">
                         </div>
                     </div>
                 </section>
@@ -22875,7 +22872,7 @@ someMethod() {
                             отправки
                             формы.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/formUseRefState.png" alt="formUseRefState">
+                            <img src="./assets/formUseRefState.png" alt="formUseRefState">
                         </div>
                     </div>
                 </section>
@@ -22914,7 +22911,7 @@ someMethod() {
                             так же
                             требуются цепочки props</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reactAppState.png" alt="reactAppState">
+                            <img src="./assets/reactAppState.png" alt="reactAppState">
                         </div>
                         <p>Redux решает проблему длинных цепочек props(так же как и useContext)</p>
                     </div>
@@ -22972,7 +22969,7 @@ someMethod() {
                             и
                             далее хранилище уведомляет подписанные компоненты об изменении состояния.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reduxBasics.png" alt="reduxBasics">
+                            <img src="./assets/reduxBasics.png" alt="reduxBasics">
                         </div>
                     </div>
                 </section>
@@ -22992,7 +22989,7 @@ someMethod() {
                             функции
                             диспетчере</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reduxStoreCreation.png" alt="reduxStoreCreation">
+                            <img src="./assets/reduxStoreCreation.png" alt="reduxStoreCreation">
                         </div>
                     </div>
                 </section>
@@ -23008,7 +23005,7 @@ someMethod() {
                             "App"
                             компонент, так же в Provider в атрибуте "store" нужно указать созданное хранилище.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reduxStoreProviding.png" alt="reduxStoreProviding">
+                            <img src="./assets/reduxStoreProviding.png" alt="reduxStoreProviding">
                         </div>
                     </div>
                 </section>
@@ -23036,7 +23033,7 @@ const someComponent = () => {
 }
             </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/useSelector.png" alt="useSelector">
+                            <img src="./assets/useSelector.png" alt="useSelector">
                         </div>
                     </div>
                 </section>
@@ -23063,7 +23060,7 @@ someDispatchFunction({
 })
                         </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/useDispatch.png" alt="useDispatch">
+                            <img src="./assets/useDispatch.png" alt="useDispatch">
                         </div>
                     </div>
                 </section>
@@ -23116,7 +23113,7 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(mapStateToProps, mapDispatchToProps)(someClassComponent);
             </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/classBasedComponentWithRedux.png" alt="classBasedComponentWithRedux">
+                            <img src="./assets/classBasedComponentWithRedux.png" alt="classBasedComponentWithRedux">
                         </div>
                     </div>
                 </section>
@@ -23139,10 +23136,10 @@ export default connect(mapStateToProps, mapDispatchToProps)(someClassComponent);
                             дополнительное
                             состояние, к нему применяется тот же подход:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/workingWithSeveralStates.png" alt="workingWithSeveralStates">
+                            <img src="./assets/workingWithSeveralStates.png" alt="workingWithSeveralStates">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/changingAdditionalState.png" alt="changingAdditionalState">
+                            <img src="./assets/changingAdditionalState.png" alt="changingAdditionalState">
                         </div>
                     </div>
                 </section>
@@ -23158,7 +23155,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(someClassComponent);
                             старому
                             состоянию!</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reduxRules.png" alt="reduxRules">
+                            <img src="./assets/reduxRules.png" alt="reduxRules">
                         </div>
                     </div>
                 </section>
@@ -23213,26 +23210,26 @@ export default store;
 
                         <pre>dispatchFunction(someStateActions.someFunctionName(any))</pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/createSlice.png" alt="createSlice">
+                            <img src="./assets/createSlice.png" alt="createSlice">
                         </div>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/createdSliceReducerUsage.png" alt="createdSliceReducerUsage">
+                            <img src="./assets/createdSliceReducerUsage.png" alt="createdSliceReducerUsage">
                         </div>
                         <p>Пример использования нескольких слайсов:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/severalSlicesUsage1.png" alt="severalSlicesUsage1">
+                            <img src="./assets/severalSlicesUsage1.png" alt="severalSlicesUsage1">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/severalSlicesUsage2.png" alt="severalSlicesUsage2">
+                            <img src="./assets/severalSlicesUsage2.png" alt="severalSlicesUsage2">
                         </div>
                         <p>В случае если слайсов много, их можно вынести в отдельные файлы и импортировать в
                             хранилище:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dividinSlices.png" alt="dividinSlices">
+                            <img src="./assets/dividinSlices.png" alt="dividinSlices">
                         </div>
                         <div class="smallScreenContainer">
-                            <img src="./images/optimisedStore.png" alt="optimisedStore">
+                            <img src="./assets/optimisedStore.png" alt="optimisedStore">
                         </div>
                     </div>
                 </section>
@@ -23244,7 +23241,7 @@ export default store;
                         <p><strong>Reducers должны быть чистыми синхронными функциями без побочных эффектов!!!</strong>
                         </p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reduxUseEffect.png" alt="reduxUseEffect">
+                            <img src="./assets/reduxUseEffect.png" alt="reduxUseEffect">
                         </div>
                     </div>
                 </section>
@@ -23255,7 +23252,7 @@ export default store;
                     <div>
                         <p>Существует два варианта взаимодействия frontEnd и backEnd:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/frontendvsBackend.png" alt="frontendvsBackend">
+                            <img src="./assets/frontendvsBackend.png" alt="frontendvsBackend">
                         </div>
                     </div>
                 </section>
@@ -23266,7 +23263,7 @@ export default store;
                     <div>
                         <p>Размещение логики приложения зависит от следующих факторов:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/logicPlace.png" alt="logicPlace">
+                            <img src="./assets/logicPlace.png" alt="logicPlace">
                         </div>
                     </div>
                 </section>
@@ -23283,7 +23280,7 @@ export default store;
                             используют PUT метод:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/fetchInRedux.png" alt="fetchInRedux">
+                            <img src="./assets/fetchInRedux.png" alt="fetchInRedux">
                         </div>
                         <p>Так же возможно использование action creator thunk. Thunk - это функция откладывающая action.
                             Action
@@ -23301,15 +23298,15 @@ export default store;
                             конструкцию вызывают в useEffect при помощи useDispatch:</p>
                         <p>Пример отправки данных на сервер:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/actionCreatorSlice.png" alt="actionCreatorSlice">
+                            <img src="./assets/actionCreatorSlice.png" alt="actionCreatorSlice">
                         </div>
                         <p>Пример запроса данных с сервера:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/reduxGetFetch.png" alt="reduxGetFetch">
+                            <img src="./assets/reduxGetFetch.png" alt="reduxGetFetch">
                         </div>
                         <p>Вызов функций с помощью useEffect:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/useEffectInRedux.png" alt="useEffectInRedux">
+                            <img src="./assets/useEffectInRedux.png" alt="useEffectInRedux">
                         </div>
                     </div>
                 </section>
@@ -23323,7 +23320,7 @@ export default store;
                             его
                             синтаксис выглядит следующим образом:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/createAsyncThunk.png" alt="createAsyncThunk">
+                            <img src="./assets/createAsyncThunk.png" alt="createAsyncThunk">
                         </div>
                         <p>С помощью createAsyncThunk (перед createSlice) мы конфигурируем запрос на сервер, далее в
                             слайсе
@@ -23337,7 +23334,7 @@ export default store;
                             данных
                             и вывод сообщения об ошибке соответственно:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/extraReducer.png" alt="extraReducer">
+                            <img src="./assets/extraReducer.png" alt="extraReducer">
                         </div>
                         <p>В первом аргументе (типе) "typePrefix" мы указываем имя слайса, и через слеш наше
                             название-индикатор
@@ -23398,7 +23395,7 @@ export default store;
 
                         <p>Пример конфигурации параметров запроса при помощи getState:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/getState.png" alt="getState">
+                            <img src="./assets/getState.png" alt="getState">
                         </div>
                     </div>
                 </section>
@@ -23429,7 +23426,7 @@ export default store;
                             клиента, таким образом происходит получение другого контента без загрузки нового HTML
                             файла</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/basicsReactRouter.png" alt="basicsReactRouter">
+                            <img src="./assets/basicsReactRouter.png" alt="basicsReactRouter">
                         </div>
                         <p>Подробную информацию можно найти на <a href="https://reactrouter.com/en/main"
                                                                   target="_blank">официальном
@@ -23444,7 +23441,7 @@ export default store;
 
                     <div>
                         <div class="smallScreenContainer">
-                            <img src="./images/urlIno.png" alt="urlIno">
+                            <img src="./assets/urlIno.png" alt="urlIno">
                         </div>
                         <p>В случае если в троке запросов несколько параметров, они разделяются знаком амперсанда
                             (&).</p>
@@ -23531,7 +23528,7 @@ import {BrowserRouter} from "react-router-dom";
 root.render(&lt;BrowserRouter&gt;&lt;App/&gt;&lt;/BrowserRouter&gt;);
             </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/reactRouterBasics.png" alt="reactRouterBasics">
+                            <img src="./assets/reactRouterBasics.png" alt="reactRouterBasics">
                         </div>
                     </div>
                 </section>
@@ -23552,7 +23549,7 @@ import {Link} from "react-router-dom";
 &lt;Link to="/linkToSomeComponent1(2)"&gt;someComponent1(2)&lt;/Link&gt;
                         </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/linkInRouterApp.png" alt="linkInRouterApp">
+                            <img src="./assets/linkInRouterApp.png" alt="linkInRouterApp">
                         </div>
                     </div>
                 </section>
@@ -23573,7 +23570,7 @@ import {NavLink} from "react-router-dom";
 &lt;NavLink activeClassName={styles.active} to="/linkToSomeComponent1(2)"&gt;someComponent1(2)&lt;/NavLink&gt;
             </pre>
                         <div class="smallScreenContainer">
-                            <img src="./images/navLinkInReactRouterApp.png" alt="navLinkInReactRouterApp">
+                            <img src="./assets/navLinkInReactRouterApp.png" alt="navLinkInReactRouterApp">
                         </div>
                     </div>
                 </section>
@@ -23585,7 +23582,7 @@ import {NavLink} from "react-router-dom";
                         <p>В случае, если требуется отобразить страницу динамически, в конце ссылки props path добавляют
                             дополнительную часть "/:anyURL", где "anyURL" является обрабатываемым параметром:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dynamicRouter.png" style="max-width: 500px" alt="dynamicRouter">
+                            <img src="./assets/dynamicRouter.png" style="max-width: 500px" alt="dynamicRouter">
                         </div>
                         <p>Для того чтобы извлечь динамические параметры из "anyURL", в требуемый файл нужно
                             импортировать
@@ -23619,7 +23616,7 @@ const params = useParams();
                             будет отражен первый компонент в списке и для того, чтобы исключить такое поведение в Route
                             используют props "exact", либо перемещают Route с более коротким url ниже по списку:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/switchComponentReactRouter.png" style="max-width: 500px"
+                            <img src="./assets/switchComponentReactRouter.png" style="max-width: 500px"
                                  alt="switchComponentReactRouter">
                         </div>
                     </div>
@@ -23637,7 +23634,7 @@ const params = useParams();
                             фичи
                             требуется соблюдать соответсвие начальных частей ссылок:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/inneredRouters.png" style="max-width: 500px" alt="inneredRouters">
+                            <img src="./assets/inneredRouters.png" style="max-width: 500px" alt="inneredRouters">
                         </div>
                         <p>В случае если с доменного имени без дополнительных эндпоинтов требуется перенаправлять
                             пользователя на какой-то компонент(стартовую страницу например), можно импортировать
@@ -23646,7 +23643,7 @@ const params = useParams();
                             компонент
                             Redirect оборачивается Route с props "path='/'" и props exact:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/redirectReactRouter.png" style="max-width: 500px"
+                            <img src="./assets/redirectReactRouter.png" style="max-width: 500px"
                                  alt="redirectReactRouter">
                         </div>
                         <p>В случае если требуется обработать невалидный ввод url после доменного имени, например
@@ -23703,7 +23700,7 @@ history.replace('/someLink');
             </pre>
                         <p>Для работы с параметрами запроса используют хук useLocation:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/useLocation.png" alt="useLocation">
+                            <img src="./assets/useLocation.png" alt="useLocation">
                         </div>
                         <p>Для гибкого кода маршрутизации используют хук useRouteMatch. Переменной присваивают вызов
                             хука
@@ -23714,7 +23711,7 @@ history.replace('/someLink');
                             использовать данную переменную, но уже с ".url". Данный способ позволяет настроить путь
                             динамически.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/useRouteMatch.png" alt="useRouteMatch">
+                            <img src="./assets/useRouteMatch.png" alt="useRouteMatch">
                         </div>
                     </div>
                 </section>
@@ -26106,14 +26103,14 @@ proms.then(val => console.log(val.toUpperCase()));
                 <div>
                     <p>Inheritance:</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/inheritanceInTS.png" alt="inheritanceInTS">
+                        <img src="./assets/inheritanceInTS.png" alt="inheritanceInTS">
                     </div>
                     <p>Inheritance - характеризуется при помощи отношения "это" между двумя классами. Т.е. класс
                         MatchReader
                         это CsvFileReader.</p>
                     <p>Composition:</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/compositionInTS.png" alt="compositionInTS">
+                        <img src="./assets/compositionInTS.png" alt="compositionInTS">
                     </div>
                     <p>Composition - характеризуется при помощи отношения "имеет" между двумя классами. Т.е. класс
                         MatchReader имеет ссылку на объект класса CsvFileReader/ApiReader</p>
@@ -27069,7 +27066,7 @@ newCar.startTravel(5); // error
                     <p>В случае если какой либо аргумент будет принимать различные объекты с различными
                         типами/интерфейсами - используют объединение типов:</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/typeUnion.png" alt="typeUnion">
+                        <img src="./assets/typeUnion.png" alt="typeUnion">
                     </div>
                     <p>Где Action это тип в который мы поместили все возможные типы action применяемые в редьюсере.</p>
                 </div>
@@ -27724,7 +27721,7 @@ crypto.pbkdf2('123ttt', '5', 1000000, 64, 'sha512', () => {
                         </ol>
                         <p>Визуальная схема работы цикла событий в nodeJS:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/nodeJSEventLoop.png" alt="nodeJSEventLoop">
+                            <img src="./assets/nodeJSEventLoop.png" alt="nodeJSEventLoop">
                         </div>
                         <p>Т.е. пока node JS крутит этот цикл, он после каждого шага проверяет на наличие новых
                             process.nextTick,
@@ -28665,7 +28662,7 @@ app.use(cors()); // обязательно с вызовом cors
                         предполагаемый
                         худший результат).</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/AlgorithmsDifficulties.png" alt="AlgorithmsDifficulties">
+                        <img src="./assets/AlgorithmsDifficulties.png" alt="AlgorithmsDifficulties">
                     </div>
                     <p><strong>Алгоритм линейного поиска</strong> в массиве начинается с первого элемента, и
                         последовательно
@@ -28747,7 +28744,7 @@ app.use(cors()); // обязательно с вызовом cors
                         которой - добавление элемента происходит в конец, а извлечение с начала
                         FIFO - first in first out(первый вошел первый вышел)</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/queue.jpeg" alt="queue">
+                        <img src="./assets/queue.jpeg" alt="queue">
                     </div>
 
                     <p>Реализация очереди в JS на <a
@@ -28758,14 +28755,14 @@ app.use(cors()); // обязательно с вызовом cors
                         данного дерева каждый узел является поддеревом</p>
 
                     <div class="smallScreenContainer">
-                        <img src="./images/tree.png" alt="tree">
+                        <img src="./assets/tree.png" alt="tree">
                     </div>
 
                     <p>Стек(Stack) - это структура данных, основной принцип построения которой - добавление элемента
                         происходит в конец и извлечение тоже с конца. LIFO - Last in First out(и кладем и берем сверху,
                         основные использующиеся методы push и pop)</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/stack.png" alt="stack">
+                        <img src="./assets/stack.png" alt="stack">
                     </div>
 
                     <p>Реализация стэка JS на <a
@@ -28780,7 +28777,7 @@ app.use(cors()); // обязательно с вызовом cors
                         массив,
                         скопировать в него значения из старого и добавить новый элемент</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/arrays.jpeg" alt="arrays">
+                        <img src="./assets/arrays.jpeg" alt="arrays">
                     </div>
 
                     <p>Граф(Graph) - также известный как сеть (Network), представляет собой коллекцию связанных между
@@ -28790,7 +28787,7 @@ app.use(cors()); // обязательно с вызовом cors
                         имеют ли ссылки направление. Графы могут быть представлены в виде списка или матрицы.</p>
 
                     <div class="smallScreenContainer">
-                        <img src="./images/graph.jpeg" alt="graph">
+                        <img src="./assets/graph.jpeg" alt="graph">
                     </div>
 
                     <p>Поиск по графу осуществляется двумя методами — <a
@@ -28809,7 +28806,7 @@ app.use(cors()); // обязательно с вызовом cors
                         и сравнивать с самого начала списка</p>
 
                     <div class="smallScreenContainer">
-                        <img src="./images/linkedList.jpeg" alt="Linked list">
+                        <img src="./assets/linkedList.jpeg" alt="Linked list">
                     </div>
 
                     <p>Реализация Linked List в JS(typeScript) на <a
@@ -28823,7 +28820,7 @@ app.use(cors()); // обязательно с вызовом cors
                         левое
                         поддерево, если больше - то в правое, сравнение происходит с каждым узлом</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/binarySearchTree.png" alt="BST">
+                        <img src="./assets/binarySearchTree.png" alt="BST">
                     </div>
 
                     <p>Реализация деревьев в JS(Binary Search Tree) на <a
@@ -28842,7 +28839,7 @@ app.use(cors()); // обязательно с вызовом cors
                     </ul>
                     <p>Пример классической двоичной кучи:</p>
                     <div class="smallScreenContainer">
-                        <img src="./images/maxHeap.png" style="max-width: 400px" alt="maxHeap">
+                        <img src="./assets/maxHeap.png" style="max-width: 400px" alt="maxHeap">
                     </div>
 
                     <p>Как видно по структуре сортировка ответвлений не обязательна.</p>
@@ -28988,7 +28985,7 @@ module.exports = (env) => {
                     <h4 id="tsWebpackConfig">Webpack конфиг на TypeScript</h4>
 
                     <div>
-                        <p>Документация для <a href="https://webpack.js.org/configuration/configuration-languages/">webpack.config.ts</a></p>
+                        <p>Документация для <a href="https://webpack.js.org/configuration/configuration-languages/">webpack.config.js</a></p>
                         <p>Пример:</p>
                         <pre>
 import path from "path";
@@ -29045,7 +29042,7 @@ export default (env: IEncVariables) => {
                     <div>
                         <p><a href="https://webpack.js.org/guides/development/" target="_blank">Документация</a> для поднятия DevServer, watch режима и webpack-dev-middleware.</p>
                         <p>DevServer удобно использовать на стадии разработки, позволяет поднимать на локалке сервер с hot reaload.</p>
-                        <p>Итоговый webpack.config.ts:</p>
+                        <p>Итоговый webpack.config.js:</p>
                         <pre>
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -29088,7 +29085,7 @@ export default (env: IEncVariables) => {
                     <h4 id="react_JSX">React. JSX. Стили. CSS + препроцессоры (SCSS)</h4>
 
                     <div>
-                        <p>При работе с react принципиальных различий нет. Преднастроенного выше пресета webpack.config.ts хватит,
+                        <p>При работе с react принципиальных различий нет. Преднастроенного выше пресета webpack.config.js хватит,
                             чтобы установить react/react-dom и работать.</p>
                         <p>Для того чтобы работать с CSS требуется добавить css-loader и style-loader:</p>
                         <pre>
@@ -29210,7 +29207,7 @@ export default (env: IEncVariables) => {
                     <div>
                         <p>Под декомпозицией подразумевается инкапсуляция параметров возвращаемой в webpack.config.js/ts конфигурации при помощи функций в отдельных файлах:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/webpackConfigDecomposition.png" style="max-width: 400px" alt="webpackConfigDecomposition">
+                            <img src="./assets/webpackConfigDecomposition.png" style="max-width: 400px" alt="webpackConfigDecomposition">
                         </div>
                         <p>Config возвращаемый в webpack.config.js/ts вызывает билдер функцию buildWebpack, которая содержит в себе конфигурационный скелет:</p>
                         <pre>
@@ -30007,15 +30004,15 @@ export function buildBabelLoader({mode}: IBuildOptions) {
                             который компилируется в JavaScript (например, TypeScript, CoffeeScript или ES6+).</p>
                         <p>Допустим у нас есть код, который выдает по тем или иным причинам ошибку:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/webpackSourceMaps.png" alt="webpackSourceMaps">
+                            <img src="./assets/webpackSourceMaps.png" alt="webpackSourceMaps">
                         </div>
                         <p>В случае если source maps отключены devTools в Source вкладке покажет нечитаемый скомпилированный код:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/webpackTurnedOffSourceMaps.png" alt="webpackTurnedOffSourceMaps">
+                            <img src="./assets/webpackTurnedOffSourceMaps.png" alt="webpackTurnedOffSourceMaps">
                         </div>
                         <p>В случае же если source maps включены, код будет точно такой же как в компоненте:
                         <div class="smallScreenContainer">
-                            <img src="./images/webpackTurnedOnSourceMaps.png" alt="webpackTurnedOnSourceMaps">
+                            <img src="./assets/webpackTurnedOnSourceMaps.png" alt="webpackTurnedOnSourceMaps">
                         </div>
                         <p>Настройка включающая source maps - devtool:</p>
                         <pre>
@@ -30082,12 +30079,12 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
                             <li>Риск ошибок: Неправильные изменения могут повлиять сразу на множество проектов.</li>
                         </ul>
                         <div class="smallScreenContainer">
-                            <img src="./images/monorepo.png" alt="monorepo">
+                            <img src="./assets/monorepo.png" alt="monorepo">
                         </div>
 
                         <p>Общая структура монорепозитория выглядит следующим образом:</p>
                         <div class="smallScreenContainer" style="max-width: 400px">
-                            <img src="./images/monorepoStructure.png" alt="monorepoStructure">
+                            <img src="./assets/monorepoStructure.png" alt="monorepoStructure">
                         </div>
 
                         <p>Корневой package.json имеет отличную от обычного package настройку, вместо dependencies в нем настраивается массив workspaces:</p>
@@ -30104,7 +30101,7 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
                         </pre>
                         <p>Папка services содержит микрофронтенды(отдельные фронтенд приложения):</p>
                         <div class="smallScreenContainer" style="max-width: 400px">
-                            <img src="./images/monorepoServicesStructure.png" alt="monorepoServicesStructure">
+                            <img src="./assets/monorepoServicesStructure.png" alt="monorepoServicesStructure">
                         </div>
                         <p>В корне services можно сделать tsconfig.base.json, который будет содержать общую для всех микрофронтендов конфигурацию:</p>
                         <pre>
@@ -30145,7 +30142,7 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
 
                         <p>Папка packages содержит переиспользуемый код и общая конфигурация:</p>
                         <div class="smallScreenContainer" style="max-width: 400px">
-                            <img src="./images/monorepoPackagesStructure.png" alt="monorepoPackagesStructure">
+                            <img src="./assets/monorepoPackagesStructure.png" alt="monorepoPackagesStructure">
                         </div>
                         <p>В директории "shared" переиспользуемый общий код(компоненты, функции и тд),
                             а в "build-config" общие для всех микрофронтендов настройки webpack, babel и тд</p>
@@ -30218,7 +30215,7 @@ export type {TBuildMode, IBuildPaths, IBuildOptions, TBuildPlatform} from './typ
   }
 }
                         </pre>
-                        <p>А каждый webpack.config.ts/js иметь дополнительный плагин <a href="https://webpack.js.org/plugins/module-federation-plugin/" target="_blank">ModuleFederationPlugin</a>:</p>
+                        <p>А каждый webpack.config.js/js иметь дополнительный плагин <a href="https://webpack.js.org/plugins/module-federation-plugin/" target="_blank">ModuleFederationPlugin</a>:</p>
                         <pre>
 import path from "path";
 import webpack from 'webpack';
@@ -30580,7 +30577,7 @@ git add .
                     <div>
                         <p>Коммит - это указатель на дерево.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/commitInfo.png" alt="commitInfo">
+                            <img src="./assets/commitInfo.png" alt="commitInfo">
                         </div>
                         <p>Как у любого объекта Git у коммита есть свой:</p>
                         <ul>
@@ -30703,7 +30700,7 @@ rootCommit(1) &lt;- commit2 &lt;- commit3 &lt;- commit4
                             В таком случае создается коммит со слиянием, и этот коммит будет иметь двух предков, предыдущий и конечный коммит ветки слияния.
                             Такой коммит называется merge(объединяющий) коммит</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/mergeCommit.png" alt="mergeCommit">
+                            <img src="./assets/mergeCommit.png" alt="mergeCommit">
                         </div>
                         <p>Команда слияния веток:</p>
                         <pre>git merge &lt;feature branch name&gt;</pre>
@@ -30911,7 +30908,7 @@ git push -u origin main
                         <pre>docker run <code>-p 8080:80</code> nginx</pre>
                         <p>Где 8080 это внешний порт, а 80 - порт контейнера.</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dockerOpenPort.png" alt="dockerOpenPort">
+                            <img src="./assets/dockerOpenPort.png" alt="dockerOpenPort">
                         </div>
                     </div>
                 </section>
@@ -30937,26 +30934,26 @@ git push -u origin main
                             Такие данные называются сохраняющимися данными (<code>Persisting data</code>)</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/persistingData.png" alt="persistingData">
+                            <img src="./assets/persistingData.png" alt="persistingData">
                         </div>
 
                         <p>Существует три способа монтировки данных на физический сервер:</p>
                         <p><code>Host Volumes:</code></p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/hostVolumes.png" alt="hostVolumes">
+                            <img src="./assets/hostVolumes.png" alt="hostVolumes">
                         </div>
 
                         <p><code>Anonymous Volumes:</code></p>
                         
                         <div class="smallScreenContainer">
-                            <img src="./images/anonymousVolumes.png" alt="anonymousVolumes">
+                            <img src="./assets/anonymousVolumes.png" alt="anonymousVolumes">
                         </div>
 
                         <p><code>Named Volumes:</code></p>
                         
                         <div class="smallScreenContainer">
-                            <img src="./images/namedVolumes.png" alt="">
+                            <img src="./assets/namedVolumes.png" alt="">
                         </div>
 
                         <p>Действия с volume:</p>
@@ -31011,13 +31008,13 @@ docker run --net myNAME nginx
                         <p>И Host и None могут быть созданы только один раз.</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/networkSettings.png" alt="networkSettings">
+                            <img src="./assets/networkSettings.png" alt="networkSettings">
                         </div>
                         
                         <p>Устройство macvlan | ipvlan</p>
                         
                         <div class="smallScreenContainer">
-                            <img src="./images/lanNetworkSettings.png" alt="lanNetworkSettings">
+                            <img src="./assets/lanNetworkSettings.png" alt="lanNetworkSettings">
                         </div>
 
                         <p>network команды:</p>
@@ -31075,13 +31072,13 @@ docker run --net myNAME nginx
 
                         <p>Пример формирования docker-compose.yml:</p>
                         <div class="smallScreenContainer">
-                            <img src="./images/dockerCompose.png" alt="dockerCompose">
+                            <img src="./assets/dockerCompose.png" alt="dockerCompose">
                         </div>
 
                         <p>Пример docker-compose.yml для фулстэк приложения:</p>
 
                         <div class="smallScreenContainer">
-                            <img src="./images/dockerComposeMultiservices.png" alt="dockerComposeMultiservices">
+                            <img src="./assets/dockerComposeMultiservices.png" alt="dockerComposeMultiservices">
                         </div>
                         <p>Запуск docker compose(текущая директория): <code>docker compose up -d</code></p>
                         <p>остановка docker compose: <code>docker compose down/stop</code></p>
@@ -31136,8 +31133,7 @@ services:
 </aside>
 
 <footer>
-    <p>Учебное пособие <a href="https://github.com/Slipbang" style="background-color: transparent" target="_blank">Slipbang</a>
-    </p>
+    <p>Учебное пособие <a href="https://github.com/Slipbang" style="background-color: transparent" target="_blank">Slipbang</a></p>
 </footer>
 </body>
 </html>

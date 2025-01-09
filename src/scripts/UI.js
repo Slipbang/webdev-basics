@@ -1,4 +1,6 @@
 'use strict';
+import '../styles/styles.css';
+
 
 function detectMobile() {
     const userAgent = navigator.userAgent;
@@ -12,9 +14,9 @@ function detectMobile() {
         userAgent.match(/Windows Phone/i)) && window.screen.width < 975;
 }
 
-let modalWin = document.createElement('div');
+const modalWin = document.createElement('div');
 modalWin.classList.add('imgModalWin');
-let container = document.createElement('div');
+const container = document.createElement('div');
 container.classList.add('modalDiv')
 modalWin.appendChild(container);
 const closeButton = document.createElement('button');

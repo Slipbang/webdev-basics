@@ -368,7 +368,6 @@ class LinkedList {
             node = node.next;
         }
         console.log(result);
-        ;
     }
 }
 
@@ -747,23 +746,25 @@ let rangeinputx = document.querySelector('#rangeinputx');
 function fun1() {
     let rangeinput1 = +rangeinputx.value + 'px';
     document.querySelector('.flexcontainerexample10').style.width = rangeinput1;
-};let rangeinputy = document.querySelector('#rangeinputy');
+}
+let rangeinputy = document.querySelector('#rangeinputy');
 
 function fun2() {
     let rangeinput2 = +rangeinputy.value + 'px';
     document.querySelector('.flexcontainerexample10').style.height = rangeinput2;
-};document.querySelector('#cont10row').onclick = function () {
+}
+document.querySelector('#cont10row').onclick = function () {
     document.querySelector('.flexcontainerexample10').style.flexDirection = 'row';
-};
+}
 document.querySelector('#cont10col').onclick = function () {
     document.querySelector('.flexcontainerexample10').style.flexDirection = 'column';
-};
+}
 document.querySelector('#modalwindow').onclick = function () {
     document.querySelector('.flexcontainerexample13').style.visibility = 'visible';
-};
+}
 document.querySelector('#closemw').onclick = function () {
     document.querySelector('.flexcontainerexample13').style.visibility = 'hidden';
-};
+}
 
 //уроки Javascript
 
@@ -776,7 +777,7 @@ document.querySelector('#queryselector2').innerHTML = "<data>28.11.1993</data>";
 document.querySelector('.tree').innerHTML = '<h3>произвольный текст</h3>';
 document.querySelector('.fraktion').innerHTML = 3.14;
 let jslink = document.querySelector('.jslink');
-jslink.innerHTML = '<img src="./images/imageExample.png" alt="imageExample">';
+jslink.innerHTML = '<img src="../src/assets/imageExample.png" alt="imageExample">';
 
 let z1 = 6;
 let z2 = 3;
@@ -795,7 +796,6 @@ console.log(d2);
 let divS3 = document.querySelector('div.s4');
 console.log(divS3);
 //document.querySelector('body').innerHTML = '';
-
 
 // UNIT 2. ОСНОВЫ ВВОДА ДАННЫХ
 let inputIn = document.querySelector('#input-in');
@@ -834,14 +834,14 @@ let secondname1 = document.querySelector('#secondname1');
 let summbut = document.querySelector('#summbut');
 summbut.onclick = function () {
     console.log('hallo' + ' ' + name1.value + ' ' + secondname1.value);
-};
+}
 let name2 = document.querySelector('#name2');
 let secondname2 = document.querySelector('#secondname2');
 let summbut1 = document.querySelector('#summbut1');
 let outpu11 = document.querySelector('.output1');
 summbut1.onclick = function () {
     outpu11.innerHTML = +name2.value + +secondname2.value
-};
+}
 
 document.querySelector('#seven').value = 'hello';
 let y111 = document.querySelector('#borderinput');
@@ -853,14 +853,14 @@ let outpu12 = document.querySelector('.output2');
 let summbut2 = document.querySelector('#summbut2');
 summbut2.onclick = function () {
     outpu12.innerHTML = +name3.value + +secondname3.value
-};
+}
 
 let t = document.querySelector('#textinput');
 let parsbutt = document.querySelector('#parsebutt');
 parsbutt.onclick = function () {
     let tt = t.value
     console.log(parseFloat(tt))
-};
+}
 
 let name4 = document.querySelector('#name4');
 let secondname4 = document.querySelector('#secondname4');
@@ -870,8 +870,7 @@ let submitbut = document.querySelector('#submitbut');
 let output2 = document.querySelector('.output3');
 submitbut.onclick = function () {
     output2.innerHTML = 'Уважаемый ' + name4.value + ' ' + secondname4.value + ', Ваш возраст ' + userage.value + ' года, по профессии Вы ' + userjob.value
-};
-
+}
 
 //UNIT 3. ОПЕРАТОР IF, ELSE, SWITCH CASE - ВЫБОР В JAVASCRIPT
 
@@ -881,7 +880,7 @@ if (a2 >= 9) {
 } else {
     console.log('else')
 }
-;const age1butt = document.querySelector('#age1butt');
+const age1butt = document.querySelector('#age1butt');
 const age1 = document.querySelector('.age1');
 
 age1butt.onclick = () => {
@@ -914,7 +913,7 @@ b1.onclick = () => {
     } else {
         out1.innerHTML = 'false';
     }
-};
+}
 const b2 = document.querySelector('#b-2');
 const a21 = document.querySelector('#a-21');
 const a22 = document.querySelector('#a-22');
@@ -929,7 +928,7 @@ b2.onclick = () => {
     } else {
         out2.textContent = A22;
     }
-};
+}
 
 let i31 = document.querySelector('#i-31');
 let i32 = document.querySelector('#i-32');
@@ -955,7 +954,8 @@ b4.onclick = () => {
     } else {
         out4.textContent = '0';
     }
-};
+}
+
 const b5 = document.querySelector('#b-5');
 const i5 = document.querySelector('#i-5');
 const out5 = document.querySelector('.out-5');
@@ -968,7 +968,8 @@ b5.onclick = () => {
     } else {
         out5.textContent = '1';
     }
-};
+}
+
 const b6 = document.querySelector('#b-6');
 const i6 = document.querySelector('#i-6');
 const out6 = document.querySelector('.out-6');
@@ -980,7 +981,8 @@ b6.onclick = () => {
     } else {
         out6.textContent = 'odd';
     }
-};
+}
+
 const b7 = document.querySelector('#b-7');
 const i7 = document.querySelector('#i-7');
 const o7 = document.querySelector('#o-7');
@@ -989,7 +991,8 @@ b7.onclick = function () {
     let I7 = +i7.value;
     let O7 = +o7.value;
     out7.textContent = Math.pow(I7, O7);
-};
+}
+
 const s8 = document.querySelector('#s-8');
 const b8 = document.querySelector('#b-8');
 const out8 = document.querySelector('.out-8');
@@ -1006,7 +1009,8 @@ b8.onclick = function () {
             out8.innerHTML = 'three';
             break;
     }
-};
+}
+
 const b9 = document.querySelector('#b-9');
 const i9 = document.querySelector('#i-9');
 const out9 = document.querySelector('.out-9');
@@ -1021,36 +1025,42 @@ b9.onclick = function () {
     } else {
         out9.innerHTML = '0';
     }
-};
-1
+}
+
 const s10 = document.querySelector('#s-10');
 const b10 = document.querySelector('#b-10');
 const out10 = document.querySelector('.out-10');
 b10.onclick = function () {
     let S10 = +s10.value;
     out10.innerHTML = S10;
-};
+}
+
 const s11 = document.querySelector('#s-11');
 const out11 = document.querySelector('.out-11');
 s11.onchange = function () {
     let S11 = +s11.value;
     out11.innerHTML = S11;
-};
+}
+
 const i12 = document.querySelector('#i-12');
 const b12 = document.querySelector('#b-12');
 const out12 = document.querySelector('.out-12');
 b12.onclick = function () {
     let I12 = i12.value;
-    out12.innerHTML = typeof (I12);
-};
+    if(isNaN(+I12)) {
+        out12.innerHTML = typeof (I12);
+    } else {
+        out12.innerHTML = typeof (+I12);
+    }
+}
+
 const i13 = document.querySelector('#i-13');
 const b13 = document.querySelector('#b-13');
 const out13 = document.querySelector('.out-13');
 b13.onclick = function () {
     let I13 = i13.value;
     out13.innerHTML = typeof (I13);
-};
-
+}
 
 // let i14 = document.querySelector('#i-14');
 // let o14 = document.querySelector('#o-14');
@@ -1092,8 +1102,7 @@ b14.onclick = function () {
     } else if (S14 === '*') {
         out14.innerHTML = I14 * O14;
     }
-};
-
+}
 
 // let s15 = document.querySelector('#s-15');
 // let o15 = document.querySelector('#o-15');
@@ -1113,7 +1122,6 @@ b14.onclick = function () {
 //     }
 // }
 
-
 const i15 = document.querySelector('#s-15');
 const o15 = document.querySelector('#o-15');
 const z15 = document.querySelector('#z-15');
@@ -1128,24 +1136,25 @@ b15.onclick = function () {
     } else if (Z15 === '||') {
         out15.innerHTML = I15 || O15;
     }
-};
+}
 
 //UNIT 4. РАБОТАЕМ С ФОРМАМИ: INPUT, RANGE, TEXTAREA, CHECKBOX...
 
 document.querySelector('#butinpas').onclick = () => {
     document.querySelector('.showinpas').innerHTML = document.querySelector('#inpas').value;
-};
+}
+
 document.querySelector('#butincol').onclick = () => {
     document.querySelector('#butincol').style.backgroundColor = document.querySelector('#incol').value;
     document.querySelector('.showincol').innerHTML = document.querySelector('#incol').value;
-};
+}
 document.querySelector('#butindate').onclick = () => {
     document.querySelector('.showindate').innerHTML = document.querySelector('#indate').value;
-};
+}
 
 document.querySelector('#inrange').oninput = () => {
     document.querySelector('.showinrange').innerHTML = document.querySelector('#inrange').value;
-};
+}
 document.querySelector('#butcheckbox').onclick = () => {
     let myCheckbox = document.querySelector('#incheckbox');
     let showcheckbox = document.querySelector('.showcheckbox')
@@ -1154,12 +1163,12 @@ document.querySelector('#butcheckbox').onclick = () => {
     } else {
         showcheckbox.innerHTML = myCheckbox.checked;
     }
-};
+}
 document.querySelector('#butform').onclick = (event) => {
     event.preventDefault();
     let form = document.querySelector('#formexamp');
     document.querySelector('.showform').innerHTML = form.elements.textarea.value + '  ' + form.elements.inptextform.value;
-};
+}
 
 //tasks
 
@@ -1167,7 +1176,7 @@ document.querySelector('#butform').onclick = (event) => {
 //Создайте button - при нажатии на него выводите alert с номером задачи.
 document.querySelector('#buttinp1').onclick = () => {
     alert('Задача №1');
-};
+}
 
 //T2
 //Создайте input type=button - при нажатии на него выводите alert с номером задачи. Номер задачи просто пропишите вручную.
@@ -1179,7 +1188,7 @@ document.querySelector('#buttinp2').onclick = () => {
 //Создайте p - при нажатии на него выводите alert с номером задачи.
 document.querySelector('.pinp3').onclick = () => {
     alert('Задача №3');
-};
+}
 
 //T4
 //Создайте input(checkbox) и button - при нажатии на кнопку выводите true если checkbox выбран и false если не выбран.
@@ -1190,7 +1199,7 @@ document.querySelector('#buttinp4').onclick = () => {
     } else {
         document.querySelector('.outinp4').innerHTML = false;
     }
-};
+}
 
 //T5
 //Создайте input(checkbox).i-5 и button.b-5. Для checkbox добавьте value="task-5" - при нажатии на кнопку b-5 выводите value checkbox если checkbox выбран и false если не выбран.
@@ -1203,14 +1212,14 @@ document.querySelector('#buttinp5').onclick = () => {
     } else {
         outinp5.innerHTML = false;
     }
-};
+}
 
 //T6
 //Создайте input(hidden) и button - при нажатии на кнопку выводите value из input в div
 
 document.querySelector('#buttinp6').onclick = () => {
     document.querySelector('.outinp6').innerHTML = document.querySelector('#checkinp6').value;
-};
+}
 
 //T7
 //Создайте input(password) и button - при нажатии на кнопку выводите в div.outinp71 value прописанное в input.
@@ -1246,7 +1255,7 @@ document.querySelector('#buttinp81').onclick = () => {
     document.querySelector('#buttinp82').onclick = () => {
         document.querySelector('.outinp82').innerHTML = document.querySelector('#checkinp82').value;
     }
-};
+}
 
 //T9
 //Создайте один input(radio) и button - при нажатии на button если radio выбран (активен, checked) выводите в div - value прописанное в input, либо 0 если не активен.
@@ -1258,42 +1267,42 @@ document.querySelector('#buttinp9').onclick = () => {
     } else {
         document.querySelector('.outinp9').innerHTML = 0;
     }
-};
+}
 
 //T10
 //Создайте input(color) и button - при нажатии на кнопку окрашивайте div выбранным цветом (имеется ввиду .style.background).
 
 document.querySelector('#buttinp10').onclick = () => {
     document.querySelector('.outinp10').style.background = document.querySelector('#colorinp10').value;
-};
+}
 
 //T11
 //Создайте input(color).colorinp111 и input(color).colorinp112- два элемента и button - при нажатии на кнопку присвойте цвет из первого input в value второго.
 
 document.querySelector('#buttinp11').onclick = () => {
     document.querySelector('#colorinp112').value = document.querySelector('#colorinp111').value;
-};
+}
 
 //T12
 //Создайте input(date) и button - при нажатии на кнопку выводите в div выбранную в input дату.
 
 document.querySelector('#buttinp12').onclick = () => {
     document.querySelector('.outinp12').innerHTML = document.querySelector('#dateinp12').value;
-};
+}
 
 //T13
 //Создайте input(range). При изменении положения ползунка input выводите значение в out. Для события используйте oninput.
 
 document.querySelector('#rangeinp13').oninput = () => {
     document.querySelector('.outinp13').innerHTML = document.querySelector('#rangeinp13').value;
-};
+}
 
 //T14
 //Создайте text-area и button - при нажатии на кнопку выводите в out-14 текст введенный в text-area
 
 document.querySelector('#buttinp14').onclick = () => {
     document.querySelector('.outinp14').innerHTML = document.querySelector('#textarea14').value;
-};
+}
 
 //T15
 //Создайте text-area input и button - при нажатии на кнопку выводите текст из input в textarea и на страницу в out-15.
@@ -1301,29 +1310,28 @@ document.querySelector('#buttinp14').onclick = () => {
 document.querySelector('#buttinp15').onclick = () => {
     document.querySelector('#textarea15').value = document.querySelector('#textinp15').value;
     document.querySelector('.outinp15').innerHTML = document.querySelector('#textinp15').value;
-};
-
+}
 
 //T16
 //Создайте select и button - при нажатии на кнопку выводите в out-16 value выбранного option из select16.
 
 document.querySelector('#buttinp16').onclick = () => {
     document.querySelector('.outinp16').innerHTML = document.querySelector('#select16').value;
-};
+}
 
 //T17
 //Создайте select. Добавьте ему событие onchange, при наступлении которого запускается функция. Функция должна выводить в out-17 value выбранного в select option.
 
 document.querySelector('#select17').onchange = () => {
     document.querySelector('.outinp17').innerHTML = document.querySelector('#select17').value;
-};
+}
 
 //T18
 //Создайте select и input. Добавьте на select событие onchange, при наступлении которого запускается функция. Функция должна выводить в input value выбранного в select option.
 
 document.querySelector('#select18').onchange = () => {
     document.querySelector('#textinp18').value = document.querySelector('#select18').value;
-};
+}
 
 //T19
 //Создайте форму. В ней input(text).textinp191 и input(password).passinp192 - и кнопку button. По нажатию кнопки выводите значение text и password в out-19 через пробел.
@@ -1331,7 +1339,7 @@ document.querySelector('#select18').onchange = () => {
 
 document.querySelector('#buttinp19').onclick = () => {
     document.querySelector('.outinp19').innerHTML = document.querySelector('#textinp191').value + ' ' + document.querySelector('#passinp192').value
-};
+}
 
 //T20
 //Создайте форму. В ней input(text) и input(password) - и кнопку button. По нажатию кнопки выводите значение из input text и password в out-20 через пробел. Используйте form.elements.
@@ -1342,8 +1350,7 @@ document.querySelector('#buttinp20').onclick = function (form) {
     let passwordinput = inputs['password'];
     document.querySelector('.outinp20').innerHTML = usernameinput.value + ' ' + passwordinput.value;
     form.preventDefault();
-};
-
+}
 
 //UNIT 5. ЦИКЛЫ В JAVASCRIPT (ЧАСТЬ 1)
 
@@ -1353,12 +1360,13 @@ for (let i = 0; i < divfor.length; i = i + 1) {
     console.log(divfor[i]);
     divfor[i].style.background = 'red';
 }
-;let divfor1 = document.getElementsByClassName('divfor');
+let divfor1 = document.getElementsByClassName('divfor');
+
 console.log(divfor1);
 for (let i = 0; i < divfor1.length; i++) {
     divfor1[i].style.border = '2px solid black';
 }
-;document.querySelector('#radiobut').onclick = () => {
+document.querySelector('#radiobut').onclick = () => {
     let radio = document.querySelectorAll('.radiodiv input');
     console.log(radio);
     for (let i = 0; i < radio.length; i++) {
@@ -1366,7 +1374,7 @@ for (let i = 0; i < divfor1.length; i++) {
             console.log(radio[i].value);
         }
     }
-};
+}
 let divout = '';
 for (let i = 0; i < 10; i++) {
 
@@ -1374,7 +1382,7 @@ for (let i = 0; i < 10; i++) {
     if (i == 8) break;
     divout += i + ' ';
 }
-;document.querySelector('.divout').innerHTML = divout;
+document.querySelector('.divout').innerHTML = divout;
 
 
 function t1() {
@@ -1383,7 +1391,8 @@ function t1() {
         out_2 += i + " ";
     }
     document.querySelector(".showcycle").innerHTML = out_2;
-};document.querySelector('#cyclebut').onclick = t1;
+}
+document.querySelector('#cyclebut').onclick = t1;
 
 function t2() {
     let out_3 = "";
@@ -1391,8 +1400,8 @@ function t2() {
         out_3 += i + " ";
     }
     document.querySelector(".showcycle1").innerHTML = out_3;
-};document.querySelector('#cyclebut1').onclick = t2;
-
+}
+document.querySelector('#cyclebut1').onclick = t2;
 
 function t3() {
     let out_4 = "";
@@ -1400,7 +1409,8 @@ function t3() {
         out_4 += i + " ";
     }
     document.querySelector(".showcycle2").innerHTML = out_4;
-};document.querySelector('#cyclebut2').onclick = t3;
+}
+document.querySelector('#cyclebut2').onclick = t3;
 
 
 function t4() {
@@ -1409,8 +1419,8 @@ function t4() {
         out_5 += i + " ";
     }
     document.querySelector(".showcycle3").innerHTML = out_5;
-};document.querySelector('#cyclebut3').onclick = t4;
-
+}
+document.querySelector('#cyclebut3').onclick = t4;
 
 function t5() {
     let out_6 = "";
@@ -1422,7 +1432,8 @@ function t5() {
         }
     }
     document.querySelector(".showcycle4").innerHTML = out_6;
-};document.querySelector('#cyclebut4').onclick = t5;
+}
+document.querySelector('#cyclebut4').onclick = t5;
 
 function t6() {
     let out_7 = "";
@@ -1430,8 +1441,8 @@ function t6() {
         out_7 += "******<br>";
     }
     document.querySelector(".showcycle5").innerHTML = out_7;
-};document.querySelector('#cyclebut5').onclick = t6;
-
+}
+document.querySelector('#cyclebut5').onclick = t6;
 
 function t7() {
     let out_8 = "";
@@ -1440,8 +1451,8 @@ function t7() {
         out_8 += i + " ";
     }
     document.querySelector(".showcycle6").innerHTML = out_8;
-};document.querySelector('#cyclebut6').onclick = t7;
-
+}
+document.querySelector('#cyclebut6').onclick = t7;
 
 function t8() {
     let out_9 = "";
@@ -1451,7 +1462,8 @@ function t8() {
         out_9 += i + " ";
     }
     document.querySelector(".showcycle7").innerHTML = out_9;
-};document.querySelector('#cyclebut7').onclick = t8;
+}
+document.querySelector('#cyclebut7').onclick = t8;
 
 function t9() {
     let out_10 = "";
@@ -1467,7 +1479,8 @@ function t9() {
         }
     }
     document.querySelector(".showcycle8").innerHTML = out_10;
-};document.querySelector('#cyclebut8').onclick = t9;
+}
+document.querySelector('#cyclebut8').onclick = t9;
 
 function t10() {
     let out_11 = "";
@@ -1475,23 +1488,24 @@ function t10() {
         out_11 += i + " ";
     }
     document.querySelector(".showcycle9").innerHTML = out_11;
-};document.querySelector('#cyclebut9').onclick = t10;
-
+}
+document.querySelector('#cyclebut9').onclick = t10;
 
 function t11() {
     let showdiv = document.querySelectorAll('.div-11');
     for (let i = 0; i < showdiv.length; i++) {
         document.querySelector(".showcycle10").innerHTML += showdiv[i].innerHTML + ' ';
     }
-};document.querySelector('#cyclebut10').onclick = t11;
-
+}
+document.querySelector('#cyclebut10').onclick = t11;
 
 function t12() {
     let divfor1 = document.querySelectorAll('.div-12');
     for (let i = 0; i < divfor1.length; i++) {
         divfor1[i].style.background = 'orange';
     }
-};document.querySelector('#cyclebut11').onclick = t12;
+}
+document.querySelector('#cyclebut11').onclick = t12;
 
 let input_13 = document.querySelectorAll('.i-13');
 
@@ -1500,7 +1514,8 @@ function t13() {
     for (let i = 0; i < input_13.length; i++) {
         input_13[i].value = i + 1;
     }
-};document.querySelector('#cyclebut12').onclick = t13;
+}
+document.querySelector('#cyclebut12').onclick = t13;
 
 function t14() {
     let showdiv12 = document.querySelector('.showcycle13')
@@ -1510,7 +1525,8 @@ function t14() {
             showdiv12.innerHTML = radio[i].value;
         }
     }
-};document.querySelector('#cyclebut13').onclick = t14;
+}
+document.querySelector('#cyclebut13').onclick = t14;
 
 function t15() {
     let out_15 = "";
@@ -1519,8 +1535,8 @@ function t15() {
     }
 
     document.querySelector(".showcycle14").innerHTML = out_15;
-};document.querySelector('#cyclebut14').onclick = t15;
-
+}
+document.querySelector('#cyclebut14').onclick = t15;
 
 //UNIT 6. ВЛОЖЕННЫЕ ЦИКЛЫ В JAVASCRIPT (ЧАСТЬ 2)
 
@@ -1531,7 +1547,6 @@ for (let i = 0; i < 5; i++) {
     }
     outstars.innerHTML += '<br>';
 }
-;
 
 let outtable = document.querySelector('.outtable');
 for (let i = 1; i < 10; i++) {
@@ -1540,7 +1555,6 @@ for (let i = 1; i < 10; i++) {
     }
     outtable.innerHTML += '<hr>'
 }
-;
 
 let outstars1 = document.querySelector('.outstars1');
 for (let i = 0; i < 3; i++) {
@@ -1549,7 +1563,6 @@ for (let i = 0; i < 3; i++) {
     }
     outstars1.innerHTML += '_';
 }
-;
 
 let outstars2 = document.querySelector('.outstars2');
 for (let i = 1; i <= 3; i++) {
@@ -1559,7 +1572,6 @@ for (let i = 1; i <= 3; i++) {
     }
     outstars2.innerHTML += `<br>`;
 }
-;
 
 let outstars3 = document.querySelector('.outstars3');
 for (let i = 1; i <= 4; i++) {
@@ -1568,7 +1580,6 @@ for (let i = 1; i <= 4; i++) {
     }
     outstars3.innerHTML += '<br>';
 }
-;
 
 let outstars4 = document.querySelector('.outstars4');
 for (let i = 1; i <= 4; i++) {
@@ -1577,7 +1588,6 @@ for (let i = 1; i <= 4; i++) {
         outstars4.innerHTML += `${k} `;
     }
 }
-;
 
 let outstars5 = document.querySelector('.outstars5');
 for (let i = 1; i <= 3; i++) {
@@ -1590,7 +1600,6 @@ for (let i = 1; i <= 3; i++) {
     }
     outstars5.innerHTML += '<br>';
 }
-;
 
 let outstars6 = document.querySelector('.outstars6');
 for (let i = 1; i <= 3; i++) {
@@ -1606,7 +1615,6 @@ for (let i = 1; i <= 3; i++) {
 
     outstars6.innerHTML += '<br>';
 }
-;
 
 let outstars7 = document.querySelector('.outstars7');
 for (let i = 1; i <= 4; i++) {
@@ -1615,7 +1623,6 @@ for (let i = 1; i <= 4; i++) {
     }
     outstars7.innerHTML += `<br>`;
 }
-;
 
 let outstars8 = document.querySelector('.outstars8');
 for (let i = 4; i >= 1; i--) {
@@ -1624,7 +1631,7 @@ for (let i = 4; i >= 1; i--) {
     }
     outstars8.innerHTML += `<br>`;
 }
-;
+
 // второй вариант
 // let outstars8 = document.querySelector('.outstars8');
 // for (let i = 1; i <= 4; i++) {
@@ -1641,7 +1648,6 @@ for (let i = 1; i <= 5; i++) {
     }
     outstars9.innerHTML += `<br>`;
 }
-;
 
 // let outstars10 = document.querySelector('.outstars10');
 // for (let i = 1; i <= 5; i++) {
@@ -1656,7 +1662,6 @@ for (let i = 1; i <= 5; i++) {
 //     outstars10.innerHTML += `<br>`;
 // };
 
-
 let outstars10 = document.querySelector('.outstars10');
 let a = '', b = 0;
 for (let i = 0; i < 5; i++) {
@@ -1666,8 +1671,7 @@ for (let i = 0; i < 5; i++) {
     }
     a += '<br>'
 }
-;outstars10.innerHTML = a;
-
+outstars10.innerHTML = a;
 
 //UNIT 7. ФУНКЦИИ И ВСЕ О НИХ
 
@@ -1687,7 +1691,7 @@ function t21() {
 
 document.querySelector('#funcbutt1').onclick = function () {
     document.querySelector('.outstars12').textContent = t21();
-};
+}
 
 function t22(a, b) {
     return (a * b);
@@ -1704,9 +1708,10 @@ function t23() {
     let a = document.querySelector('#inputbrthdate');
     let b = 2022 - a.value;
     return b;
-};document.querySelector('#funcbutt14').onclick = function () {
+}
+document.querySelector('#funcbutt14').onclick = function () {
     document.querySelector('.outstars14').textContent = t23();
-};
+}
 
 function t24(a = 'Hello', b = 'Dmitry', c = ' ') {
     return a + c + b;
@@ -1714,7 +1719,7 @@ function t24(a = 'Hello', b = 'Dmitry', c = ' ') {
 
 document.querySelector('#funcbutt15').onclick = function () {
     document.querySelector('.outstars15').textContent = t24();
-};
+}
 
 function t25() {
 
@@ -1726,21 +1731,22 @@ function t25() {
     } else {
         return Math.floor((Math.random() * (a25 - b25 + 1)) + b25);
     }
-};document.querySelector('#funcbutt16').onclick = function () {
+}
+document.querySelector('#funcbutt16').onclick = function () {
     document.querySelector('.outstars16').textContent = t25();
-};
+}
 
 function t26() {
-    let x = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
-    let y = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
-    let z = Math.floor(Math.random() * (255 - 0 + 1)) + 0;
+    let x = Math.floor(Math.random() * (255 + 1));
+    let y = Math.floor(Math.random() * (255 + 1));
+    let z = Math.floor(Math.random() * (255 + 1));
     return `rgb(${x}, ${y}, ${z})`;
 }
 
 document.querySelector('#funcbutt17').onclick = function () {
     document.querySelector('.outstars17').innerHTML = t26();
     document.querySelector('.outstars17').style.color = t26();
-};
+}
 
 function t27(str) {
     return str.trim();
@@ -1748,8 +1754,7 @@ function t27(str) {
 
 document.querySelector('#funcbutt18').onclick = function () {
     document.querySelector('.outstars18').innerHTML = t27(' hello ');
-
-};
+}
 
 function t28(a) {
     if (a % 2 == 0) {
@@ -1761,7 +1766,7 @@ function t28(a) {
 
 document.querySelector('#funcbutt19').onclick = function () {
     document.querySelector('.outstars19').innerHTML = t28(document.querySelector('#inputnumb2').value);
-};
+}
 
 function t29(n, m) {
     n = Number(n);
@@ -1778,7 +1783,7 @@ function t29(n, m) {
 
 document.querySelector('#funcbutt20').onclick = function () {
     document.querySelector('.outstars20').innerHTML = t29(document.querySelector('#inputnumb3').value, document.querySelector('#inputnumb4').value);
-};
+}
 // второй способ
 // function t29(n,m) {
 //     return Math.max(n,m)
@@ -1786,7 +1791,6 @@ document.querySelector('#funcbutt20').onclick = function () {
 // document.querySelector('#funcbutt20').onclick = function() {
 //     document.querySelector('.outstars20').innerHTML = t29(document.querySelector('#inputnumb3').value,document.querySelector('#inputnumb4').value);
 // };
-
 
 // UNIT 8. ЦИКЛ WHILE, DO WHILE
 
@@ -1796,7 +1800,7 @@ while (p <= 10) {
     sum = sum + p;
     p++;
 }
-console.log('sum = ' + sum)
+console.log('sum = ' + sum);
 
 
 let outstars21 = document.querySelector('.outstars21');
@@ -1823,7 +1827,7 @@ outstars21.innerHTML = outStr;
 
 let outwhile = document.querySelector('.outwhile1');
 let p3 = 1;
-let k3 = ''
+let k3 = '';
 
 function t30() {
     while (p3 <= 50) {
@@ -1832,7 +1836,6 @@ function t30() {
     }
     outwhile.innerHTML = k3;
 }
-
 document.querySelector('#funcbutt21').onclick = t30;
 
 
@@ -1875,7 +1878,6 @@ function t33() {
     }
     outwhile3.innerHTML = k6;
 }
-
 document.querySelector('#funcbutt24').onclick = t33;
 
 
@@ -1916,7 +1918,6 @@ function t35() {
     }
     outwhile6.innerHTML = outStr8;
 }
-
 document.querySelector('#funcbutt26').onclick = t35;
 
 
@@ -1932,7 +1933,6 @@ function t36() {
     }
     outwhile7.innerHTML = outStr9;
 }
-
 document.querySelector('#funcbutt27').onclick = t36;
 
 
@@ -1960,7 +1960,8 @@ function t37() {
         outStr10 += 'error';
     }
     outwhile8.innerHTML = outStr10;
-};document.querySelector('#funcbutt28').onclick = t37;
+}
+document.querySelector('#funcbutt28').onclick = t37;
 
 let outwhile9 = document.querySelector('.outwhile9');
 let inputwhile10 = document.querySelector('#inputwhile10');
@@ -1986,7 +1987,8 @@ function t38() {
         outStr11 += 'error';
     }
     outwhile9.innerHTML = outStr11;
-};document.querySelector('#funcbutt29').onclick = t38;
+}
+document.querySelector('#funcbutt29').onclick = t38;
 
 
 let outwhile10 = document.querySelector('.outwhile10');
@@ -2000,7 +2002,6 @@ function t39() {
     }
     outwhile10.innerHTML = k12;
 }
-
 document.querySelector('#funcbutt30').onclick = t39;
 
 
@@ -2016,7 +2017,6 @@ function t40() {
     }
     outwhile11.innerHTML = k13;
 }
-
 document.querySelector('#funcbutt31').onclick = t40;
 
 
@@ -2029,9 +2029,7 @@ function t41() {
         p14++;
     }
 }
-
 document.querySelector('#funcbutt32').onclick = t41;
-
 
 let inputwhile13 = document.querySelectorAll('.inputwhile13');
 let p15 = 0;
@@ -2042,7 +2040,6 @@ function t42() {
         p15++;
     }
 }
-
 document.querySelector('#funcbutt33').onclick = t42;
 
 
@@ -2056,7 +2053,8 @@ function t43() {
         }
         p16++;
     }
-};document.querySelector('#funcbutt34').onclick = t43;
+}
+document.querySelector('#funcbutt34').onclick = t43;
 
 
 let outwhile15 = document.querySelector('.outwhile15');
@@ -2065,13 +2063,14 @@ let o17 = 0;
 let k17 = '';
 
 function t44() {
-    while (p17 >= 0, o17 <= 10) {
+    while (p17 >= 0 && o17 <= 10) {
         k17 += `${p17} ${o17} `;
         p17--;
         o17++;
     }
     outwhile15.innerHTML = k17;
-};document.querySelector('#funcbutt35').onclick = t44;
+}
+document.querySelector('#funcbutt35').onclick = t44;
 
 
 // function t15() {
@@ -2129,19 +2128,23 @@ addedtext.onclick = function () {
 function funct1() {
     document.querySelector('.outdom1').style.width = '200px';
     document.querySelector('.outdom1').style.height = '40px';
-};document.querySelector('#dombut1').onclick = funct1;
+}
+document.querySelector('#dombut1').onclick = funct1;
 
 function funct2() {
     document.querySelector('.outdom2').classList.add('bg-2')
-};document.querySelector('#dombut2').onclick = funct2;
+}
+document.querySelector('#dombut2').onclick = funct2;
 
 function funct3() {
     document.querySelector('.outdom3').classList.remove('bg-3');
-};document.querySelector('#dombut3').onclick = funct3;
+}
+document.querySelector('#dombut3').onclick = funct3;
 
 function funct4() {
     document.querySelector('.outdom4').classList.toggle('bg-4')
-};document.querySelector('#dombut4').onclick = funct4;
+}
+document.querySelector('#dombut4').onclick = funct4;
 
 
 function funct5() {
@@ -2150,13 +2153,15 @@ function funct5() {
 
     b.innerHTML = a.classList.contains('bg-4');
 
-};document.querySelector('#dombut5').onclick = funct5;
+}
+document.querySelector('#dombut5').onclick = funct5;
 
 
 function funct6() {
     let lengthp6 = document.querySelectorAll('.p-6');
     document.querySelector('.outdom6').innerHTML = lengthp6.length;
-};document.querySelector('#dombut6').onclick = funct6;
+}
+document.querySelector('#dombut6').onclick = funct6;
 
 function funct7() {
     let outdom7 = document.querySelectorAll('.outdom7');
@@ -2164,7 +2169,8 @@ function funct7() {
         outdom7[i].classList.add('bg-7')
     }
 
-};document.querySelector('#dombut7').onclick = funct7;
+}
+document.querySelector('#dombut7').onclick = funct7;
 
 function funct8() {
     let outdom8 = document.querySelectorAll('.outdom8');
@@ -2172,7 +2178,8 @@ function funct8() {
         outdom8[i].classList.toggle('bg-8')
     }
 
-};document.querySelector('#dombut8').onclick = funct8;
+}
+document.querySelector('#dombut8').onclick = funct8;
 
 
 function funct9() {
@@ -2183,8 +2190,6 @@ let outdom9 = document.querySelectorAll('.outdom9');
 for (let i = 0; i < outdom9.length; i++) {
     outdom9[i].onclick = funct9;
 }
-;
-
 
 function funct10() {
     this.classList.toggle('bg-9');
@@ -2194,8 +2199,6 @@ let outdom10 = document.querySelectorAll('.outdom10');
 for (let i = 0; i < outdom10.length; i++) {
     outdom10[i].onclick = funct10;
 }
-;
-
 
 let addedtext11 = document.createElement('div');
 addedtext11.innerHTML = '25';
@@ -2203,8 +2206,8 @@ addedtext11.classList.add('addedtext11');
 
 function funct11() {
     document.querySelector('.outdom11').append(addedtext11);
-};document.querySelector('#dombut11').onclick = funct11;
-
+}
+document.querySelector('#dombut11').onclick = funct11;
 
 let addedtext12 = document.createElement('div');
 addedtext12.innerHTML = '12';
@@ -2212,8 +2215,8 @@ addedtext12.classList.add('addedtext12', 'bg-12');
 
 function funct12() {
     document.querySelector('.outdom12').append(addedtext12);
-};document.querySelector('#dombut12').onclick = funct12;
-
+}
+document.querySelector('#dombut12').onclick = funct12;
 
 const addedtext13 = document.createElement('div');
 addedtext13.innerHTML = 'Push Me';
@@ -2222,15 +2225,15 @@ addedtext13.classList.add('addedtext13', 'bg-13');
 function funct13() {
     document.querySelector('.outdom13').append(addedtext13);
     document.querySelector('.addedtext13').onclick = funct13_1;
-};document.querySelector('#dombut13').onclick = funct13;
+}
+document.querySelector('#dombut13').onclick = funct13;
 
 function funct13_1() {
     const addedtext13 = document.createElement('div');
     addedtext13.innerHTML = 'Push Me';
     addedtext13.classList.add('addedtext13', 'bg-13');
     document.querySelector('.outdom14').append(addedtext13);
-};
-
+}
 
 const addedtext14 = document.createElement('div');
 addedtext14.innerHTML = '14';
@@ -2239,8 +2242,8 @@ addedtext14.classList.add('addedtext14', 'bg-14');
 function funct14() {
     document.querySelector('.outdom14-1').prepend(addedtext14);
 
-};document.querySelector('#dombut14').onclick = funct14;
-
+}
+document.querySelector('#dombut14').onclick = funct14;
 
 const addedtext15 = document.createElement('div');
 addedtext15.innerHTML = '15';
@@ -2248,8 +2251,8 @@ addedtext15.classList.add('addedtext15', 'bg-15');
 
 function funct15() {
     document.querySelector('.outdom15').before(addedtext15);
-};document.querySelector('#dombut15').onclick = funct15;
-
+}
+document.querySelector('#dombut15').onclick = funct15;
 
 const addedtext16 = document.createElement('div');
 addedtext16.innerHTML = '16';
@@ -2257,8 +2260,8 @@ addedtext16.classList.add('addedtext16', 'bg-16');
 
 function funct16() {
     document.querySelector('.outdom16').after(addedtext16);
-};document.querySelector('#dombut16').onclick = funct16;
-
+}
+document.querySelector('#dombut16').onclick = funct16;
 
 const addedtext17 = document.createElement('div');
 addedtext17.innerHTML = '17';
@@ -2266,15 +2269,16 @@ addedtext17.classList.add('addedtext17', 'bg-17');
 
 function funct17() {
     document.querySelector('.outdom17').replaceWith(addedtext17);
-};document.querySelector('#dombut17').onclick = funct17;
-
+}
+document.querySelector('#dombut17').onclick = funct17;
 
 function funct18() {
     let p18 = document.querySelector('.p-18');
     let getatrib = p18.getAttribute('data-b');
     document.querySelector('.outdom18').innerHTML = getatrib;
 
-};document.querySelector('#dombut18').onclick = funct18;
+}
+document.querySelector('#dombut18').onclick = funct18;
 
 function funct19() {
     let p19 = document.querySelectorAll('.p-19');
@@ -2283,14 +2287,15 @@ function funct19() {
         getatrib12 = Number(getatrib12)
         document.querySelector('.outdom19').innerHTML += getatrib12 + ' ';
     }
-};document.querySelector('#dombut19').onclick = funct19;
+}
+document.querySelector('#dombut19').onclick = funct19;
 
 
 function funct20() {
     document.querySelector('.outdom20').setAttribute('title', 'go');
 
-};document.querySelector('#dombut20').onclick = funct20;
-
+}
+document.querySelector('#dombut20').onclick = funct20;
 
 // UNIT 10. МАССИВЫ В JAVASCRIPT
 
@@ -2326,15 +2331,13 @@ console.log(numbers);
 //     document.querySelector('.outarray').innerHTML += numbers[i] + ' ';
 // };
 
-
 let outarray = '';
 for (let i = 0; i < numbers.length; i++) {
     outarray += numbers[i] + ' ';
 }
-;document.querySelector('.outarray').innerHTML = outarray;
+document.querySelector('.outarray').innerHTML = outarray;
 
 let numbers2 = [4, 2, 5, 23, 43, 4, 2, 6, 12]
-
 
 //max
 let max = numbers2[0];
@@ -2346,7 +2349,6 @@ for (let i = 0; i < numbers2.length; i++) {
 }
 console.log('max: ' + max)
 
-
 //min
 let min = numbers2[0]; // 4
 
@@ -2357,23 +2359,21 @@ for (let i = 0; i < numbers2.length; i++) {
 }
 console.log('min: ' + min);
 
-
 //sum
 let sumarray = 0; // 4
 
 for (let i = 0; i < numbers2.length; i++) {
     sumarray = sumarray + numbers2[i];
 }
-;console.log('сумма: ' + sumarray);
-
+console.log('сумма: ' + sumarray);
 
 let firstarray = ['one', 2, true, false];
 
 function masfunct1() {
 
     document.querySelector('.outarray1').innerHTML = firstarray;
-};document.querySelector('#arraybut1').onclick = masfunct1;
-
+}
+document.querySelector('#arraybut1').onclick = masfunct1;
 
 let secondarray = ['three', 4, true, false];
 
@@ -2383,16 +2383,16 @@ function masfunct2() {
         outarray2 += secondarray[i] + ' ';
     }
     document.querySelector('.outarray2').innerHTML = outarray2;
-};document.querySelector('#arraybut2').onclick = masfunct2;
-
+}
+document.querySelector('#arraybut2').onclick = masfunct2;
 
 let thirdarray = ['five', 6, true, false];
 
 function masfunct3() {
 
     document.querySelector('.outarray3').innerHTML = thirdarray.length;
-};document.querySelector('#arraybut3').onclick = masfunct3;
-
+}
+document.querySelector('#arraybut3').onclick = masfunct3;
 
 let fourtharray = ['один', 2, 'три', 4, 'пять', 6, 'семь', 8, 'девять', 10];
 
@@ -2401,7 +2401,8 @@ function masfunct4() {
     outarray4 += fourtharray[0] + ' ' + fourtharray[3] + ' ' + fourtharray[8];
 
     document.querySelector('.outarray4').innerHTML = outarray4;
-};document.querySelector('#arraybut4').onclick = masfunct4;
+}
+document.querySelector('#arraybut4').onclick = masfunct4;
 
 
 let fiftharray = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
@@ -2411,7 +2412,8 @@ function masfunct5() {
     outarray5 = fiftharray[0] + fiftharray[2] + fiftharray[3];
 
     document.querySelector('.outarray5').innerHTML = outarray5;
-};document.querySelector('#arraybut5').onclick = masfunct5;
+}
+document.querySelector('#arraybut5').onclick = masfunct5;
 
 
 let sixtharray = ['Dmitry', 'Sagittarius', 28, 'november'];
@@ -2422,7 +2424,8 @@ function masfunct6() {
         outarray6 += sixtharray[i] + ' ';
     }
     document.querySelector('.outarray6').innerHTML = outarray6;
-};document.querySelector('#arraybut6').onclick = masfunct6;
+}
+document.querySelector('#arraybut6').onclick = masfunct6;
 
 
 let seventharray = ['china', 'india', 'brazil', 'japan', 'egypt'];
@@ -2436,8 +2439,8 @@ function masfunct7() {
         outarray7 += seventharray[i] + ' ';
     }
     document.querySelector('.outarray7').innerHTML = outarray7;
-};document.querySelector('#arraybut7').onclick = masfunct7;
-
+}
+document.querySelector('#arraybut7').onclick = masfunct7;
 
 let eightharray = [];
 
@@ -2451,22 +2454,22 @@ function masfunct8() {
     }
     document.querySelector('.outarray8').innerHTML = outarray8;
     document.querySelector('.outarray8-1').innerHTML = eightharray.length;
-};document.querySelector('#arraybut8').onclick = masfunct8;
-
+}
+document.querySelector('#arraybut8').onclick = masfunct8;
 
 let nintharray = [100, 200, 300, 400, 700, 121];
 
 function masfunct9() {
     document.querySelector('.outarray9').innerHTML = nintharray[nintharray.length - 1];
-};document.querySelector('#arraybut9').onclick = masfunct9;
-
+}
+document.querySelector('#arraybut9').onclick = masfunct9;
 
 let tentharray = [100, 200, 300, 400, 700, 121];
 
 function masfunct10() {
     document.querySelector('.outarray10').innerHTML = tentharray[1] + tentharray[tentharray.length - 1];
-};document.querySelector('#arraybut10').onclick = masfunct10;
-
+}
+document.querySelector('#arraybut10').onclick = masfunct10;
 
 let eleventharray = [2, 3, 4, 5, 6, 7];
 
@@ -2480,8 +2483,8 @@ function masfunct11() {
     }
     document.querySelector('.outarray11').innerHTML = outarray11;
 
-};document.querySelector('#arraybut11').onclick = masfunct11;
-
+}
+document.querySelector('#arraybut11').onclick = masfunct11;
 
 let twelftharray = ['test', 'west', 'list', 'class', 'best'];
 
@@ -2494,8 +2497,8 @@ function masfunct12() {
         outarray12 += twelftharray[i] + ' ';
     }
     document.querySelector('.outarray12').innerHTML = outarray12;
-};document.querySelector('#arraybut12').onclick = masfunct12;
-
+}
+document.querySelector('#arraybut12').onclick = masfunct12;
 
 let thirteentharray = ['test', 'west', 'list', 'class', 'best'];
 
@@ -2505,8 +2508,8 @@ function masfunct13() {
         outarray13 += thirteentharray[i] + ' ' + [i] + ' ';
     }
     document.querySelector('.outarray13').innerHTML = outarray13;
-};document.querySelector('#arraybut13').onclick = masfunct13;
-
+}
+document.querySelector('#arraybut13').onclick = masfunct13;
 
 let fourteentharray = [1, 2, 3, 'hello', 66];
 
@@ -2516,8 +2519,8 @@ function masfunct14() {
         outarray14 += fourteentharray[i] + ' ';
     }
     document.querySelector('.outarray14').innerHTML = outarray14;
-};document.querySelector('#arraybut14').onclick = masfunct14;
-
+}
+document.querySelector('#arraybut14').onclick = masfunct14;
 
 let fifteentharray = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
@@ -2529,8 +2532,8 @@ function masfunct15() {
         }
     }
     document.querySelector('.outarray15').innerHTML = outarray15;
-};document.querySelector('#arraybut15').onclick = masfunct15;
-
+}
+document.querySelector('#arraybut15').onclick = masfunct15;
 
 let sixteenthassive = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 let sixteenthassive_odd = [];
@@ -2554,8 +2557,8 @@ function masfunct16() {
     }
     document.querySelector('.outarray16-odd').innerHTML = outarray16Odd;
     document.querySelector('.outarray16-even').innerHTML = outarray16Even;
-};document.querySelector('#arraybut16').onclick = masfunct16;
-
+}
+document.querySelector('#arraybut16').onclick = masfunct16;
 
 let seventeentharray = [3, 0, 2, 6, 0, 1, 3, 1, 9, 0, 2, 0];
 
@@ -2567,8 +2570,8 @@ function masfunct17() {
         }
     }
     document.querySelector('.outarray17').innerHTML = count;
-};document.querySelector('#arraybut17').onclick = masfunct17;
-
+}
+document.querySelector('#arraybut17').onclick = masfunct17;
 
 let eighteentharray = [15, 24, 13, 78, 21, 4, 45, 67];
 
@@ -2580,8 +2583,8 @@ function masfunct18() {
         }
     }
     document.querySelector('.outarray18').innerHTML = max18;
-};document.querySelector('#arraybut18').onclick = masfunct18;
-
+}
+document.querySelector('#arraybut18').onclick = masfunct18;
 
 let nineteentharray = [15, 424, 313, 78, 241, 4, 45, 67];
 
@@ -2593,8 +2596,8 @@ function masfunct19() {
         }
     }
     document.querySelector('.outarray19').innerHTML = min19;
-};document.querySelector('#arraybut19').onclick = masfunct19;
-
+}
+document.querySelector('#arraybut19').onclick = masfunct19;
 
 let twentietharray = [4, 5, 6, 7, 8, 9, 10];
 let sumarray20 = 0; // 4
@@ -2603,8 +2606,8 @@ function masfunct20() {
         sumarray20 = sumarray20 + twentietharray[i];
     }
     document.querySelector('.outarray20').innerHTML = sumarray20;
-};document.querySelector('#arraybut20').onclick = masfunct20;
-
+}
+document.querySelector('#arraybut20').onclick = masfunct20;
 
 // UNIT 11. ДОБАВЛЕНИЕ И УДАЛЕНИЕ ЭЛЕМЕНТОВ В МАССИВЕ, POP, PUSH,SPLICE
 
@@ -2636,113 +2639,69 @@ function showArr(domElem, arr) {
         out += arr[i] + ' ';
     }
     document.querySelector(domElem).innerHTML = out;
-};
+}
 
 let spl_array1 = [33, 'best', 66, 'best'];
 
 function funkmass1() {
     let input1 = document.querySelector('.inpmass1').value;
-    array1.push(input1);
-    showArr('.divarray1', array1);
+    spl_array1.push(input1);
+    showArr('.divarray1', spl_array1);
 }
 document.querySelector('#buttarray1').onclick = funkmass1;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-}
 let array2 = [33, 'best', 66, 'best'];
 
 function funkmass2() {
     array2.pop();
     showArr('.divarray2', array2);
-};document.querySelector('#buttarray2').onclick = funkmass2;
+}
+document.querySelector('#buttarray2').onclick = funkmass2;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array3 = [33, 'best', 66, 'best'];
+let array3 = [33, 'best', 66, 'best'];
 
 function funkmass3() {
     array3.shift();
     showArr('.divarray3', array3);
-};document.querySelector('#buttarray3').onclick = funkmass3;
+}
+document.querySelector('#buttarray3').onclick = funkmass3;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array4 = [33, 'best', 66, 'best'];
+let array4 = [33, 'best', 66, 'best'];
 
 function funkmass4() {
     let input4 = document.querySelector('.inpmass4').value;
     array4.push(input4);
     showArr('.divarray4', array4);
-};document.querySelector('#buttarray4').onclick = funkmass4;
+}
+document.querySelector('#buttarray4').onclick = funkmass4;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array5 = [33, 'best', 66, 'best'];
+let array5 = [33, 'best', 66, 'best'];
 
 function funkmass5() {
     let input5 = document.querySelector('.inpmass5').value;
     array5.unshift(input5);
     showArr('.divarray5', array5);
-};document.querySelector('#buttarray5').onclick = funkmass5;
+}
+document.querySelector('#buttarray5').onclick = funkmass5;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array6 = ['test', 5, 12];
+let array6 = ['test', 5, 12];
 
 function funkmass6() {
     let input6 = document.querySelector('.inpmass6').value;
     array6[array6.length] = input6;
     showArr('.divarray6', array6);
-};document.querySelector('#buttarray6').onclick = funkmass6;
+}
+document.querySelector('#buttarray6').onclick = funkmass6;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
+let array7 = ['china', 'india', 'brazil', 'japan', 'egypt'];
 
 function funkmass7() {
     array7.length = array7.length - 1;
     showArr('.divarray7', array7);
-};document.querySelector('#buttarray7').onclick = funkmass7;
+}
+document.querySelector('#buttarray7').onclick = funkmass7;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array8 = [2, '4', 12, 67, 'hello'];
+let array8 = [2, '4', 12, 67, 'hello'];
 
 function funkmass8() {
     let input8 = document.querySelector('.inpmass8').value;
@@ -2753,16 +2712,10 @@ function funkmass8() {
     }
     array8 = newArr;
     showArr('.divarray8', array8);
-};document.querySelector('#buttarray8').onclick = funkmass8;
+}
+document.querySelector('#buttarray8').onclick = funkmass8;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array9 = [100, 200, 300, 400, 700, 121];
+let array9 = [100, 200, 300, 400, 700, 121];
 
 function funkmass9() {
     let emptyarray = [];
@@ -2771,22 +2724,16 @@ function funkmass9() {
     }
     array9 = emptyarray;
     showArr('.divarray9', array9);
-};document.querySelector('#buttarray9').onclick = funkmass9;
+}
+document.querySelector('#buttarray9').onclick = funkmass9;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array10 = [3, 14, 15, 92, 6];
+let array10 = [3, 14, 15, 92, 6];
 
 function funkmass10() {
     array10.reverse();
     showArr('.divarray10', array10);
-};document.querySelector('#buttarray10').onclick = funkmass10;
-
+}
+document.querySelector('#buttarray10').onclick = funkmass10;
 
 let array11 = [2, 3, 4, 5, 6, 7];
 
@@ -2795,8 +2742,8 @@ function funkmass11() {
     let input11 = document.querySelector('.inpmass11').value;
     mass11 = array11.indexOf(parseInt(input11));
     document.querySelector('.divarray11').innerHTML = mass11;
-};document.querySelector('#buttarray11').onclick = funkmass11;
-
+}
+document.querySelector('#buttarray11').onclick = funkmass11;
 
 let array12 = [6, 62, 60, 70, 1, 5];
 
@@ -2812,7 +2759,6 @@ function funkmass12() {
 
 document.querySelector('#buttarray12').onclick = funkmass12;
 
-
 let array13 = [6, 0, 22, 1, 4, 76];
 
 function funkmass13() {
@@ -2823,8 +2769,8 @@ function funkmass13() {
         lastIndex--;
     }
     document.querySelector('.divarray13').innerHTML = reversearray13;
-};document.querySelector('#buttarray13').onclick = funkmass13;
-
+}
+document.querySelector('#buttarray13').onclick = funkmass13;
 
 let array14 = [];
 
@@ -2834,16 +2780,10 @@ function funkmass14() {
         array14[i] = 1;
     }
     document.querySelector('.divarray14').innerHTML = array14;
-};document.querySelector('#buttarray14').onclick = funkmass14;
+}
+document.querySelector('#buttarray14').onclick = funkmass14;
 
-
-function showArr(domElem, arr) {
-    let out = '';
-    for (let i = 0; i < arr.length; i++) {
-        out += arr[i] + ' ';
-    }
-    document.querySelector(domElem).innerHTML = out;
-};let array15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
+let array15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function funkmass15() {
     let newelement15 = +document.querySelector('.inpmass15').value;
@@ -2856,8 +2796,8 @@ function funkmass15() {
             break;
         }
     }
-};document.querySelector('#buttarray15').onclick = funkmass15;
-
+}
+document.querySelector('#buttarray15').onclick = funkmass15;
 
 let array16 = [];
 let array16_1 = [5, 6, 7, 8, 9];
@@ -2866,8 +2806,8 @@ let array16_2 = [23, 24, 56, 87];
 function funkmass16() {
     array16 = array16_1.concat(array16_2);
     document.querySelector('.divarray16').innerHTML = array16;
-};document.querySelector('#buttarray16').onclick = funkmass16;
-
+}
+document.querySelector('#buttarray16').onclick = funkmass16;
 
 let array17 = [];
 let array17_1 = ['a', 'b', 'c', 'd'];
@@ -2881,8 +2821,8 @@ function funkmass17() {
         array17.push(array17_2[i]);
     }
     document.querySelector('.divarray17').innerHTML = array17;
-};document.querySelector('#buttarray17').onclick = funkmass17;
-
+}
+document.querySelector('#buttarray17').onclick = funkmass17;
 
 let array18 = ['b', 'c', '45', 'e', 'z', 'y'];
 
@@ -2891,8 +2831,8 @@ function funkmass18() {
     let input18 = document.querySelector('.inpmass18').value;
     mass18 = array18.includes(input18);
     document.querySelector('.divarray18').innerHTML = mass18;
-};document.querySelector('#buttarray18').onclick = funkmass18;
-
+}
+document.querySelector('#buttarray18').onclick = funkmass18;
 
 let array19 = ['Your', 'payment', 'method', 'will', 'automatically', 'be', 'charged', 'in', 'advance', 'every']
 let maxString = '';
@@ -2915,11 +2855,10 @@ function funkmass20() {
     let mass20 = '';
     mass20 = array20.join('');
     document.querySelector('.divarray20').innerHTML = mass20;
-};document.querySelector('#buttarray20').onclick = funkmass20;
-
+}
+document.querySelector('#buttarray20').onclick = funkmass20;
 
 // UNIT 12. ДВУМЕРНЫЕ МАССИВЫ
-
 
 // let array = [4, 5, 6];
 let dualarray = [[1, 2, 3], [4, 5, 6], [7, 8, 9],];
@@ -2990,8 +2929,6 @@ document.querySelector('#butarray1').onclick = function () {
     return un12Array1[2][0];
 }
 
-
-
 let un12Array2 = [[12, 'hi'], [45, 87], [55, 13]];
 
 function funcarray2() {
@@ -3000,22 +2937,21 @@ function funcarray2() {
 }
 document.querySelector('#butarray2').onclick = funcarray2;
 
-
 let un12array3 = [[1, 2, 3], [3, 4, 5], [6, [7, 'my']]];
 
 function funcarray3() {
     document.querySelector('.un12divarray3').innerHTML = un12array3[2][1][1];
     return un12array3[2][1][1];
-};document.querySelector('#butarray3').onclick = funcarray3;
-
+}
+document.querySelector('#butarray3').onclick = funcarray3;
 
 let un12array4 = [[1, 2, 3], 'go', [3, 4, 5], [6, [7, 'my']]];
 
 function funcarray4() {
     document.querySelector('.un12divarray4').innerHTML = un12array4[1][0] + un12array4[1][1];
     return un12array4[1][0] + un12array4[1][1];
-};document.querySelector('#butarray4').onclick = funcarray4;
-
+}
+document.querySelector('#butarray4').onclick = funcarray4;
 
 let un12array5 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
 
@@ -3026,8 +2962,8 @@ function funcarray5() {
         if (un12array5[i][1] % 2 === 0) outarray5 += un12array5[i][1] + ' ';
     }
     document.querySelector('.un12divarray5').innerHTML = outarray5;
-};document.querySelector('#butarray5').onclick = funcarray5;
-
+}
+document.querySelector('#butarray5').onclick = funcarray5;
 
 let un12array6 = [[1, 2], [3, 4], [5, 6], [21, 34], [44, 56]];
 
@@ -3038,8 +2974,8 @@ function funcarray6() {
         if (un12array6[i][1] % 2 != 0) outarray6 += un12array6[i][1] + ' ';
     }
     document.querySelector('.un12divarray6').innerHTML = outarray6;
-};document.querySelector('#butarray6').onclick = funcarray6;
-
+}
+document.querySelector('#butarray6').onclick = funcarray6;
 
 let un12array7 = [[1, 2, 3, 9], [3, 4, 7], [5, 6, 8, 32], [21, 34, 43], [44, 56]];
 
@@ -3052,8 +2988,8 @@ function funcarray7() {
         }
     }
     document.querySelector('.un12divarray7').innerHTML = outarray7;
-};document.querySelector('#butarray7').onclick = funcarray7;
-
+}
+document.querySelector('#butarray7').onclick = funcarray7;
 
 let un12array8 = [[1, 2, 3, 9], [3, 4, 7], [5, 6, 8, 32], [21, 34, 43], [44, 56]];
 
@@ -3066,8 +3002,8 @@ function funcarray8() {
         }
     }
     document.querySelector('.un12divarray8').innerHTML = outarray8;
-};document.querySelector('#butarray8').onclick = funcarray8;
-
+}
+document.querySelector('#butarray8').onclick = funcarray8;
 
 let un12array9 = [[-2, 7, -3], [3, 4, -7], [-5, 6, -8, 32], [21, -34, -43], [44, -56]];
 
@@ -3079,8 +3015,8 @@ function funcarray9() {
         }
     }
     document.querySelector('.un12divarray9').innerHTML = outarray9;
-};document.querySelector('#butarray9').onclick = funcarray9;
-
+}
+document.querySelector('#butarray9').onclick = funcarray9;
 
 let un12array10 = [[-2, '7', -3], [3, 4, -7], [-5, 6, -8, 32, 'a'], ['st', 21, -34, -43], [44, -56, 'task']];
 
@@ -3095,7 +3031,6 @@ function funcarray10() {
 }
 document.querySelector('#butarray10').onclick = funcarray10;
 
-
 let un12array11 = [[4, 5, 6], [7, 8], [9, 10, 11, 12, 13]];
 
 function funcarray11() {
@@ -3106,8 +3041,8 @@ function funcarray11() {
         }
     }
     document.querySelector('.un12divarray11').innerHTML = outarray11;
-};document.querySelector('#butarray11').onclick = funcarray11;
-
+}
+document.querySelector('#butarray11').onclick = funcarray11;
 
 let un12array12 = [[0, 1, 0, 1, 0, 1, 0, 1], [1, 0, 1, 0, 1, 0, 1, 0], [0, 1, 0, 1, 0, 1, 0, 1], [1, 0, 1, 0, 1, 0, 1, 0], [0, 1, 0, 1, 0, 1, 0, 1], [1, 0, 1, 0, 1, 0, 1, 0], [0, 1, 0, 1, 0, 1, 0, 1], [1, 0, 1, 0, 1, 0, 1, 0],];
 
@@ -3121,8 +3056,8 @@ function funcarray12() {
         outarray12 += '<br>';
     }
     document.querySelector('.un12divarray12').innerHTML = outarray12;
-};document.querySelector('#butarray12').onclick = funcarray12;
-
+}
+document.querySelector('#butarray12').onclick = funcarray12;
 
 let un12array13 = [];
 
@@ -3146,8 +3081,8 @@ function funcarray13() {
         un12array13.push(Toutarray13);
     }
     console.log(un12array13)
-};document.querySelector('#butarray13').onclick = funcarray13;
-
+}
+document.querySelector('#butarray13').onclick = funcarray13;
 
 let un12array14 = [[], [1, 0], [1, 0, 0, 0], [3, 4, 5, 6, 7, 8], [1, 2]];
 
@@ -3157,8 +3092,8 @@ function funcarray14() {
         outarray14 += un12array14[i].length + ' ';
     }
     document.querySelector('.un12divarray14').innerHTML = outarray14;
-};document.querySelector('#butarray14').onclick = funcarray14;
-
+}
+document.querySelector('#butarray14').onclick = funcarray14;
 
 let un12array15 = [[], [1, 0], [1, 0, 0, 0], [3, 4, 5, 6, 7, 8], [1, 2]];
 
@@ -3172,8 +3107,8 @@ function funcarray15() {
     }
     outarray15 += maxarray.length;
     document.querySelector('.un12divarray15').innerHTML = outarray15;
-};document.querySelector('#butarray15').onclick = funcarray15;
-
+}
+document.querySelector('#butarray15').onclick = funcarray15;
 
 let un12array16 = [[0, 7, 0, 6], 0, 0, 8];
 console.group('array16');
@@ -3182,14 +3117,12 @@ console.log(un12array16[0][1] === 7);
 console.log(un12array16[0][3] === 6);
 console.groupEnd();
 
-
 let un12array17 = [[0, 0, 6], [0, 7], 0, [0, 0, 8]];
 console.group('array17');
 console.log(un12array17[3][2] == 8);
 console.log(un12array17[1][1] == 7);
 console.log(un12array17[0][2] == 6);
 console.groupEnd();
-
 
 let un12array18 = [3, 0, [0, 12], 0, [8]];
 console.group('array18');
@@ -3198,7 +3131,6 @@ console.log(un12array18[4][0] === 8);
 console.log(un12array18[2][1] === 12);
 console.groupEnd();
 
-
 let un12array19 = [[[0, 3]], [[0, 0, 8]], [0, [12]]];
 console.group('array19');
 console.log(un12array19[0][0][1] === 3);
@@ -3206,14 +3138,12 @@ console.log(un12array19[1][0][2] === 8);
 console.log(un12array19[2][1][0] === 12);
 console.groupEnd();
 
-
 let un12array20 = [0, [0, [0, 9]], [0, 0, 18], 12,];
 console.group('array20');
 console.log(un12array20[1][1][1] === 9);
 console.log(un12array20[2][2] === 18);
 console.log(un12array20[3] === 12);
 console.groupEnd();
-
 
 // UNIT 13. АССОЦИАТИВНЫЙ МАССИВ (ОБЪЕКТ) В JAVASCRIPT
 
@@ -3236,7 +3166,6 @@ for (let key in asoarray) {
 }
 document.querySelector('.asoarrayout').innerHTML = asoarrayout;
 
-
 //1
 function funkasoaray1() {
     let asoarray1 = {
@@ -3248,7 +3177,6 @@ function funkasoaray1() {
 
 document.querySelector('#asoarraybutt1').onclick = funkasoaray1;
 
-
 //2
 function funkasoaray2() {
     let asoarray2 = {
@@ -3259,7 +3187,6 @@ function funkasoaray2() {
 }
 
 document.querySelector('#asoarraybutt2').onclick = funkasoaray2;
-
 
 //3
 function funkasoaray3() {
@@ -3275,8 +3202,8 @@ function funkasoaray3() {
     document.querySelector('.assoarrayout3').innerHTML = asoarrayout3;
     return asoarrayout3;
 
-};document.querySelector('#asoarraybutt3').onclick = funkasoaray3;
-
+}
+document.querySelector('#asoarraybutt3').onclick = funkasoaray3;
 
 //4
 function funkasoaray4() {
@@ -3290,8 +3217,8 @@ function funkasoaray4() {
     document.querySelector('.assoarrayout4').innerHTML = asoarrayout4;
     return asoarrayout4;
 
-};document.querySelector('#asoarraybutt4').onclick = funkasoaray4;
-
+}
+document.querySelector('#asoarraybutt4').onclick = funkasoaray4;
 
 //5
 function funkasoaraycommon(arr, block) {
@@ -3300,13 +3227,14 @@ function funkasoaraycommon(arr, block) {
         asoarrayoutcommon += `${keycommon} : ${arr[keycommon]} <br>`;
     }
     document.querySelector(block).innerHTML = asoarrayoutcommon;
-};document.querySelector('#asoarraybutt5').onclick = () => {
+}
+
+document.querySelector('#asoarraybutt5').onclick = () => {
     let asoarray5 = {
         "one": 1, "two": 2
     }
     funkasoaraycommon(asoarray5, '.assoarrayout5');
 };
-
 
 //6
 document.querySelector('#asoarraybutt6').onclick = () => {
@@ -3320,7 +3248,6 @@ document.querySelector('#asoarraybutt6').onclick = () => {
 
     funkasoaraycommon(asoarray6, '.assoarrayout6');
 };
-
 
 //7
 let asoarray7 = {
@@ -3338,8 +3265,8 @@ function funkasoaray7() {
 
         }
     }
-};document.querySelector('#asoarraybutt7').onclick = funkasoaray7;
-
+}
+document.querySelector('#asoarraybutt7').onclick = funkasoaray7;
 
 //8
 let asoarray8 = {
@@ -3357,8 +3284,8 @@ function funkasoaray8() {
 
         }
     }
-};document.querySelector('#asoarraybutt8').onclick = funkasoaray8;
-
+}
+document.querySelector('#asoarraybutt8').onclick = funkasoaray8;
 
 //8
 let asoarray9 = {
@@ -3377,8 +3304,8 @@ function funkasoaray9() {
 
         document.querySelector('.assoarrayout9').innerHTML = containerasoarray;
     }
-};document.querySelector('#asoarraybutt9').onclick = funkasoaray9;
-
+}
+document.querySelector('#asoarraybutt9').onclick = funkasoaray9;
 
 //10
 function funkasoaray10(arr, val) {
@@ -3409,8 +3336,8 @@ function funkasoaray11() {
         }
     }
     funkasoaraycommon(asoarray11, '.assoarrayout11');
-};document.querySelector('#asoarraybutt11').onclick = funkasoaray11;
-
+}
+document.querySelector('#asoarraybutt11').onclick = funkasoaray11;
 
 //12
 let asoarray12 = {
@@ -3425,8 +3352,8 @@ function funkasoaray12() {
         }
     }
     funkasoaraycommon(asoarray12, '.assoarrayout12');
-};document.querySelector('#asoarraybutt12').onclick = funkasoaray12;
-
+}
+document.querySelector('#asoarraybutt12').onclick = funkasoaray12;
 
 //13
 let asoarray13 = {
@@ -3445,8 +3372,8 @@ function funkasoaray13() {
     }
     document.querySelector('.assoarrayout13').innerHTML = sumasoarray;
 
-};document.querySelector('#asoarraybutt13').onclick = funkasoaray13;
-
+}
+document.querySelector('#asoarraybutt13').onclick = funkasoaray13;
 
 //14
 let asoarray14 = {
@@ -3462,8 +3389,8 @@ function funkasoaray14() {
         }
         document.querySelector('.assoarrayout14').innerHTML = asoarraycontainer14;
     }
-};document.querySelector('#asoarraybutt14').onclick = funkasoaray14;
-
+}
+document.querySelector('#asoarraybutt14').onclick = funkasoaray14;
 
 //15
 let asoarray15 = {
@@ -3478,8 +3405,8 @@ function funkasoaray15() {
         }
         document.querySelector('.assoarrayout15').innerHTML = asoarraycontainer15;
     }
-};document.querySelector('#asoarraybutt15').onclick = funkasoaray15;
-
+}
+document.querySelector('#asoarraybutt15').onclick = funkasoaray15;
 
 //16
 let asoarray16 = {
@@ -3499,8 +3426,8 @@ function funkasoaray16() {
 
     }
     document.querySelector('.assoarrayout16').innerHTML = asoarraycontainer16;
-};document.querySelector('#asoarraybutt16').onclick = funkasoaray16;
-
+}
+document.querySelector('#asoarraybutt16').onclick = funkasoaray16;
 
 //17
 let asoarray17 = {
@@ -3521,8 +3448,8 @@ function funkasoaray17() {
         }
     }
     document.querySelector('.assoarrayout17').innerHTML = asoarraycontainer17;
-};document.querySelector('#asoarraybutt17').onclick = funkasoaray17;
-
+}
+document.querySelector('#asoarraybutt17').onclick = funkasoaray17;
 
 let asoarray18 = {
     "red": ['Akademmistechko', 'Nyvky', 'Universytet', 'Lisova'],
@@ -3538,8 +3465,8 @@ function funkasoaray18() {
     }
     document.querySelector('.assoarrayout18').innerHTML = asoarraycontainer18;
 
-};document.querySelector('#asoarraybutt18').onclick = funkasoaray18;
-
+}
+document.querySelector('#asoarraybutt18').onclick = funkasoaray18;
 
 //19
 let asoarray19 = {
@@ -3559,8 +3486,8 @@ function funkasoaray19() {
         }
     }
     document.querySelector('.assoarrayout19').innerHTML = asoarraycontainer19;
-};document.querySelector('#asoarraybutt19').onclick = funkasoaray19;
-
+}
+document.querySelector('#asoarraybutt19').onclick = funkasoaray19;
 
 //20
 let asoarray20 = {
@@ -3580,17 +3507,13 @@ function funkasoaray20() {
     }
 
     document.querySelector('.assoarrayout20').innerHTML = asoarraycontainer20;
-};
-
+}
 
 document.querySelector('#asoarraybutt20').onclick = funkasoaray20;
-
 
 // UNIT 14. ПРАКТИКА ПО МАССИВАМ - ПОЛУЧАЕМ ПРОГНОЗ ПОГОДЫ ПО API
 
 //id=703448
-
-
 function apifunc() {
     let inputapitext = document.querySelector('.inputapitext').value;
     let inputapinumber = document.querySelector('.inputapinumber').value;
@@ -3621,9 +3544,7 @@ function apifunc() {
 
 document.querySelector('#button-api').onclick = apifunc;
 
-
 //sumoftwo задача
-
 
 function twoSum(arr100, target100) {
     const result100 = {};
@@ -3638,9 +3559,7 @@ function twoSum(arr100, target100) {
     }
     return result100;
 }
-
 console.log(twoSum([10, 20, 10, 40, 50, 60, 70], 50));
-
 
 //UNIT 15. SET В JAVASCRIPT
 
@@ -3671,7 +3590,6 @@ let newarr = Array.from(newset);
 console.log(newarr); // конвертация сета обратно в массив
 console.log(newarr[2]);
 
-
 //1
 let set1 = new Set();
 set1.add('h');
@@ -3682,7 +3600,6 @@ console.log(set1)
 let arrayfromset1 = Array.from(set1)
 document.querySelector('.outset1').innerHTML += arrayfromset1;
 
-
 //2
 let set2 = new Set();
 
@@ -3692,8 +3609,8 @@ function funcset2() {
     console.log(set2)
     let arrayfromset2 = Array.from(set2)
     document.querySelector('.outset2').innerHTML = arrayfromset2;
-};document.querySelector('#buttset2').onclick = funcset2;
-
+}
+document.querySelector('#buttset2').onclick = funcset2;
 
 //3
 let set3 = new Set(['one', 'two', 'four']);
@@ -3704,8 +3621,8 @@ function funcset3() {
     console.log(set3)
     let arrayfromset3 = Array.from(set3)
     document.querySelector('.outset3').innerHTML = arrayfromset3;
-};document.querySelector('#buttset3').onclick = funcset3;
-
+}
+document.querySelector('#buttset3').onclick = funcset3;
 
 //4
 let set4 = new Set(['a', 'b', 'c', 'z']);
@@ -3719,16 +3636,16 @@ function funcset4() {
         setcontainer4 = false;
     }
     document.querySelector('.outset4').innerHTML = setcontainer4;
-};document.querySelector('#buttset4').onclick = funcset4;
-
+}
+document.querySelector('#buttset4').onclick = funcset4;
 
 //5
 let set5 = new Set(['a', 'b', 'c', 'z', 'a2', 'b2', 'c2', 'z2']);
 
 function funcset5() {
     document.querySelector('.outset5').innerHTML = set5.size;
-};document.querySelector('#buttset5').onclick = funcset5;
-
+}
+document.querySelector('#buttset5').onclick = funcset5;
 
 //6
 let arrayforset6 = [1, 2, 3, 4, 5, 3, 4, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56];
@@ -3737,11 +3654,10 @@ function funcset6() {
     let set6 = new Set(arrayforset6);
     console.log(set6)
     document.querySelector('.outset6').innerHTML = set6.size;
-};document.querySelector('#buttset6').onclick = funcset6;
-
+}
+document.querySelector('#buttset6').onclick = funcset6;
 
 //7
-
 function funcset7() {
     let inputset7 = document.querySelector('.inputset7').value;
     let setcontainer7 = '';
@@ -3752,8 +3668,8 @@ function funcset7() {
         setcontainer7 += 0;
     }
     document.querySelector('.outset7').innerHTML = setcontainer7;
-};document.querySelector('#buttset7').onclick = funcset7;
-
+}
+document.querySelector('#buttset7').onclick = funcset7;
 
 //8
 let set8 = new Set([1, 2, 3, 4, 5, 3, 4, 7, 9, 5, 7, 8, 9, 23, 45, 5, 2, 4, 5, 3, 24, 5, 2, 4, 56, 4, 3, 2, 335, 2, 23, 41, 3, 4, 1, 1, 4, 2, 2, 4, 5, 24, 5, 3, 22, 56]);
@@ -3767,8 +3683,8 @@ function funcset8() {
     }
     console.log(setarray8)
     document.querySelector('.outset8').innerHTML = setarray8;
-};document.querySelector('#buttset8').onclick = funcset8;
-
+}
+document.querySelector('#buttset8').onclick = funcset8;
 
 //9
 function funcset9(our_set) {        //const funcset9 = our_set => { }
@@ -3782,8 +3698,7 @@ function funcset9(our_set) {        //const funcset9 = our_set => { }
 document.querySelector('#buttset9').onclick = () => {
     let set9 = new Set([9, 8, 7, 6, 5]);
     document.querySelector('.outset9').innerHTML = funcset9(set9);
-};
-
+}
 
 //10
 const funcset10 = (out_set, elem) => {
@@ -3792,11 +3707,12 @@ const funcset10 = (out_set, elem) => {
         out10 += item10 + ' ';
     }
     document.querySelector(elem).textContent = out10;
-};
+}
+
 document.querySelector('#buttset10').onclick = () => {
     let set10 = new Set(['4', '5', '6']);
     funcset10(set10, '.outset10');
-};
+}
 
 
 //11
@@ -3820,11 +3736,10 @@ const funcset12 = () => {
     }
     let set12 = new Set(setarray12);
     return set12
-};
+}
 document.querySelector('#buttset12').onclick = () => {
     console.log(funcset12());
-};
-
+}
 
 //13
 let str13 = 'The name conjures up visions of plum pudding and Christmas punch quaint coaching inns and cozy firesides but also of orphaned and starving children';
@@ -3924,7 +3839,8 @@ function funcfor1() {
         outfor1 += arrayfor1[i] + ' ';
     }
     document.querySelector('.outfor1').innerHTML = outfor1;
-};document.querySelector('#buttfor1').onclick = funcfor1;
+}
+document.querySelector('#buttfor1').onclick = funcfor1;
 
 
 //T2
@@ -3938,7 +3854,8 @@ function funcfor2() {
         outfor2 += [i] + ': ' + arrayfor2[i] + ' ' + '<br>';
     }
     document.querySelector('.outfor2').innerHTML = outfor2;
-};document.querySelector('#buttfor2').onclick = funcfor2;
+}
+document.querySelector('#buttfor2').onclick = funcfor2;
 
 
 //T3
@@ -3948,7 +3865,8 @@ function funcfor3() {
     for (let i = 0; i < outfor3.length; i++) {
         outfor3[i].innerHTML = 3;
     }
-};document.querySelector('#buttfor3').addEventListener('click', funcfor3);
+}
+document.querySelector('#buttfor3').addEventListener('click', funcfor3);
 
 
 //T4
@@ -3958,7 +3876,8 @@ function funcfor4() {
     for (let i = 0; i < outfor4.length; i++) {
         outfor4[i].innerHTML = 4;
     }
-};document.querySelector('#buttfor4').addEventListener('click', funcfor4);
+}
+document.querySelector('#buttfor4').addEventListener('click', funcfor4);
 
 
 //T5
@@ -3973,7 +3892,8 @@ function funcfor5() {
         }
     }
     return newarray5;
-};document.querySelector('#buttfor5').addEventListener('click', () => {
+}
+document.querySelector('#buttfor5').addEventListener('click', () => {
     document.querySelector('.outfor5').innerHTML = funcfor5();
 });
 
@@ -3990,7 +3910,8 @@ function funcfor6() {
         }
     }
     document.querySelector('.outfor6').innerHTML = newarray6;
-};document.querySelector('#buttfor6').addEventListener('click', funcfor6);
+}
+document.querySelector('#buttfor6').addEventListener('click', funcfor6);
 
 
 //T7
@@ -4005,7 +3926,8 @@ function funcfor7() {
         newarray7[item7.id] = item7.name;
     }
     return newarray7;
-};document.querySelector('#buttfor7').addEventListener('click', () => {
+}
+document.querySelector('#buttfor7').addEventListener('click', () => {
     console.log(funcfor7());
 });
 
@@ -4027,7 +3949,7 @@ function funcfor8() {
 
 document.querySelector('#buttfor8').addEventListener('click', () => {
     console.log(funcfor8());
-});
+})
 
 
 //T9
@@ -4058,10 +3980,10 @@ function funcfor9() {
         }
         return maxindex9;
     }
-};document.querySelector('#buttfor9').addEventListener('click', () => {
+}
+document.querySelector('#buttfor9').addEventListener('click', () => {
     document.querySelector('.outfor9').innerHTML = funcfor9();
-});
-
+})
 
 //T10
 //При нажатии buttfor10 выполняете функцию funcfor10. Функция должна преобразовывать массив arrayfor10 в ассоциативный массив вида {4: 4, 6: 6, 9: 9, hello : "hello"} и возвращать полученный массив.
@@ -4077,7 +3999,7 @@ function funcfor10() {
 
 document.querySelector('#buttfor10').addEventListener('click', () => {
     console.log(funcfor10());
-});
+})
 
 
 //Т11
@@ -4092,7 +4014,8 @@ function funcfor11() {
         if (arrayfor11[key11] > 10) conteinerfor11 += arrayfor11[key11] + ' ';
     }
     document.querySelector('.outfor11').innerHTML = conteinerfor11;
-};document.querySelector('#buttfor11').addEventListener('click', funcfor11);
+}
+document.querySelector('#buttfor11').addEventListener('click', funcfor11);
 
 
 //T12
@@ -4106,7 +4029,8 @@ function funcfor12() {
     }
     document.querySelector('.outfor12').innerHTML = conteinerfor12;
 
-};document.querySelector('#buttfor12').addEventListener('click', funcfor12);
+}
+document.querySelector('#buttfor12').addEventListener('click', funcfor12);
 
 
 //T13
@@ -4119,7 +4043,8 @@ function funcfor13() {
         conteinerfor13 += item13 + ' ';
     }
     document.querySelector('.outfor13').innerHTML = conteinerfor13;
-};document.querySelector('#buttfor13').addEventListener('click', funcfor13);
+}
+document.querySelector('#buttfor13').addEventListener('click', funcfor13);
 
 
 //T14
@@ -4132,7 +4057,8 @@ function funcfor14() {
         conteinerfor14 += item14 + ' ';
     }
     document.querySelector('.outfor14').innerHTML = conteinerfor14;
-};document.querySelector('#buttfor14').addEventListener('click', funcfor14);
+}
+document.querySelector('#buttfor14').addEventListener('click', funcfor14);
 
 
 //T15
@@ -4145,7 +4071,8 @@ function funcfor15() {
         item15.innerHTML = 15;
     }
     console.log(conteinerforclasses15)
-};document.querySelector('#buttfor15').addEventListener('click', funcfor15);
+}
+document.querySelector('#buttfor15').addEventListener('click', funcfor15);
 
 
 //UNIT 17. МЕТОДЫ МАССИВОВ: MAP, FILTER ( ЧАСТЬ 1)
@@ -4165,7 +4092,7 @@ let maparrayc = maparraya.filter(function (item, index) {
     if (item % 2 == 0 && item > 0) {  //(3)[6, 14, 300]
         return true;
     }
-});
+})
 console.log(maparrayc)
 
 
@@ -4182,7 +4109,8 @@ function funcmap1() {
     })
     console.log(array1_res);
     document.querySelector('.outmap1').innerHTML = array1_res;
-};document.querySelector('#buttmap1').addEventListener('click', funcmap1);
+}
+document.querySelector('#buttmap1').addEventListener('click', funcmap1);
 
 
 //T2
@@ -4195,7 +4123,8 @@ function funcmap2() {
         return item2 ** 2;
     })
 
-};document.querySelector('#buttmap2').onclick = () => {
+}
+document.querySelector('#buttmap2').onclick = () => {
     console.log(funcmap2());
     document.querySelector('.outmap2').innerHTML = array2_res;
 };
@@ -4216,7 +4145,7 @@ document.querySelector('#buttmap3').onclick = () => {
     console.log(funcfilter3());
     console.log(array3_res);
     document.querySelector('.outmap3').innerHTML = array3_res;
-};
+}
 
 
 //T4
@@ -4230,7 +4159,8 @@ function funcmap4() {
             return item4;
         }
     })
-};document.querySelector('#buttmap4').onclick = () => {
+}
+document.querySelector('#buttmap4').onclick = () => {
     console.log(funcmap4());
     console.log(array4_res);
 };
@@ -4253,7 +4183,7 @@ document.querySelector('#buttmap5').onclick = () => {
     console.log(funcfilter5());
     console.log(arrayfilter5_res);
     document.querySelector('.outmap5').innerHTML = arrayfilter5_res;
-};
+}
 
 
 //T6
@@ -4267,7 +4197,8 @@ function funcfilter6() {
             return item6;
         }
     })
-};document.querySelector('#buttmap6').onclick = () => {
+}
+document.querySelector('#buttmap6').onclick = () => {
     console.log(funcfilter6());
     console.log(arrayfilter6_res);
     document.querySelector('.outmap6').innerHTML = arrayfilter6_res;
@@ -4286,7 +4217,8 @@ function funcfilter7() {
             return true;
         }
     })
-};document.querySelector('#buttmap7').onclick = () => {
+}
+document.querySelector('#buttmap7').onclick = () => {
     console.log(funcfilter7());
     console.log(arrayfilter7_res);
     document.querySelector('.outmap7').innerHTML = arrayfilter7_res;
@@ -4304,7 +4236,8 @@ function funcfilter8() {
             arrayfilter8_res.push(index8);
         }
     })
-};document.querySelector('#buttmap8').onclick = () => {
+}
+document.querySelector('#buttmap8').onclick = () => {
     console.log(funcfilter8());
     console.log(arrayfilter8_res);
     document.querySelector('.outmap8').innerHTML = arrayfilter8_res;
@@ -4329,7 +4262,8 @@ function funcfilter9() {
             return true;
         }
     })
-};document.querySelector('#buttmap9').onclick = () => {
+}
+document.querySelector('#buttmap9').onclick = () => {
     console.log(funcfilter9());
     console.log(arrayfilter9_num);
     console.log(arrayfilter9_string);
@@ -4351,7 +4285,8 @@ function funcfilter10() {
             }
         }
     })
-};document.querySelector('#buttmap10').onclick = () => {
+}
+document.querySelector('#buttmap10').onclick = () => {
     console.log(funcfilter10());
     console.log(arrayfilter10_res);
     document.querySelector('.outmap10').innerHTML = arrayfilter10_res;
@@ -4391,7 +4326,8 @@ function funcforeach1() {
     })
     console.log(arrayforeach1_res);
     document.querySelector('.outforeach1').innerHTML = arrayforeach1_res;
-};document.querySelector('#buttforeach1').onclick = funcforeach1;
+}
+document.querySelector('#buttforeach1').onclick = funcforeach1;
 
 
 //T2
@@ -4406,7 +4342,8 @@ function funcforeach2() {
     })
     console.log(arrayforeach2_res);
     document.querySelector('.outforeach2').innerHTML = arrayforeach2_res;
-};document.querySelector('#buttforeach2').onclick = funcforeach2;
+}
+document.querySelector('#buttforeach2').onclick = funcforeach2;
 
 
 //T3
@@ -4420,11 +4357,11 @@ function funcforeach3() {
         if (typeof elem3 == 'number') {
             arrayforeach3_res.push(elem3)
         }
-        ;
     })
     console.log(arrayforeach3_res);
     document.querySelector('.outforeach3').innerHTML = arrayforeach3_res;
-};document.querySelector('#buttforeach3').onclick = funcforeach3;
+}
+document.querySelector('#buttforeach3').onclick = funcforeach3;
 
 
 //T4
@@ -4439,7 +4376,8 @@ function funcforeach4() {
     })
     console.log(arrayforeach4_res);
     document.querySelector('.outforeach4').innerHTML = arrayforeach4_res;
-};document.querySelector('#buttforeach4').onclick = funcforeach4;
+}
+document.querySelector('#buttforeach4').onclick = funcforeach4;
 
 
 //T5
@@ -4450,7 +4388,8 @@ let arrayforeach5_res = [];
 function funcforeach5() {
     arrayforeach5_res.push(this.getAttribute('data-taskforeach5'))
     console.log(arrayforeach5_res);
-};document.querySelectorAll('.taskforeach-5').forEach((elem5) => {
+}
+document.querySelectorAll('.taskforeach-5').forEach((elem5) => {
     elem5.onclick = funcforeach5;
 })
 
@@ -4463,7 +4402,8 @@ function funcforeach6() {
     arraysplit6_res = str6.split('');
     console.log(arraysplit6_res);
     document.querySelector('.outforeach6').innerHTML = arraysplit6_res;
-};document.querySelector('#buttforeach6').onclick = funcforeach6;
+}
+document.querySelector('#buttforeach6').onclick = funcforeach6;
 
 //T7
 //Дана строка str7="hello world hi mazai" - преобразуйте ее в массив и разбейте по словам. Причем слова не должны содержать пробелов и присвойте arraysplit7_res.
@@ -4475,7 +4415,8 @@ function funcforeach7() {
     arraysplit7_res = str7.split(' ');
     console.log(arraysplit7_res);
     document.querySelector('.outforeach7').innerHTML = arraysplit7_res;
-};document.querySelector('#buttforeach7').onclick = funcforeach7;
+}
+document.querySelector('#buttforeach7').onclick = funcforeach7;
 
 
 //T8
@@ -4488,7 +4429,6 @@ function funcforeach8() {
     console.log(arrayjoin8_res);
     document.querySelector('.outforeach8').innerHTML = arrayjoin8_res;
 }
-
 document.querySelector('#buttforeach8').onclick = funcforeach8;
 
 
@@ -4504,7 +4444,8 @@ function funcforeach9() {
     }
     console.log(arrayjoin9_res);
     document.querySelector('.outforeach9').innerHTML = arrayjoin9_res;
-};document.querySelector('#buttforeach9').onclick = funcforeach9;
+}
+document.querySelector('#buttforeach9').onclick = funcforeach9;
 
 
 //T10
@@ -4545,18 +4486,13 @@ function funcforeach10() {
     arrayforeach10_res = result.join('&');
     document.querySelector('.outforeach10').innerHTML = arrayforeach10_res
 }
-
 document.querySelector('#buttforeach10').onclick = funcforeach10;
 
-
 //UNIT 19. СОБЫТИЯ МЫШИ В JAVASCRIPT
-
-
 document.querySelector('.blockone').onclick = function (event) {
     console.log(event);
     console.log('click');
 }
-
 
 document.querySelector('.blocktwo').onclick = () => {
     console.log('click');
@@ -4568,7 +4504,6 @@ document.querySelector('.blocktwo').oncontextmenu = () => {
     console.log('right button');
     return false
 }
-
 
 let width = 75;
 document.querySelector('.blockthree').onclick = () => {
@@ -4595,6 +4530,7 @@ document.querySelector('.blockthree').onmousedown = () => {
     console.log('mouse downed');
     document.querySelector('.blockthree').style.background = 'yellow';
 }
+
 document.querySelector('.blockthree').onmouseup = () => {
     console.log('mouse upped');
     document.querySelector('.blockthree').style.background = 'blue';
@@ -4615,9 +4551,10 @@ function funcevent1() {
     let text = document.querySelector('.event1').textContent;
     document.querySelector('.outevent1').textContent = text;
     return text;
-};document.querySelector('.event1').onclick = (event) => {
+}
+document.querySelector('.event1').onclick = (event) => {
     funcevent1();
-};
+}
 
 
 //T2
@@ -4626,7 +4563,8 @@ function funcevent1() {
 function funcevent2(event) {
     document.querySelector('.outevent2').innerHTML = event.altKey;
     return event.altKey;
-};document.querySelector('.event2').onclick = funcevent2;
+}
+document.querySelector('.event2').onclick = funcevent2;
 
 
 //T3
@@ -4637,8 +4575,7 @@ document.querySelector('.event3').onclick = () => {
     document.querySelector('.event3').style.width = width3 + 'px';
     width3 = width3 + 5;
     document.querySelector('.outevent3').innerHTML = width3;
-};
-
+}
 
 //T4
 //Добавьте на блок .blockevent4 событие двойной клик и по двойному клику запуск функции funcevent4. Функция должна возвращать и выводить на экран содержимое блока (только текст). Вывод осуществляется в out-4.
@@ -4647,9 +4584,10 @@ let text4 = document.querySelector('.event4').textContent;
 function funcevent4() {
     document.querySelector('.outevent4').textContent = text4;
     return text4;
-};document.querySelector('.event4').ondblclick = () => {
+}
+document.querySelector('.event4').ondblclick = () => {
     funcevent4();
-};
+}
 
 
 //T5
@@ -4663,24 +4601,21 @@ document.querySelector('.event5').ondblclick = () => {
     } else {
         eventelement5.classList.add('active');
     }
-};
-
+}
 
 //T6
 //Дан блок .event6 и список .ulevent6. При двойном клике на блоке скрывайте .ulevent6 если он показан и
 //показывайте если скрыт. Скрытие и показ делайте через добавление - удаление класса .hideevent6.
 document.querySelector('.event6').ondblclick = () => {
     document.querySelector('.ulevent6').classList.toggle('hideevent6');
-};
-
+}
 
 //T7
 //Дан блок .div-7. При клике правой кнопкой мыши на блоке добавляйте ему класс .active. При повторном клике - удаляйте.
 document.querySelector('.event7').oncontextmenu = () => {
     document.querySelector('.event7').classList.toggle('active');
     return false;
-};
-
+}
 
 //T8
 //Дано . ckboxevent8. Повесьте на него событие onchange при котором на документе отключается клик правой кнопкой мыши если checkbox выбран и отключает если не выбран.
@@ -4693,53 +4628,44 @@ document.querySelector('.checkboxevent8').onchange = () => {
     } else {
         document.oncontextmenu = null;
     }
-};
+}
 
 //T9
 //Дан блок .outevent9. Внутри блока - изображение 1.png. При клике правой кнопкой мыши - меняйте изображение на 2.png. Надеюсь вы догадаетесь изменить только src изображения?
 function funcevent9() {
-    document.querySelector('.event9 img').setAttribute('src', './JSImages/jojo2.png');
+    document.querySelector('.event9 img').setAttribute('src', '../src/assets/JSImages/jojo2.png');
 }
-
 document.querySelector('.event9').oncontextmenu = funcevent9;
-
 
 //T10
 //Дан блок .event10. Внутри блока - изображение 1.png. При наведении мыши (mouseenter) - меняйте изображение на 2.png.
 function funcevent10() {
-    document.querySelector('.event10 img').setAttribute('src', './JSImages/jojo2.png');
+    document.querySelector('.event10 img').setAttribute('src', '../src/assets/JSImages/jojo2.png');
 }
-
 document.querySelector('.event10').onmouseenter = funcevent10;
-
 
 //T11
 //Дан блок .event11. Внутри блока - изображение 1.png. При наведении мыши (mouseenter) - меняйте изображение на 2.png. При уведении мыши - mouseleave - возвращайте исходное изображение.
 function funcevent11_1() {
-    document.querySelector('.event11 img').setAttribute('src', './JSImages/jojo1.png');
+    document.querySelector('.event11 img').setAttribute('src', '../src/assets/JSImages/jojo1.png');
 }
 
 document.querySelector('.event11').onmouseenter = funcevent11_1;
 
 function funcevent11_2() {
-    document.querySelector('.event11 img').setAttribute('src', './JSImages/jojo2.png');
+    document.querySelector('.event11 img').setAttribute('src', '../src/assets/JSImages/jojo2.png');
 }
-
 document.querySelector('.event11').onmouseleave = funcevent11_2;
-
 
 //T12
 //Дан блок .event12. Добавьте на него событие mousedown - при нажатии кнопки мыши - добавляйте ему класс active.
 function funcevent12() {
     document.querySelector('.event12').classList.add('active');
 }
-
 document.querySelector('.event12').onmousedown = funcevent12;
-
 
 //T13
 //Дан блок .event13. Добавьте на него событие mousedown - при нажатии кнопки мыши - добавляйте ему класс active. Добавьте ему событие mouseup - при отпускании мыши - удаляйте класс active.
-
 document.querySelector('.event13').onmousedown = () => {
     document.querySelector('.event13').classList.add('active');
 }
@@ -4747,13 +4673,11 @@ document.querySelector('.event13').onmouseup = () => {
     document.querySelector('.event13').classList.remove('active');
 }
 
-
 //T14
 //Дан блок .event14. При нажатии кнопки buttevent14 добавляйте к нему событие onclick - которое, при клике добавляем блоку event14 класс active.
 document.querySelector('#buttevent14').onclick = () => {
     document.querySelector('.event14').classList.add('active');
 }
-
 
 //T15
 //Дан блок .event15. Добавьте на него событие move. При каждом движении мыши увеличивайте число внутри на 1.
@@ -4763,9 +4687,7 @@ function funcevent15() {
     counterevent15++;
     document.querySelector('.event15').innerHTML = counterevent15;
 }
-
 document.querySelector('.event15').onmousemove = funcevent15;
-
 
 //T16
 //Дан блок .event16. Добавьте на него событие move. При каждом движении мыши увеличивайте ширину блока на 1px.
@@ -4779,21 +4701,17 @@ function funcevent16() {
 let moovingevent16 = document.querySelector('.event16')
 moovingevent16.onmousemove = funcevent16;
 
-
 //T17
 //Дано 2 кнопки - buttevent17_on и buttevent17_off. Напишите фукнции funcevent17On и funcevent17Off которые включают и отключают событие onmousemove в задании 16.
 function funcevent17On() {
     moovingevent16.onmousemove = funcevent16;
 }
-
 document.querySelector('#buttevent17_on').onclick = funcevent17On;
 
 function funcevent17Off() {
     moovingevent16.onmousemove = null;
 }
-
 document.querySelector('#buttevent17_off').onclick = funcevent17Off;
-
 
 //T18
 //Дан блок .event18. Напишите фукнцию funcevent18 которая выводит в данный блок его ширину при событии onmouseenter.
@@ -4804,16 +4722,12 @@ document.querySelector('.event18').onmouseenter = () => {
     document.querySelector('.event18').innerHTML = document.querySelector('.event18').offsetWidth;
 }
 
-
 //T19
 //Дан блок .event19. Напишите фукнцию funcevent19 которая выводит в данный блок его классы при событии onmouseout.
 function funcevent19() {
-
     document.querySelector('.event19').innerHTML = document.querySelector('.event19').classList;
 }
-
 document.querySelector('.event19').onmouseout = funcevent19;
-
 
 //T20
 //Дан элемент progress. Напишите фукнцию funcevent20 которая увеличивает его value на 1 при каждом событии mousemove внутри progress.
@@ -4823,16 +4737,13 @@ function funcevent20() {
     counterevent20++;
     document.querySelector('#progressbar20').value = counterevent20;
 }
-
 document.querySelector('#progressbar20').onmousemove = funcevent20;
 
-
 //UNIT 20. СОБЫТИЯ КЛАВИАТУРЫ В JAVASCRIPT
-
 //событие изменения инпута
 document.querySelector('.inputkb').oninput = function (eventinp) {
     console.log(eventinp);
-};
+}
 
 //событие срабатывания клавиши
 document.querySelector('.inputkb').onkeypress = function (eventkb) {
@@ -4842,7 +4753,7 @@ document.querySelector('.inputkb').onkeypress = function (eventkb) {
     console.log('key: ' + eventkb.key);
     console.log('keyCode: ' + eventkb.keyCode);
     console.log(eventkb);
-};
+}
 
 //событие срабатывает при зажатии клавиши
 document.querySelector('.inputkb').onkeydown = function (eventkbdown) {
@@ -4857,7 +4768,7 @@ document.querySelector('.inputkb').onkeydown = function (eventkbdown) {
     } else {
         document.querySelector('.checkboxkb').checked = false;
     }
-};
+}
 
 //событие срабатывает при отжатии клавиши
 document.querySelector('.inputkb').onkeyup = function (eventkbup) {
@@ -4872,8 +4783,7 @@ document.querySelector('.inputkb').onkeyup = function (eventkbup) {
     } else {
         document.querySelector('.checkboxkb').checked = false;
     }
-};
-
+}
 
 document.querySelector('.inputkbfalse').onkeypress = function (eventkbfalse) {
     console.log('keypress');
@@ -4887,7 +4797,7 @@ document.querySelector('.inputkbfalse').onkeypress = function (eventkbfalse) {
     }
     document.querySelector('.inputkbfalse').value += arraykbfalse[eventkbfalse.key]
     return false;
-};
+}
 
 
 //T1
@@ -4906,7 +4816,6 @@ document.querySelector('.inputkb2').onkeydown = function funckb1(eventkb2) {
     return eventkb2.keyCode;
 }
 
-
 //T3
 //Дан input .inputkb3. Напишите функцию funckb3, которая выводит на страницу true если введен символ и false если
 //цифра. Для определения - используйте код клавиши.
@@ -4918,7 +4827,8 @@ function funckb3(eventkb3) {
     } else {
         document.querySelector('.outkb3').textContent = true;
     }
-};document.querySelector('.inputkb3').onkeydown = funckb3;
+}
+document.querySelector('.inputkb3').onkeydown = funckb3;
 
 
 //T4
@@ -4927,16 +4837,15 @@ function funckb3(eventkb3) {
 function funckb4() {
     let inputkb4 = document.querySelector('.inputkb4').value;
     document.querySelector('.outkb4').textContent = inputkb4.toLowerCase();
-};document.querySelector('.inputkb4').onkeydown = funckb4;
-
+}
+document.querySelector('.inputkb4').onkeydown = funckb4;
 
 //T5
 //Дан input .inputkb5. Напишите функцию funckb5, которая выводит в .outkb5 все вводимые символы в верхнем регистре.
 //Т.е. пользователь ввел AbCd и функция выведет ABCD.
 document.querySelector('.inputkb5').onkeydown = function funckb5() {
     document.querySelector('.outkb5').textContent = document.querySelector('.inputkb5').value.toUpperCase();
-};
-
+}
 
 //T6
 //Дан input .inputkb6. Напишите функцию funckb6, которая выводит в .inputkb6 только символы в нижнем регистре.
@@ -4947,8 +4856,7 @@ document.querySelector('.inputkb6').onkeydown = function funckb6(eventkb6) {
     } else {
         return false
     }
-};
-
+}
 
 //T7
 //Дан input .inputkb7. Напишите функцию funckb7, которая выводит в .outkb7 случаный символ из массива arraykb7 при каждом вводе символа.
@@ -4960,16 +4868,14 @@ document.querySelector('.inputkb7').onkeydown = function funckb7(eventkb7) {
     strkb7 += arraykb7[index];
     document.querySelector('.outkb7').innerHTML = strkb7;
     return false;
-};
+}
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
 //T8
 //Дан input .inputkb8. Напишите функцию funckb8, которая выводит в .outkb8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7.
-
 document.querySelector('.inputkb8').onkeydown = function funckb8(eventkb8) {
     let arraykb8 = {
         i: 1, o: 0, l: 7,
@@ -4980,7 +4886,7 @@ document.querySelector('.inputkb8').onkeydown = function funckb8(eventkb8) {
     } else {
         document.querySelector('.outkb8').textContent = document.querySelector('.inputkb8').value;
     }
-};
+}
 
 //T9
 //Дан input .inputkb9. Напишите функцию funckb8, выводит в .outkb9 количество нажатых клавиш стрелка вниз.
@@ -4990,8 +4896,7 @@ document.querySelector('.inputkb9').onkeydown = function funckb9(eventkb9) {
         document.querySelector('.outkb9').innerHTML = counterkv9;
         counterkv9++;
     }
-};
-
+}
 
 //T10
 //Дан input .inputkb10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и
@@ -5016,9 +4921,7 @@ document.querySelector('.inputkb10').onkeydown = function funckb10(eventkb10) {
         document.querySelector('#jojoimg10').style.height = counterH10 + 'px';
         counterH10++
     }
-
-};
-
+}
 
 // //T11
 // //1. Выполните в html верстку клавиш клавиатуры. Сверстайте – блок цифровых клавиш от 1 до 0. И ряд клавиш q – p. Добавьте
@@ -5043,9 +4946,7 @@ document.querySelector('.inputkb10').onkeydown = function funckb10(eventkb10) {
 //     return false;
 // }
 
-
 //UNIT 21. КРАТКИЙ ОБЗОР TOUCH СОБЫТИЙ
-
 document.querySelector('.touchevent').addEventListener('touchstart', functouchs);
 document.querySelector('.touchevent').addEventListener('touchend', functouche);
 let countertse = 0;
@@ -5056,12 +4957,14 @@ function functouchs(eventtouch) {
     document.querySelector('.outtouchevent-1').innerHTML = 'количество нажимающих пальцев: ' + eventtouch.touches.length;
     document.querySelector('.outtouchevent').innerHTML = 'количество кликов: ' + countertse;
     countertse++;
-};let countertee = 0;
+}
+let countertee = 0;
 
 function functouche() {
     document.querySelector('.outtouchevent-2').innerHTML = 'количество отпусканий пальца: ' + countertee;
     countertee++;
-};document.querySelector('.touchevent-1').addEventListener('touchmove', functouchm);
+}
+document.querySelector('.touchevent-1').addEventListener('touchmove', functouchm);
 let counterm = 0;
 
 function functouchm(eventm) {
@@ -5070,15 +4973,12 @@ function functouchm(eventm) {
     counterm++;
 }
 
-
 //T1
 //Создайте блок diveventmove1. Добавьте на него событие touchstart. Выведите в outeventmove1 слово touch если событие сработает.
 function functouchevent1() {
     document.querySelector('.outeventmove1').innerHTML += 'touch';
 }
-
 document.querySelector('.diveventmove1').addEventListener('touchstart', functouchevent1);
-
 
 //T2
 //Создайте блок diveventmove2. Добавьте на него событие touchstart. Выведите в outeventmove2 число срабатываний события.
@@ -5087,12 +4987,11 @@ let countertouchevent2 = 0;
 function functouchevent2() {
     document.querySelector('.outeventmove2').innerHTML = 'число срабатываний: ' + countertouchevent2;
     countertouchevent2++;
-};document.querySelector('.diveventmove2').addEventListener('touchstart', functouchevent2);
-
+}
+document.querySelector('.diveventmove2').addEventListener('touchstart', functouchevent2);
 
 //T3
 //Создайте блок diveventmove3_1 и diveventmove3_2. Добавьте на них событие touchstart. Выведите в outeventmove3 номер блока 1 или 2 на котором сработало событие.
-
 function functouchevent3(touchevent3) {
     let outtouchevent3 = document.querySelector('.outeventmove3');
     if (touchevent3.target.classList.contains('diveventmove3_1')) {
@@ -5102,9 +5001,9 @@ function functouchevent3(touchevent3) {
         outtouchevent3.innerHTML = 2;
     }
 
-};document.querySelector('.diveventmove3_1').addEventListener('touchstart', functouchevent3);
+}
+document.querySelector('.diveventmove3_1').addEventListener('touchstart', functouchevent3);
 document.querySelector('.diveventmove3_2').addEventListener('touchstart', functouchevent3);
-
 
 //T4
 //Создайте блок diveventmove4. И кнопку butteventmove4. При нажатии кнопки - добавляйте событие touchstart на блок diveventmove4. При событии происходит вывод текста touch в outeventmove4.
@@ -5116,31 +5015,25 @@ document.querySelector('#butteventmove4').onclick = () => {
     document.querySelector('.diveventmove4').addEventListener('touchstart', functouchevent4);
 }
 
-
 //T5
 //Дана кнопка butteventmove5. При ее нажатии очищайте событие ontouchstart на блоке diveventmove4.
 document.querySelector('#butteventmove5').onclick = () => {
     document.querySelector('.diveventmove4').removeEventListener('touchstart', functouchevent4);
 }
 
-
 //T6
 //Добавьте событие touchend на diveventmove4. При его срабатывании выведите в outeventmove6 слово touchend.
 function functouchevent6() {
     document.querySelector('.outeventmove6').innerHTML += 'touchend';
 }
-
 document.querySelector('.diveventmove4').addEventListener('touchend', functouchevent6);
-
 
 //T7
 //Дан блок diveventmove7. Добавьте событие touch, при срабатывании которого окрашивайте блок в красный цвет.
 function functouchevent7() {
     document.querySelector('.diveventmove7').style.backgroundColor = 'red';
 }
-
 document.querySelector('.diveventmove7').addEventListener('touchstart', functouchevent7);
-
 
 //T8
 //Дан блок diveventmove8. Добавьте на него событие touch, которое при срабатывании окрашивает блок случаным цветом
@@ -5153,22 +5046,18 @@ function functouchevent8() {
     document.querySelector('.diveventmove8').style.backgroundColor = randomcollor8;
     document.querySelector('.outeventmove8').innerHTML = randomcollor8;
 }
-
 document.querySelector('.diveventmove8').addEventListener('touchstart', functouchevent8);
 
 function getRandomInt8(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
 //T9
 //Дан блок diveventmove9. Добавьте событие touchstart. Выводите количество одновременных касаний в outeventmove9.
 function functouchevent9(touchevent9) {
     document.querySelector('.outeventmove9').innerHTML = 'количество одновременных касаний: ' + touchevent9.touches.length;
 }
-
 document.querySelector('.diveventmove9').addEventListener('touchstart', functouchevent9);
-
 
 //T10
 //Дан блок diveventmove10. Добавьте на него событие touchmove. При срабатывании события - увеличивайте его ширину на 1.
@@ -5178,18 +5067,14 @@ function functouchevent10() {
     document.querySelector('.diveventmove10').style.width = countertouchevent10 + 'px';
     countertouchevent10++;
 }
-
 document.querySelector('.diveventmove10').addEventListener('touchmove', functouchevent10);
-
 
 //T11
 //Дан блок diveventmove11. Добавьте на него событие touch. При срабатывании выводите радиус события radiusX, radiusY.
 function functouchevent11(touchevent11) {
     document.querySelector('.outeventmove11').innerHTML = 'radiusX: ' + touchevent11.touches[0].radiusX + '; ' + 'radiusY: ' + touchevent11.touches[0].radiusY;
 }
-
 document.querySelector('.diveventmove11').addEventListener('touchstart', functouchevent11);
-
 
 //T12
 //1. Добавьте на кнопку nex событие click, touch так, чтобы при событии запускалась функция nextFunction и
@@ -5246,7 +5131,6 @@ function prevFunction() {
     document.querySelector('.img-12-max').src = images12[counterte].src
 }
 
-
 function resetFunction() {
     counterte = 0;
     images12.forEach(element => {
@@ -5260,9 +5144,7 @@ function resetFunction() {
 // prev.ontouchend = prevFunction;
 // reset.ontouchend = resetFunction;
 
-
 //UNIT 22. ОБРАБАТЫВАЕМ ОШИБКИ С ПОМОЩЬЮ TRY CATCH
-
 let atry = 5;
 atry = atry * 2;
 try {
@@ -5274,7 +5156,6 @@ try {
     console.log('still working')
 }
 console.log(atry);
-
 
 //T1
 //Добавьте в код функции try catch так, чтобы вместо ошибки выводилось в tryout1 цифра 1.
@@ -5295,7 +5176,6 @@ function functry1() {
 
 document.querySelector('#trybutt1').onclick = functry1;
 
-
 //T2
 //Добавьте в код функции try catch так, чтобы вместо ошибки был вывод результата в tryout2.
 function functry2() {
@@ -5310,9 +5190,7 @@ function functry2() {
         document.querySelector('.tryout2').innerHTML = a * b;
     }
 }
-
 document.querySelector('#trybutt2').onclick = functry2;
-
 
 //T3
 //Добавьте в код функции try catch так, чтобы вместо ошибки был вывод результата в tryout3. Если его нет - создавайте в коде.
@@ -5333,7 +5211,6 @@ function functry3() {
         console.log(Err);
     }
 }
-
 document.querySelector('#trybutt3').onclick = functry3;
 
 
@@ -5353,9 +5230,7 @@ function functry4() {
         document.querySelector('.tryout4').innerHTML = 0;
     }
 }
-
 document.querySelector('#trybutt4').onclick = functry4;
-
 
 //T5
 //Добавьте try, catch, finnaly так, чтобы в tryout5 выводился 0 при ошибки. А в tryout5-1 всегда выводилось слово 'finnaly';
@@ -5371,7 +5246,6 @@ function functry5() {
         document.querySelector('.tryout5-1').innerHTML = 'finnaly';
     }
 }
-
 document.querySelector('#trybutt5').onclick = functry5;
 
 
@@ -5391,7 +5265,6 @@ console.log(arraylsB);
 console.log(arraylsB[1]);
 console.log(typeof arraylsB);
 
-
 let arraylsC = {
     hello: 5, k: 2, 4: 'hi',
 };
@@ -5402,14 +5275,13 @@ console.log(arraylsD);
 
 console.log(typeof arraylsD);
 
-
 //T1
 // Создайте функцию funcLS1 которая записывает в LS ключ 5 со значением 11. Проверьте что происходит при
 // повторном вызове функции. Запускается ф-я по кнопке buttLS1.
 function funcLS1() {
     localStorage.setItem(5, 11);
-};document.querySelector('#buttLS1').onclick = funcLS1;
-
+}
+document.querySelector('#buttLS1').onclick = funcLS1;
 
 //T2
 // Создайте функцию funcLS2 которая записывает в LS массив arrayLS2 = [7,6,5]. Ключ arrayLS2. Проверьте что происходит при
@@ -5418,8 +5290,8 @@ let arrayLS2 = [7, 6, 5];
 
 function funcLS2() {
     localStorage.setItem('arrayLS2', JSON.stringify(arrayLS2));
-};document.querySelector('#buttLS2').onclick = funcLS2;
-
+}
+document.querySelector('#buttLS2').onclick = funcLS2;
 
 //T3
 // При нажатии кнопки funcLS3 выведите из LS сохраненный массив arrayLS2. Выведите в divLS3 в формате ключ пробел
@@ -5430,8 +5302,8 @@ function funcLS3() {
     for (let i = 0; i < stringLS3.length; i++) {
         document.querySelector('.divLS3').innerHTML += [i] + ' ' + stringLS3[i] + '<br>';
     }
-};document.querySelector('#buttLS3').onclick = funcLS3;
-
+}
+document.querySelector('#buttLS3').onclick = funcLS3;
 
 //T4
 // Создайте функцию funcLS4 которая записывает в LS массив arrayLS4 = {hello: world, hi:mahai}. Ключ arrayLS4. Проверьте что
@@ -5440,7 +5312,7 @@ let arrayLS4 = {hello: 'world', hi: 'mahai'};
 
 function funcLS4() {
     localStorage.setItem('arrayLS4', JSON.stringify(arrayLS4));
-};
+}
 document.querySelector('#buttLS4').onclick = funcLS4;
 
 
@@ -5455,14 +5327,16 @@ function funcLS5() {
         LSout5 += keyLS5 + ' ' + stringLS4[keyLS5] + '<br>';
     }
     document.querySelector('.divLS5').innerHTML = LSout5;
-};document.querySelector('#buttLS5').onclick = funcLS5;
+}
+document.querySelector('#buttLS5').onclick = funcLS5;
 
 
 //T6
 // Создайте функцию funcLS6 которая очищает весь LS. Запуск по кнопке buttLS6.
 function funcLS6() {
     localStorage.clear();
-};document.querySelector('#buttLS6').onclick = funcLS6;
+}
+document.querySelector('#buttLS6').onclick = funcLS6;
 
 
 //T7
@@ -5475,7 +5349,8 @@ function funcLS7() {
     let storageinp7 = document.querySelector('#inputLS7').value;
     arrayLS7.push(storageinp7);
     localStorage.setItem('arrayLS7', JSON.stringify(arrayLS7));
-};document.querySelector('#buttLS7').onclick = funcLS7;
+}
+document.querySelector('#buttLS7').onclick = funcLS7;
 
 
 //T8
@@ -5523,7 +5398,7 @@ xhttp2.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
         myAJAXfunction2(this.responseText);
     }
-};
+}
 let aJAXpostrequest = {auth: '7859d9d42a8834141d529577207c9596', action: 2, name: 'Dmitry'};
 let AJAXstring = new URLSearchParams(aJAXpostrequest);
 // xhttp2.open('POST', 'https://getpost.itgid.info/index2.php', true);
@@ -5534,8 +5409,7 @@ function myAJAXfunction2(data) {
     console.log('POST запрос:');
     aAJAX2 = data;
     console.log(data);
-};
-
+}
 
 //дз GET запросы
 let httprequest = new XMLHttpRequest();
@@ -5554,7 +5428,7 @@ document.querySelector('#buttAJAX1').onclick = function myAJAXfunction1() {
     function AJAXfunction1(data) {
         document.querySelector('.outAJAX1').innerHTML = data;
     }
-};
+}
 
 //T2
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице.
@@ -5571,8 +5445,7 @@ document.querySelector('#buttAJAX2').onclick = function myAJAXfunction2() {
     function AJAXfunction2(data) {
         document.querySelector('.outAJAX2').innerHTML = data;
     }
-};
-
+}
 
 //T3
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа.
@@ -5589,8 +5462,7 @@ document.querySelector('#buttAJAX3').onclick = function myAJAXfunction3() {
     function AJAXfunction3(data) {
         document.querySelector('.outAJAX3').innerHTML = data;
     }
-};
-
+}
 
 //T4
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа.
@@ -5608,8 +5480,7 @@ document.querySelector('#buttAJAX4').onclick = function myAJAXfunction4() {
     function AJAXfunction4(data) {
         document.querySelector('.outAJAX4').innerHTML = data;
     }
-};
-
+}
 
 //T5
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату.
@@ -5626,8 +5497,7 @@ document.querySelector('#buttAJAX5').onclick = function myAJAXfunction5() {
     function AJAXfunction5(data) {
         document.querySelector('.outAJAX5').innerHTML = data;
     }
-};
-
+}
 
 //T6
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа.
@@ -5645,8 +5515,7 @@ document.querySelector('#buttAJAX6').onclick = function myAJAXfunction6() {
     function AJAXfunction6(data) {
         document.querySelector('.outAJAX6').innerHTML = data;
     }
-};
-
+}
 
 //T7
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение.
@@ -5666,8 +5535,7 @@ document.querySelector('#buttAJAX7').onclick = function myAJAXfunction7() {
         image.src = data;
         document.querySelector('.containerAJAX7').appendChild(image);
     }
-};
-
+}
 
 //T8
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения.
@@ -5677,15 +5545,14 @@ document.querySelector('#buttAJAX8').onclick = function myAJAXfunction8() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction8(this.responseText);
         }
-    };
+    }
     httprequest.open('GET', 'https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=8&year=1993', true);
     httprequest.send();
 
     function AJAXfunction8(data) {
         document.querySelector('.outAJAX8').innerHTML = data;
     }
-};
-
+}
 
 //T9
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1.
@@ -5696,15 +5563,14 @@ document.querySelector('#buttAJAX9').onclick = function myAJAXfunction9() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction9(this.responseText);
         }
-    };
+    }
     httprequest.open('GET', 'https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=9&m=1&d=1&y=1', true);
     httprequest.send();
 
     function AJAXfunction9(data) {
         document.querySelector('.outAJAX9').innerHTML = data;
-    };
-};
-
+    }
+}
 
 //POST запросы
 //T10
@@ -5724,7 +5590,7 @@ document.querySelector('#buttAJAX10').onclick = function myAJAXfunction10() {
     function AJAXfunction10(data) {
         document.querySelector('.outAJAX10').innerHTML = data;
     }
-};
+}
 
 //T11
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице.
@@ -5745,8 +5611,7 @@ document.querySelector('#buttAJAX11').onclick = function myAJAXfunction11() {
     function AJAXfunction11(data) {
         document.querySelector('.outAJAX11').innerHTML = data;
     }
-};
-
+}
 
 //T12
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа.
@@ -5767,8 +5632,7 @@ document.querySelector('#buttAJAX12').onclick = function myAJAXfunction12() {
     function AJAXfunction12(data) {
         document.querySelector('.outAJAX12').innerHTML = data;
     }
-};
-
+}
 
 //T13
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа.
@@ -5779,7 +5643,7 @@ document.querySelector('#buttAJAX13').onclick = function myAJAXfunction13() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction13(this.responseText);
         }
-    };
+    }
     let aJAXpostrequest = {auth: '7859d9d42a8834141d529577207c9596', action: 4, num1: 10, num2: 200};
     let AJAXstring = new URLSearchParams(aJAXpostrequest);
     httprequest.open('POST', 'https://getpost.itgid.info/index2.php', true);
@@ -5789,8 +5653,7 @@ document.querySelector('#buttAJAX13').onclick = function myAJAXfunction13() {
     function AJAXfunction13(data) {
         document.querySelector('.outAJAX13').innerHTML = data;
     }
-};
-
+}
 
 //T14
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату.
@@ -5800,7 +5663,7 @@ document.querySelector('#buttAJAX14').onclick = function myAJAXfunction14() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction14(this.responseText);
         }
-    };
+    }
     let aJAXpostrequest = {auth: '7859d9d42a8834141d529577207c9596', action: 5};
     let AJAXstring = new URLSearchParams(aJAXpostrequest);
     httprequest.open('POST', 'https://getpost.itgid.info/index2.php', true);
@@ -5810,8 +5673,7 @@ document.querySelector('#buttAJAX14').onclick = function myAJAXfunction14() {
     function AJAXfunction14(data) {
         document.querySelector('.outAJAX14').innerHTML = data;
     }
-};
-
+}
 
 //T15
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа.
@@ -5822,7 +5684,7 @@ document.querySelector('#buttAJAX15').onclick = function myAJAXfunction15() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction15(this.responseText);
         }
-    };
+    }
     let aJAXpostrequest = {auth: '7859d9d42a8834141d529577207c9596', action: 6, num1: 100, num2: 15};
     let AJAXstring = new URLSearchParams(aJAXpostrequest);
     httprequest.open('POST', 'https://getpost.itgid.info/index2.php', true);
@@ -5832,8 +5694,7 @@ document.querySelector('#buttAJAX15').onclick = function myAJAXfunction15() {
     function AJAXfunction15(data) {
         document.querySelector('.outAJAX15').innerHTML = data;
     }
-};
-
+}
 
 //T16
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение.
@@ -5843,7 +5704,7 @@ document.querySelector('#buttAJAX16').onclick = function myAJAXfunction16() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction16(this.responseText);
         }
-    };
+    }
     let aJAXpostrequest = {auth: '7859d9d42a8834141d529577207c9596', action: 7};
     let AJAXstring = new URLSearchParams(aJAXpostrequest);
     httprequest.open('POST', 'https://getpost.itgid.info/index2.php', true);
@@ -5856,8 +5717,7 @@ document.querySelector('#buttAJAX16').onclick = function myAJAXfunction16() {
         image.src = data;
         document.querySelector('.containerAJAX16').appendChild(image);
     }
-};
-
+}
 
 //T17
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения.
@@ -5867,7 +5727,7 @@ document.querySelector('#buttAJAX17').onclick = function myAJAXfunction17() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction17(this.responseText);
         }
-    };
+    }
     let aJAXpostrequest = {auth: '7859d9d42a8834141d529577207c9596', action: 8, year: 1993};
     let AJAXstring = new URLSearchParams(aJAXpostrequest);
     httprequest.open('POST', 'https://getpost.itgid.info/index2.php', true);
@@ -5877,8 +5737,7 @@ document.querySelector('#buttAJAX17').onclick = function myAJAXfunction17() {
     function AJAXfunction17(data) {
         document.querySelector('.outAJAX17').innerHTML = data;
     }
-};
-
+}
 
 //T18
 //Отправьте POST запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1.
@@ -5889,7 +5748,7 @@ document.querySelector('#buttAJAX18').onclick = function myAJAXfunction18() {
         if (this.readyState == 4 && this.status == 200) {
             AJAXfunction18(this.responseText);
         }
-    };
+    }
     let aJAXpostrequest = {auth: '7859d9d42a8834141d529577207c9596', action: 9, m: 1, d: 1, y: 1};
     let AJAXstring = new URLSearchParams(aJAXpostrequest);
     httprequest.open('POST', 'https://getpost.itgid.info/index2.php', true);
@@ -5899,11 +5758,9 @@ document.querySelector('#buttAJAX18').onclick = function myAJAXfunction18() {
     function AJAXfunction18(data) {
         document.querySelector('.outAJAX18').innerHTML = data;
     }
-};
-
+}
 
 //UNIT 26. УЧИМ FETCH НА ПРАКТИКЕ
-
 
 // //fetch запрос с гет параметром
 // fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=1')
@@ -5937,7 +5794,6 @@ document.querySelector('#buttAJAX18').onclick = function myAJAXfunction18() {
 //         console.log('fetch post запрос: ' + response)
 //     })
 
-
 //fetch get запросы
 //T1
 //Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 1. Выведите в outfetch1 результат. Запускаться функция должна по нажатию buttfetch1.
@@ -5949,9 +5805,8 @@ document.querySelector('#buttfetch1').onclick = function () {
         })
         .then(data => {
             document.querySelector('.outfetch1').innerHTML = data;
-        });
+        })
 }
-
 
 //T2
 //Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 2. Добавьте параметр name с вашим именем на латинице.
@@ -5964,9 +5819,8 @@ document.querySelector('#buttfetch2').onclick = function () {
         })
         .then(data => {
             document.querySelector('.outfetch2').innerHTML = data;
-        });
+        })
 }
-
 
 //T3
 //Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа.
@@ -5979,7 +5833,7 @@ document.querySelector('#buttfetch3').onclick = function () {
         })
         .then(data => {
             document.querySelector('.outfetch3').innerHTML = data;
-        });
+        })
 }
 
 //T4
@@ -5994,7 +5848,7 @@ document.querySelector('#buttfetch4').onclick = function () {
         })
         .then(data => {
             document.querySelector('.outfetch4').innerHTML = data;
-        });
+        })
 }
 
 //T5
@@ -6008,9 +5862,8 @@ document.querySelector('#buttfetch5').onclick = function () {
         })
         .then(data => {
             document.querySelector('.outfetch5').innerHTML = data;
-        });
+        })
 }
-
 
 //T6
 //Отправьте GET запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа.
@@ -6104,7 +5957,6 @@ document.querySelector('#buttfetch11').onclick = function () {
         })
 }
 
-
 //T12
 //Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа.
 //Если все сделано верно, сервер вернет сумму чисел. Не забывайте указывать параметр auth (ключ в чате). Выведите в outfetch12 результат. Запускаться функция должна по нажатию buttfetch12.
@@ -6119,7 +5971,6 @@ document.querySelector('#buttfetch12').onclick = function () {
             document.querySelector('.outfetch12').innerHTML = response;
         })
 }
-
 
 //T13
 //Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 4. Добавьте параметр num1 и num2 содержащие числа.
@@ -6137,7 +5988,6 @@ document.querySelector('#buttfetch13').onclick = function () {
         })
 }
 
-
 //T14
 //Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату.
 //Не забывайте указывать параметр auth (ключ в чате). Выведите в outfetch14 результат. Запускаться функция должна по нажатию buttfetch14.
@@ -6153,7 +6003,6 @@ document.querySelector('#buttfetch14').onclick = function () {
         })
 }
 
-
 //T15
 //Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 6. Добавьте параметр num1 и num2 содержащие числа.
 //Если все сделано верно, сервер вернет большее число. Не забывайте указывать параметр auth (ключ в чате). Выведите в outfetch15 результат. Запускаться функция должна по нажатию buttfetch15.
@@ -6168,7 +6017,6 @@ document.querySelector('#buttfetch15').onclick = function () {
             document.querySelector('.outfetch15').innerHTML = response;
         })
 }
-
 
 //T16
 //Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение.
@@ -6186,8 +6034,7 @@ document.querySelector('#buttfetch16').onclick = function () {
             image.src = response;
             document.querySelector('.containerfetch16').appendChild(image);
         })
-};
-
+}
 
 //T17
 //Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 8. В качестве параметра по очереди укажите year равный году вашего рождения.
@@ -6204,7 +6051,6 @@ document.querySelector('#buttfetch17').onclick = function () {
         })
 }
 
-
 //T18
 //Отправьте POST запрос (fetch) на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 9. В качестве параметра по очереди укажите m = 1, d=1, y=1.
 //Если все сделано верно, сервер возвратит дату или месяц или год. Не забывайте указывать параметр auth (ключ в чате). Выведите в outfetch18 результат.
@@ -6220,7 +6066,6 @@ document.querySelector('#buttfetch18').onclick = function () {
             document.querySelector('.outfetch18').innerHTML = response;
         })
 }
-
 
 //UNIT 27. РАБОТАЕМ С ПРОМИСАМИ (PROMISE)
 
@@ -6260,7 +6105,7 @@ document.querySelector('#buttpromise1').onclick = function () {
             .then(data => {   // либо сокращенно   .then(data => data.text()).then(data => {console.log('fetch запрос: ' + data);})
                 resolve(data.text());
             });
-    });
+    })
     let promiseB1 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=2&name=Dmitriy')
             .then(data => {   // либо сокращенно   .then(data => data.text()).then(data => {console.log('fetch запрос: ' + data);})
@@ -6269,9 +6114,8 @@ document.querySelector('#buttpromise1').onclick = function () {
     });
     Promise.all([promiseA1, promiseB1]).then(value => {
         document.querySelector('.outpromise1').innerHTML = value[0] + ' ' + value[1];
-    });
-};
-
+    })
+}
 
 //T2
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 3. Добавьте параметр num1 и num2 содержащие числа. Если все сделано верно, сервер вернет сумму чисел.
@@ -6282,19 +6126,18 @@ document.querySelector('#buttpromise2').onclick = function () {
         fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=3&num1=50&num2=150')
             .then(data => {
                 resolve(data.text());
-            });
-    });
+            })
+    })
     let promiseB2 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=4&num1=25&num2=75')
             .then(data => {
                 resolve(data.text());
-            });
-    });
+            })
+    })
     Promise.all([promiseA2, promiseB2]).then(value => {
         document.querySelector('.outpromise2').innerHTML = value[0] + ' ' + value[1];
-    });
-};
-
+    })
+}
 
 //T3
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 5. Если все сделано верно, сервер вернет текущее время и дату. Не забывайте указывать параметр auth (ключ в чате).
@@ -6305,19 +6148,18 @@ document.querySelector('#buttpromise3').onclick = function () {
         fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=5')
             .then(data => {
                 resolve(data.text());
-            });
-    });
+            })
+    })
     let promiseB3 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=6&num1=100&num2=1000')
             .then(data => {
                 resolve(data.text());
-            });
-    });
+            })
+    })
     Promise.all([promiseA3, promiseB3]).then(value => {
         document.querySelector('.outpromise3').innerHTML = value[0] + ' ' + value[1];
-    });
-};
-
+    })
+}
 
 //T4
 //Отправьте GET запрос на сайт http://getpost.itgid.info/index2.php. В качестве action укажите 7. Если все сделано верно, сервер случайную ссылку на изображение. Не забывайте указывать параметр auth (ключ в чате).
@@ -6328,18 +6170,18 @@ document.querySelector('#buttpromise4').onclick = function () {
         fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=7')
             .then(data => {
                 resolve(data.text());
-            });
-    });
+            })
+    })
     let promiseB4 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php?auth=7859d9d42a8834141d529577207c9596&action=8&year=1993')
             .then(data => {
                 resolve(data.text());
-            });
-    });
+            })
+    })
     Promise.all([promiseA4, promiseB4]).then(value => {
         document.querySelector('.outpromise4').innerHTML = value[0] + ' ' + value[1];
-    });
-};
+    })
+}
 
 
 //T5
@@ -6350,9 +6192,11 @@ document.querySelector('#buttpromise4').onclick = function () {
 document.querySelector('#buttpromise5').onclick = function () {
     let promiseA5 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php', {
-            method: 'POST', headers: {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-            }, body: 'auth=7859d9d42a8834141d529577207c9596&action=1',
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=1',
         })
             .then(response => {
                 resolve(response.text());
@@ -6360,18 +6204,19 @@ document.querySelector('#buttpromise5').onclick = function () {
     });
     let promiseB5 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php', {
-            method: 'POST', headers: {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-            }, body: 'auth=7859d9d42a8834141d529577207c9596&action=2&name=Dmitriy',
-        })
-            .then(response => {
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=2&name=Dmitriy',
+        }).then(response => {
                 resolve(response.text());
             })
-    });
+    })
     Promise.all([promiseA5, promiseB5]).then(value => {
         document.querySelector('.outpromise5').innerHTML = value[0] + ' ' + value[1];
     })
-};
+}
 
 
 //T6
@@ -6382,11 +6227,12 @@ document.querySelector('#buttpromise5').onclick = function () {
 document.querySelector('#buttpromise6').onclick = () => {
     let promiseA6 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php', {
-            method: 'POST', headers: {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-            }, body: 'auth=7859d9d42a8834141d529577207c9596&action=3&num1=39&num2=41',
-        })
-            .then(response => {
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=3&num1=39&num2=41',
+        }).then(response => {
                 resolve(response.text());
             })
     });
@@ -6395,15 +6241,14 @@ document.querySelector('#buttpromise6').onclick = () => {
             method: 'POST', headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             }, body: 'auth=7859d9d42a8834141d529577207c9596&action=4&num1=18&num2=65',
-        })
-            .then(response => {
+        }).then(response => {
                 resolve(response.text());
             })
-    });
+    })
     Promise.all([promiseA6, promiseB6]).then(value => {
         document.querySelector('.outpromise6').innerHTML = value[0] + ' ' + value[1];
     })
-};
+}
 
 
 //T7
@@ -6414,21 +6259,23 @@ document.querySelector('#buttpromise6').onclick = () => {
 document.querySelector('#buttpromise7').onclick = () => {
     let promiseA7 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php', {
-            method: 'POST', headers: {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-            }, body: 'auth=7859d9d42a8834141d529577207c9596&action=5',
-        })
-            .then(response => {
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=5',
+        }).then(response => {
                 resolve(response.text());
             })
     });
     let promiseB7 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php', {
-            method: 'POST', headers: {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-            }, body: 'auth=7859d9d42a8834141d529577207c9596&action=6&num1=500&num2=200',
-        })
-            .then(response => {
+            }
+            , body: 'auth=7859d9d42a8834141d529577207c9596&action=6&num1=500&num2=200',
+        }).then(response => {
                 resolve(response.text());
             })
     })
@@ -6445,28 +6292,30 @@ document.querySelector('#buttpromise7').onclick = () => {
 document.querySelector('#buttpromise8').onclick = () => {
     let promiseA8 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php', {
-            method: 'POST', headers: {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-            }, body: 'auth=7859d9d42a8834141d529577207c9596&action=7',
-        })
-            .then(response => {
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=7',
+        }).then(response => {
                 resolve(response.text());
             })
     });
     let promiseB8 = new Promise((resolve, reject) => {
         fetch('https://getpost.itgid.info/index2.php', {
-            method: 'POST', headers: {
+            method: 'POST',
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
-            }, body: 'auth=7859d9d42a8834141d529577207c9596&action=8&year=1993',
-        })
-            .then(response => {
+            },
+            body: 'auth=7859d9d42a8834141d529577207c9596&action=8&year=1993',
+        }).then(response => {
                 resolve(response.text());
-            });
-    });
+            })
+    })
     Promise.all([promiseA8, promiseB8]).then(value => {
         document.querySelector('.outpromise8').innerHTML = value[0] + ' ' + value[1];
-    });
-};
+    })
+}
 
 
 //UNIT 28. ООП В ES6
@@ -6555,8 +6404,7 @@ function rec() {
         return recA;
     }
     rec();
-};
-
+}
 rec()
 
 
@@ -6578,7 +6426,7 @@ function moove() {
 
 document.querySelector('#moovingbutt').onclick = () => {
     if (!isStarted) moove();
-};
+}
 
 let timeoutMooveBack;
 
@@ -6623,7 +6471,7 @@ document.querySelector('#stopMoving').onclick = () => {
     offsetMB = 0;
     offsetMBB = 0;
     isStarted = false;
-};
+}
 
 const person = {
     name: "gavrik", age: 228, greet: function () {
