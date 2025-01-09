@@ -190,6 +190,7 @@ const anchorHandler = debounce((anchors, observer) => {
             const parentClass = a?.parentElement?.classList[0] || null;
 
             if (parentClass) sideBarBuilder(parentClass);
+            history.replaceState(null, '', `#${id}`);
         }
     })
 });
