@@ -6,13 +6,14 @@
     <!-- Document title in browser tabs -->
     <title>WebDev Basics</title>
     <!-- Document Favicon in browser tabs -->
-<!--    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
+    <!--    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
     <!-- Additional approach to add favicon -->
     <!--    <link rel="apple-touch-icon" href="apple-touch-icon.png">-->
     <!--    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">-->
     <!--    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">-->
     <!-- SEO -->
-    <meta name="description" content="Web Development Workbook: Definitions, code examples, core concepts, and practice exercises for learning HTML, CSS, JavaScript, and other technologies.">
+    <meta name="description"
+          content="Web Development Workbook: Definitions, code examples, core concepts, and practice exercises for learning HTML, CSS, JavaScript, and other technologies.">
     <meta name="keywords" content="html, css, js, react, typeScript">
     <meta name="author" content="Slipbang">
     <!-- For mobile devices -->
@@ -28,9 +29,9 @@
 
 
     <!-- Local scripts -->
-<!--    <script src="../src/scripts/UI.js" defer></script>-->
-<!--    <script src="../src/scripts/tasks.js" defer></script>-->
-<!--    <script src="../src/scripts/OOPClasses.js" defer></script>-->
+    <!--    <script src="../src/scripts/UI.js" defer></script>-->
+    <!--    <script src="../src/scripts/tasks.js" defer></script>-->
+    <!--    <script src="../src/scripts/OOPClasses.js" defer></script>-->
 
 </head>
 <body>
@@ -1033,7 +1034,8 @@ const getDate = () =&gt; new Date;
                     подключения:</p>
 
                 <pre>&lt;audio controls src="аудиофайл.формат"&gt;Отображаемый текст в случае невозможности воспроизведения&lt;/audio&gt;</pre>
-                <audio preload="none" controls src="./assets/example.mp3">Your browser does not support the audio tag.</audio>
+                <audio preload="none" controls src="./assets/example.mp3">Your browser does not support the audio tag.
+                </audio>
                 <pre>
 &lt;audio controls&gt;
    &lt;source src="аудиофайл.формат" type="audio/формат"&gt;
@@ -28737,8 +28739,10 @@ app.use(cors()); // обязательно с вызовом cors
                 <h4 id="dataStructures">Структуры данных</h4>
                 <div>
                     <p>Структура данных (англ. data structure) — программная единица, позволяющая хранить и обрабатывать
-                        множество однотипных и/или логически связанных данных в вычислительной технике. Для добавления, поиска,
-                        изменения и удаления данных структура данных предоставляет некоторый набор функций, составляющих её интерфейс.</p>
+                        множество однотипных и/или логически связанных данных в вычислительной технике. Для добавления,
+                        поиска,
+                        изменения и удаления данных структура данных предоставляет некоторый набор функций, составляющих
+                        её интерфейс.</p>
                     <p>Очередь(Queue) - это структура данных состоящая из каких-то элементов, основной принцип
                         построения
                         которой - добавление элемента происходит в конец, а извлечение с начала
@@ -28874,7 +28878,8 @@ app.use(cors()); // обязательно с вызовом cors
                 </section>
 
                 <section>
-                    <h4 id="configurationOpt_env_prodVebBundle">Конфигурация. Опции конфигурации. Переменные окружения. Prod/dev сборка</h4>
+                    <h4 id="configurationOpt_env_prodVebBundle">Конфигурация. Опции конфигурации. Переменные окружения.
+                        Prod/dev сборка</h4>
 
                     <div>
                         <p>Мануал <a href="https://webpack.js.org/configuration/" target="_blank">конфигурации</a></p>
@@ -28927,22 +28932,28 @@ module.exports = (env) => {
     }
 };
                         </pre>
-                        <p>Список + документация <a href="https://webpack.js.org/plugins/" target="_blank">Webpack плагинов</a></p>
+                        <p>Список + документация <a href="https://webpack.js.org/plugins/" target="_blank">Webpack
+                            плагинов</a></p>
                     </div>
                 </section>
 
                 <section>
-                    <h4 id="loaders_typescript_regularExpressions">Лоадеры. Поддержка TypesCript. Регулярные выражения</h4>
+                    <h4 id="loaders_typescript_regularExpressions">Лоадеры. Поддержка TypesCript. Регулярные
+                        выражения</h4>
 
                     <div>
                         <p>Лоадеры (loaders) в Webpack — это преобразователи, которые обрабатывают файлы других типов
-                            (например, CSS, изображения, TypeScript, JSON) и превращают их в модули, которые могут быть включены в JavaScript.
-                            Webpack изначально понимает только JavaScript и JSON, поэтому для обработки других типов файлов необходимы лоадеры.
-                            В общих словах лоадеры представляют из себя определенную цепочку обработчиков, через которые проходят файлы с тем или иным расширением.</p>
+                            (например, CSS, изображения, TypeScript, JSON) и превращают их в модули, которые могут быть
+                            включены в JavaScript.
+                            Webpack изначально понимает только JavaScript и JSON, поэтому для обработки других типов
+                            файлов необходимы лоадеры.
+                            В общих словах лоадеры представляют из себя определенную цепочку обработчиков, через которые
+                            проходят файлы с тем или иным расширением.</p>
 
                         <p>Установка TypeScript для Webpack:</p>
                         <pre>npm install --save-dev typescript ts-loader</pre>
-                        <p>Документация для настройки <a href="https://webpack.js.org/guides/typescript/">TypeScript</a></p>
+                        <p>Документация для настройки <a href="https://webpack.js.org/guides/typescript/">TypeScript</a>
+                        </p>
                         <p>Пример webpack.config.js с TS:</p>
                         <pre>
 const path = require('path');
@@ -28985,7 +28996,8 @@ module.exports = (env) => {
                     <h4 id="tsWebpackConfig">Webpack конфиг на TypeScript</h4>
 
                     <div>
-                        <p>Документация для <a href="https://webpack.js.org/configuration/configuration-languages/">webpack.config.js</a></p>
+                        <p>Документация для <a href="https://webpack.js.org/configuration/configuration-languages/">webpack.config.js</a>
+                        </p>
                         <p>Пример:</p>
                         <pre>
 import path from "path";
@@ -29029,10 +29041,14 @@ export default (env: IEncVariables) => {
 };
                         </pre>
                         <p>При использовании ts все импорты можно перевести на ESM синтаксис.</p>
-                        <p>В tsconfig.json дополнительно можно поставить флаги "esModuleInterop": true и "allowSyntheticDefaultImports": true.</p>
-                        <p><code>esModuleInterop</code> позволяет работать с пакетами, которые используют CommonJS как с обычными пакетами с помощью import,
-                            <code>allowSyntheticDefaultImports</code> активирует у ts-loader или babel-loader функцию генерации дефолтных импортов для библиотек,
-                            которые их не имеют, благорадя этому можно писать не <code>import * as React from 'react'</code>, а <code>import React from 'react'</code></p>
+                        <p>В tsconfig.json дополнительно можно поставить флаги "esModuleInterop": true и
+                            "allowSyntheticDefaultImports": true.</p>
+                        <p><code>esModuleInterop</code> позволяет работать с пакетами, которые используют CommonJS как с
+                            обычными пакетами с помощью import,
+                            <code>allowSyntheticDefaultImports</code> активирует у ts-loader или babel-loader функцию
+                            генерации дефолтных импортов для библиотек,
+                            которые их не имеют, благорадя этому можно писать не <code>import * as React from
+                                'react'</code>, а <code>import React from 'react'</code></p>
                     </div>
                 </section>
 
@@ -29040,8 +29056,10 @@ export default (env: IEncVariables) => {
                     <h4 id="devServer_watchMode_sourceMaps">DevServer. Watch режим. Source maps</h4>
 
                     <div>
-                        <p><a href="https://webpack.js.org/guides/development/" target="_blank">Документация</a> для поднятия DevServer, watch режима и webpack-dev-middleware.</p>
-                        <p>DevServer удобно использовать на стадии разработки, позволяет поднимать на локалке сервер с hot reaload.</p>
+                        <p><a href="https://webpack.js.org/guides/development/" target="_blank">Документация</a> для
+                            поднятия DevServer, watch режима и webpack-dev-middleware.</p>
+                        <p>DevServer удобно использовать на стадии разработки, позволяет поднимать на локалке сервер с
+                            hot reaload.</p>
                         <p>Итоговый webpack.config.js:</p>
                         <pre>
 import path from "path";
@@ -29073,11 +29091,15 @@ export default (env: IEncVariables) => {
     return config;
 };
                         </pre>
-                        <p>Импорт "type { Configuration as DevServerConfiguration }" нужен для протаскивания типа переменной
+                        <p>Импорт "type { Configuration as DevServerConfiguration }" нужен для протаскивания типа
+                            переменной
                             devServer для webpack.Configuration, иначе TS будет выбрасывать ошибку при компиляции!!!</p>
-                        <p>Source Map в Webpack — это файл, который служит для сопоставления минифицированного или транслированного
-                            кода (например, после сборки или транспиляции) с исходным кодом. Source Map позволяет разработчикам отлаживать код,
-                            видя оригинальные строки, файлы и столбцы из исходных файлов, вместо трудно читаемого собранного кода.</p>
+                        <p>Source Map в Webpack — это файл, который служит для сопоставления минифицированного или
+                            транслированного
+                            кода (например, после сборки или транспиляции) с исходным кодом. Source Map позволяет
+                            разработчикам отлаживать код,
+                            видя оригинальные строки, файлы и столбцы из исходных файлов, вместо трудно читаемого
+                            собранного кода.</p>
                     </div>
                 </section>
 
@@ -29085,7 +29107,8 @@ export default (env: IEncVariables) => {
                     <h4 id="react_JSX">React. JSX. Стили. CSS + препроцессоры (SCSS)</h4>
 
                     <div>
-                        <p>При работе с react принципиальных различий нет. Преднастроенного выше пресета webpack.config.js хватит,
+                        <p>При работе с react принципиальных различий нет. Преднастроенного выше пресета
+                            webpack.config.js хватит,
                             чтобы установить react/react-dom и работать.</p>
                         <p>Для того чтобы работать с CSS требуется добавить css-loader и style-loader:</p>
                         <pre>
@@ -29104,9 +29127,11 @@ rules: [
 ],
 ...
                         </pre>
-                        <p>Документация <a href="https://webpack.js.org/loaders/css-loader/" target="_blank">css-loader</a>:</p>
+                        <p>Документация <a href="https://webpack.js.org/loaders/css-loader/"
+                                           target="_blank">css-loader</a>:</p>
                         <pre>npm install --save-dev css-loader</pre>
-                        <p>Документация <a href="https://webpack.js.org/loaders/style-loader/" target="_blank">style-loader</a>:</p>
+                        <p>Документация <a href="https://webpack.js.org/loaders/style-loader/" target="_blank">style-loader</a>:
+                        </p>
                         <pre>npm install --save-dev style-loader</pre>
 
                         <p>В случае если нужен css препроцессор, нужно установить sass-loader:</p>
@@ -29134,11 +29159,14 @@ module: {
 },
 ...
                         </pre>
-                        <p>Документация <a href="https://webpack.js.org/loaders/sass-loader/" target="_blank">sass-loader</a>:</p>
+                        <p>Документация <a href="https://webpack.js.org/loaders/sass-loader/" target="_blank">sass-loader</a>:
+                        </p>
                         <pre>npm install sass-loader sass webpack --save-dev</pre>
 
-                        <p>Для того чтобы webpack создавал отдельные минифицированные css файлы нужно использовать mini-css-extract-plugin.</p>
-                        <p>Документация <a href="https://webpack.js.org/plugins/mini-css-extract-plugin/" target="_blank">mini-css-extract-plugin</a>:</p>
+                        <p>Для того чтобы webpack создавал отдельные минифицированные css файлы нужно использовать
+                            mini-css-extract-plugin.</p>
+                        <p>Документация <a href="https://webpack.js.org/plugins/mini-css-extract-plugin/"
+                                           target="_blank">mini-css-extract-plugin</a>:</p>
                         <pre>npm install --save-dev mini-css-extract-plugin</pre>
                         <p>И так же вместо style-loader нужно использовать MiniCssExtractPlugin.loader:</p>
                         <pre>
@@ -29205,11 +29233,14 @@ export default (env: IEncVariables) => {
                     <h4 id="decomposition_reusableConfiguration">Декомпозиция. Переиспользуемая конфигурация</h4>
 
                     <div>
-                        <p>Под декомпозицией подразумевается инкапсуляция параметров возвращаемой в webpack.config.js/ts конфигурации при помощи функций в отдельных файлах:</p>
+                        <p>Под декомпозицией подразумевается инкапсуляция параметров возвращаемой в webpack.config.js/ts
+                            конфигурации при помощи функций в отдельных файлах:</p>
                         <div class="smallScreenContainer">
-                            <img src="./assets/webpackConfigDecomposition.png" style="max-width: 400px" alt="webpackConfigDecomposition">
+                            <img src="./assets/webpackConfigDecomposition.png" style="max-width: 400px"
+                                 alt="webpackConfigDecomposition">
                         </div>
-                        <p>Config возвращаемый в webpack.config.js/ts вызывает билдер функцию buildWebpack, которая содержит в себе конфигурационный скелет:</p>
+                        <p>Config возвращаемый в webpack.config.js/ts вызывает билдер функцию buildWebpack, которая
+                            содержит в себе конфигурационный скелет:</p>
                         <pre>
 import webpack from "webpack";
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
@@ -29324,8 +29355,10 @@ export function <code>buildResolver</code>(options: IBuildOptions): Configuratio
 
                     <div>
                         <p>Для того чтобы не было css коллизий используются css модули.</p>
-                        <p>Документация <a href="https://webpack.js.org/loaders/css-loader/#modules" target="_blank">webpack css модулей</a></p>
-                        <p>Модули точно такие же как преднастроенные модули в react, так же в названии через точку указывается
+                        <p>Документация <a href="https://webpack.js.org/loaders/css-loader/#modules" target="_blank">webpack
+                            css модулей</a></p>
+                        <p>Модули точно такие же как преднастроенные модули в react, так же в названии через точку
+                            указывается
                             fileName.module.ext и имеют такой же классовый синтаксис:</p>
                         <pre>
 //App.module.scss
@@ -29394,7 +29427,8 @@ export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
                 </section>
 
                 <section>
-                    <h4 id="routing_lasyChunks_bundleSize_codeSplit">Роутинг. Ленивые чанки. Размер бандла и код сплитинг</h4>
+                    <h4 id="routing_lasyChunks_bundleSize_codeSplit">Роутинг. Ленивые чанки. Размер бандла и код
+                        сплитинг</h4>
 
                     <div>
                         <p>Роутинг очевидно обеспечивает react-router-dom, устанавливаем требуемую версию RRD:</p>
@@ -29440,7 +29474,8 @@ container.render(&lt;RouterProvider router={router} /&gt;);
 
                         <p>Так же требуется интегрировать в код &lt;Outlet&gt; для рендера ссылочных компонентов.</p>
 
-                        <p>Чтобы при развернутой локалке работали чанки, нужно в DevServer добавить опцию historyApiFallBack с флагом:</p>
+                        <p>Чтобы при развернутой локалке работали чанки, нужно в DevServer добавить опцию
+                            historyApiFallBack с флагом:</p>
                         <pre>
 import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
 import {IBuildOptions} from "./types/types";
@@ -29469,7 +29504,9 @@ import {lazy} from "react";
 
 export const LazyAbout = lazy(() => import('./About'));
                         </pre>
-                        <p>Для легкой инспекции чанков можно использовать плагин <a href="https://github.com/webpack-contrib/webpack-bundle-analyzer">Webpack Bundle Analyzer</a></p>
+                        <p>Для легкой инспекции чанков можно использовать плагин <a
+                                href="https://github.com/webpack-contrib/webpack-bundle-analyzer">Webpack Bundle
+                            Analyzer</a></p>
                         <pre>npm install --save-dev webpack-bundle-analyzer</pre>
                         <p>Использовать как обычный плагин:</p>
                         <pre>
@@ -29487,7 +29524,8 @@ plugins: [
                     <h4 id="alias_moduleResolving">Алиасы(псевдонимы) и резолвинг модулей</h4>
 
                     <div>
-                        <p>Алиасы для путей особенно полезны в том случае, когда в проекте присутствует глубокая вложенность компонентов
+                        <p>Алиасы для путей особенно полезны в том случае, когда в проекте присутствует глубокая
+                            вложенность компонентов
                             и нужно импортировать компоненты с далеко расположенных уровней.</p>
                         <p>Настройка:</p>
                         <pre>
@@ -29503,7 +29541,8 @@ export function buildResolver(options: IBuildOptions): Configuration['resolve'] 
     };
 }
                         </pre>
-                        <p>В случае если проект на TypeScript в tsconfig.json обязательно нужно добавить следующие параметры:</p>
+                        <p>В случае если проект на TypeScript в tsconfig.json обязательно нужно добавить следующие
+                            параметры:</p>
                         <pre>
 {
   "compilerOptions": {
@@ -29544,7 +29583,8 @@ import {App} from "@/components/App";
 
                     <div>
                         <p>Для того чтобы обработать png/jpg/jpeg файлы требуется следующий
-                            <a href="https://webpack.js.org/guides/asset-management/#loading-images" target="_blank">webpack loader</a>:</p>
+                            <a href="https://webpack.js.org/guides/asset-management/#loading-images" target="_blank">webpack
+                                loader</a>:</p>
                         <pre>
 export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
     ...
@@ -29560,7 +29600,8 @@ export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
     return [..., assetLoader, ...];
 }
                         </pre>
-                        <p>Чтобы TypeScript не выдавал ошибки и показывал свойства, так же необходимо объявить модули:</p>
+                        <p>Чтобы TypeScript не выдавал ошибки и показывал свойства, так же необходимо объявить
+                            модули:</p>
                         <pre>
 // global.d.ts
 // модули для картинок, можно добавить еще расширений:
@@ -29575,14 +29616,16 @@ declare module "*.svg" {
     export default SVG;
 }
                         </pre>
-                        <p>Теперь импортированные картинки(и svg) можно использовать для передачи их в scr для img тега</p>
+                        <p>Теперь импортированные картинки(и svg) можно использовать для передачи их в scr для img
+                            тега</p>
                         <pre>
 import imageExample from '@/assets/imageExample.png';
 ...
 &lt;img width={300} src={imageExample} alt="imageExample"/&gt;
 ...
                         </pre>
-                        <p>В случае если требуется использовать svg в компонентном стиле (<code>&lt;Svg /&gt;</code>), нужно установить и подключить
+                        <p>В случае если требуется использовать svg в компонентном стиле (<code>&lt;Svg /&gt;</code>),
+                            нужно установить и подключить
                             <a href="https://react-svgr.com/docs/webpack/" target="_blank">svgrLoader</a>:</p>
                         <pre>npm install --save-dev @svgr/webpack</pre>
                         <p>Использование в buildLoaders:</p>
@@ -29616,7 +29659,8 @@ export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
     return [..., svgrLoader];
 }
                         </pre>
-                        <p>В данном svgrLoader так же используется плагин, который позволяет применять цвет из color атрибута (color: 'red' и тд)</p>
+                        <p>В данном svgrLoader так же используется плагин, который позволяет применять цвет из color
+                            атрибута (color: 'red' и тд)</p>
                         <p>В итоге svg можно использовать следующим образом:</p>
                         <pre>
 import UlbiIcon from '@/assets/app-image.svg';
@@ -29632,7 +29676,8 @@ import styles from './App.module.scss';
                     <h4 id="globalBundleVariables_treeShaking">Глобальные переменные сборки. Tree shaking</h4>
 
                     <div>
-                        <p>У webpack есть дефолтный плагин DefinePlugin, он позволяет сделать любую переменную глобально-доступной:</p>
+                        <p>У webpack есть дефолтный плагин DefinePlugin, он позволяет сделать любую переменную
+                            глобально-доступной:</p>
                         <pre>
 export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): Configuration['plugins'] {
     const isDev = mode === 'development';
@@ -29654,12 +29699,17 @@ export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): 
     return plugins;
 }
                         </pre>
-                        <p>В качестве аргумента DefinePlugin функции мы передаем объект, где ключ это имя глобальной переменной
-                            и застрингованное(JSON.stringify()) значение передается извне через опции и далее можно передать через ENV.</p>
-                        <p>В случае если применяется TypeScript, нужно также сделать объявление константы в d.ts файле:</p>
+                        <p>В качестве аргумента DefinePlugin функции мы передаем объект, где ключ это имя глобальной
+                            переменной
+                            и застрингованное(JSON.stringify()) значение передается извне через опции и далее можно
+                            передать через ENV.</p>
+                        <p>В случае если применяется TypeScript, нужно также сделать объявление константы в d.ts
+                            файле:</p>
                         <pre>declare const __PLATFORM__: 'mobile' | 'desktop';</pre>
-                        <p>Tree shaking это механизм удаления неиспользуемых частей кода, удобно когда для разных версий приложения
-                            неиспользуемый код удаляется и итоговый бандл становится меньше. Базовый функционал webpack.</p>
+                        <p>Tree shaking это механизм удаления неиспользуемых частей кода, удобно когда для разных версий
+                            приложения
+                            неиспользуемый код удаляется и итоговый бандл становится меньше. Базовый функционал
+                            webpack.</p>
                     </div>
                 </section>
 
@@ -29667,7 +29717,8 @@ export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): 
                     <h4 id="bundlingSpeedUp">Ускорение сборки. Вынос проверки типов в отдельный процесс</h4>
 
                     <div>
-                        <p>В случае если сборка бандла занимает слишком много времени, для ускорения сборки можно вынести проверку типов в отдельный процесс.</p>
+                        <p>В случае если сборка бандла занимает слишком много времени, для ускорения сборки можно
+                            вынести проверку типов в отдельный процесс.</p>
                         <p>Для этого в tsLoader можно добавить следующие параметры:</p>
                         <pre>
 export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
@@ -29689,9 +29740,11 @@ export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
     return [..., tsLoader, ...];
 }
                         </pre>
-                        <p>Данная настройка убирает проверку типов из основного процесса сборки, и для того чтобы вернуть проверку,
+                        <p>Данная настройка убирает проверку типов из основного процесса сборки, и для того чтобы
+                            вернуть проверку,
                             но уже в отдельном процессе требуется установить
-                            плагин <a href="https://github.com/TypeStrong/fork-ts-checker-webpack-plugin" target="_blank">ForkTsCheckerWebpackPlugin</a>:</p>
+                            плагин <a href="https://github.com/TypeStrong/fork-ts-checker-webpack-plugin"
+                                      target="_blank">ForkTsCheckerWebpackPlugin</a>:</p>
                         <pre>npm install --save-dev fork-ts-checker-webpack-plugin</pre>
                         <p>Интегрируется в проект как обычно:</p>
                         <pre>
@@ -29715,10 +29768,12 @@ export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): 
                     <h4 id="HMR">HMR (Hot Module Replacement)</h4>
 
                     <div>
-                        <p><a href="https://webpack.js.org/guides/hot-module-replacement/" target="_blank">HMR</a> - механизм обновления
+                        <p><a href="https://webpack.js.org/guides/hot-module-replacement/" target="_blank">HMR</a> -
+                            механизм обновления
                             контента на странице без перезагрузки страницы, по своей сути улучшение hot reload.</p>
                         <p>Полезно в случае, если надо часто дебажить формы, селектора, инпуты и т.д.</p>
-                        <p>Для того чтобы подключить HMR в случае, если в проекте нет фреймворков(React/Vue/Angular/ect), достаточно в DevServer подключить hot флаг:</p>
+                        <p>Для того чтобы подключить HMR в случае, если в проекте нет
+                            фреймворков(React/Vue/Angular/ect), достаточно в DevServer подключить hot флаг:</p>
                         <pre>
 export function buildDevServer({port}: IBuildOptions): DevServerConfiguration {
     return {
@@ -29729,8 +29784,10 @@ export function buildDevServer({port}: IBuildOptions): DevServerConfiguration {
     }
 }
                         </pre>
-                        <p>В случае же если фреймворки все-таки используются, нужно установить соответсвующий фреймворку плагин:</p>
-                        <p><a href="https://github.com/pmmmwh/react-refresh-webpack-plugin" target="_blank">react-refresh-webpack-plugin</a> для React:</p>
+                        <p>В случае же если фреймворки все-таки используются, нужно установить соответсвующий фреймворку
+                            плагин:</p>
+                        <p><a href="https://github.com/pmmmwh/react-refresh-webpack-plugin" target="_blank">react-refresh-webpack-plugin</a>
+                            для React:</p>
                         <pre>
 npm install -D @pmmmwh/react-refresh-webpack-plugin react-refresh
 // если есть TypeScript то так же нужно установить типы (un-official integration):
@@ -29804,14 +29861,17 @@ export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): 
                     <h4 id="copyPlugin">Favicon + copy plugin</h4>
 
                     <div>
-                        <p>Чтобы подключить favicon нужно в HtmlWebpackPlugin добавить favicon свойство, в котором указать путь до иконки:</p>
+                        <p>Чтобы подключить favicon нужно в HtmlWebpackPlugin добавить favicon свойство, в котором
+                            указать путь до иконки:</p>
                         <pre>
 new HtmlWebpackPlugin({
     template: paths.html,
     <code>favicon: path.resolve(paths.public, 'favicon.ico')</code>
 }),
                         </pre>
-                        <p>Для копирования статических файлов можно установить и использовать <a href="https://webpack.js.org/plugins/copy-webpack-plugin/" target="_blank">CopyPlugin</a>:</p>
+                        <p>Для копирования статических файлов можно установить и использовать <a
+                                href="https://webpack.js.org/plugins/copy-webpack-plugin/"
+                                target="_blank">CopyPlugin</a>:</p>
                         <pre>npm install copy-webpack-plugin --save-dev</pre>
                         <p>Подключение:</p>
                         <pre>
@@ -29847,8 +29907,10 @@ export function buildPlugins({mode, paths, analyzer, platform}: IBuildOptions): 
                     <h4 id="babel">Babel. Создаем свой плагин</h4>
 
                     <div>
-                        <p><a href="https://babeljs.io" target="_blank">Babel</a> — транспайлер, который преобразует код, написанный на современном JavaScript (ES6+), в совместимый
-                            с более старыми версиями JavaScript (ES5 и ниже), чтобы его можно было выполнять в различных окружениях,
+                        <p><a href="https://babeljs.io" target="_blank">Babel</a> — транспайлер, который преобразует
+                            код, написанный на современном JavaScript (ES6+), в совместимый
+                            с более старыми версиями JavaScript (ES5 и ниже), чтобы его можно было выполнять в различных
+                            окружениях,
                             включая устаревшие браузеры. </p>
 
                         <p>Чтобы Babel правильно работал с фреймворками, ему нужно установить и настроить пресеты.</p>
@@ -29900,7 +29962,8 @@ export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
     ];
 }
                         </pre>
-                        <p>Все настройки которые передаются в presets можно вынести в babel.config.json например если конфиг так же нужен для jest:</p>
+                        <p>Все настройки которые передаются в presets можно вынести в babel.config.json например если
+                            конфиг так же нужен для jest:</p>
                         <pre>
 // babel.config.json
 {
@@ -29917,9 +29980,11 @@ export function buildLoaders({mode}: IBuildOptions): ModuleOptions['rules'] {
     }
 }
                         </pre>
-                        <p>babelLoader так же желательно декомпозировать из webpack buildLoader файла тк этот лоадер может тоже сильно разрастись.</p>
+                        <p>babelLoader так же желательно декомпозировать из webpack buildLoader файла тк этот лоадер
+                            может тоже сильно разрастись.</p>
                         <p>Для babelLoader так же можно написать свой плагин, рассмотрим пример
-                            с <a href="https://www.npmjs.com/package/@types/babel__core">babel__core</a> библиотекой:</p>
+                            с <a href="https://www.npmjs.com/package/@types/babel__core">babel__core</a> библиотекой:
+                        </p>
                         <pre>
 // устанавливаем babel__core
 npm i -D @types/babel__core
@@ -30000,13 +30065,15 @@ export function buildBabelLoader({mode}: IBuildOptions) {
 
                     <div>
                         <p>Source maps в Webpack позволяют сопоставлять скомпилированный JavaScript-код с исходным,
-                            чтобы упростить отладку и отображение ошибок в удобном виде. Это особенно полезно, когда исходный код написан на языке,
+                            чтобы упростить отладку и отображение ошибок в удобном виде. Это особенно полезно, когда
+                            исходный код написан на языке,
                             который компилируется в JavaScript (например, TypeScript, CoffeeScript или ES6+).</p>
                         <p>Допустим у нас есть код, который выдает по тем или иным причинам ошибку:</p>
                         <div class="smallScreenContainer">
                             <img src="./assets/webpackSourceMaps.png" alt="webpackSourceMaps">
                         </div>
-                        <p>В случае если source maps отключены devTools в Source вкладке покажет нечитаемый скомпилированный код:</p>
+                        <p>В случае если source maps отключены devTools в Source вкладке покажет нечитаемый
+                            скомпилированный код:</p>
                         <div class="smallScreenContainer">
                             <img src="./assets/webpackTurnedOffSourceMaps.png" alt="webpackTurnedOffSourceMaps">
                         </div>
@@ -30046,7 +30113,8 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
     }
 }
                         </pre>
-                        <p>Возможные параметры <a href="https://webpack.js.org/configuration/devtool/" target="_blank">devtool</a>.</p>
+                        <p>Возможные параметры <a href="https://webpack.js.org/configuration/devtool/" target="_blank">devtool</a>.
+                        </p>
                     </div>
                 </section>
 
@@ -30054,28 +30122,49 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
                     <h4 id="monorepository">Монорепозиторий. Конфигурация проекта + workspaces</h4>
 
                     <div>
-                        <p>Монорепозиторий во фронтенд-разработке — это подход к управлению исходным кодом, при котором все связанные
-                            проекты и их зависимости хранятся в одном репозитории. Вместо того чтобы разрабатывать и поддерживать
-                            каждую часть приложения в отдельном репозитории, разработчики объединяют их в одном месте.</p>
+                        <p>Монорепозиторий во фронтенд-разработке — это подход к управлению исходным кодом, при котором
+                            все связанные
+                            проекты и их зависимости хранятся в одном репозитории. Вместо того чтобы разрабатывать и
+                            поддерживать
+                            каждую часть приложения в отдельном репозитории, разработчики объединяют их в одном
+                            месте.</p>
 
                         <p>Основные особенности монорепозитория:</p>
                         <ul>
-                            <li>Единое хранилище кода: Все приложения, библиотеки, утилиты, компоненты и конфигурации находятся в одном репозитории.</li>
-                            <li>Совместное управление зависимостями: Библиотеки и пакеты, используемые в нескольких частях проекта, могут обновляться централизованно.</li>
-                            <li>Упрощенная разработка: Легче отслеживать изменения, устранять конфликты и тестировать код, так как все части системы доступны в одном месте.</li>
-                            <li>Централизованная CI/CD: Единая система для автоматического тестирования, сборки и деплоя.</li>
+                            <li>Единое хранилище кода: Все приложения, библиотеки, утилиты, компоненты и конфигурации
+                                находятся в одном репозитории.
+                            </li>
+                            <li>Совместное управление зависимостями: Библиотеки и пакеты, используемые в нескольких
+                                частях проекта, могут обновляться централизованно.
+                            </li>
+                            <li>Упрощенная разработка: Легче отслеживать изменения, устранять конфликты и тестировать
+                                код, так как все части системы доступны в одном месте.
+                            </li>
+                            <li>Централизованная CI/CD: Единая система для автоматического тестирования, сборки и
+                                деплоя.
+                            </li>
                         </ul>
                         <p>Плюсы:</p>
                         <ul>
-                            <li>Упрощенное управление зависимостями: Обновление библиотек в одном месте сразу для всех проектов.</li>
-                            <li>Единый стандарт: Общие правила форматирования, линтинга и конфигурации (например, ESLint, Prettier).</li>
-                            <li>Ускорение разработки: Легче взаимодействовать с кодом разных проектов, так как они находятся "под одной крышей".</li>
+                            <li>Упрощенное управление зависимостями: Обновление библиотек в одном месте сразу для всех
+                                проектов.
+                            </li>
+                            <li>Единый стандарт: Общие правила форматирования, линтинга и конфигурации (например,
+                                ESLint, Prettier).
+                            </li>
+                            <li>Ускорение разработки: Легче взаимодействовать с кодом разных проектов, так как они
+                                находятся "под одной крышей".
+                            </li>
                             <li>Согласованность версий: Упрощенная работа с совместимыми версиями пакетов.</li>
                         </ul>
                         <p>Минусы:</p>
                         <ul>
-                            <li>Масштабируемость: С ростом проекта репозиторий может становиться слишком большим, усложняя клонирование и работу.</li>
-                            <li>Ограничения инструментов: Некоторые инструменты и системы контроля версий могут плохо справляться с огромными монорепозиториями.</li>
+                            <li>Масштабируемость: С ростом проекта репозиторий может становиться слишком большим,
+                                усложняя клонирование и работу.
+                            </li>
+                            <li>Ограничения инструментов: Некоторые инструменты и системы контроля версий могут плохо
+                                справляться с огромными монорепозиториями.
+                            </li>
                             <li>Риск ошибок: Неправильные изменения могут повлиять сразу на множество проектов.</li>
                         </ul>
                         <div class="smallScreenContainer">
@@ -30087,7 +30176,8 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
                             <img src="./assets/monorepoStructure.png" alt="monorepoStructure">
                         </div>
 
-                        <p>Корневой package.json имеет отличную от обычного package настройку, вместо dependencies в нем настраивается массив workspaces:</p>
+                        <p>Корневой package.json имеет отличную от обычного package настройку, вместо dependencies в нем
+                            настраивается массив workspaces:</p>
                         <pre>
 // package.json
 {
@@ -30103,7 +30193,8 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
                         <div class="smallScreenContainer" style="max-width: 400px">
                             <img src="./assets/monorepoServicesStructure.png" alt="monorepoServicesStructure">
                         </div>
-                        <p>В корне services можно сделать tsconfig.base.json, который будет содержать общую для всех микрофронтендов конфигурацию:</p>
+                        <p>В корне services можно сделать tsconfig.base.json, который будет содержать общую для всех
+                            микрофронтендов конфигурацию:</p>
                         <pre>
 // tsconfig.base.json
 {
@@ -30125,7 +30216,8 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
   }
 }
                         </pre>
-                        <p>tsconfig.json микрофронтендов при таком подходе должны обязательно иметь extends опцию, для расширения основного tsconfig.base.json:</p>
+                        <p>tsconfig.json микрофронтендов при таком подходе должны обязательно иметь extends опцию, для
+                            расширения основного tsconfig.base.json:</p>
                         <pre>
 // tsconfig.json для "shop" мирофронтенда:
 {
@@ -30146,7 +30238,8 @@ export function buildWebpack(options: IBuildOptions): webpack.Configuration {
                         </div>
                         <p>В директории "shared" переиспользуемый общий код(компоненты, функции и тд),
                             а в "build-config" общие для всех микрофронтендов настройки webpack, babel и тд</p>
-                        <p>Глобально настройка webpack для монорепозиториев не отличается от настройки для стандартного приложения,
+                        <p>Глобально настройка webpack для монорепозиториев не отличается от настройки для стандартного
+                            приложения,
                             за исключением требования плагина ModuleFederationPlugin, который будет рассмотрен далее,
                             а так же желательно сделать реэкспорт кастомного buildWebpack модуля и типов:.</p>
                         <pre>
@@ -30162,7 +30255,8 @@ export type {TBuildMode, IBuildPaths, IBuildOptions, TBuildPlatform} from './typ
                     <h4 id="microServicesConfig_moduleFederation">Конфигурация микросервисов. Module federation</h4>
 
                     <div>
-                        <p>package.json каждого микросервиса должен иметь в зависимостях содержимое директорий shared и build-config!</p>
+                        <p>package.json каждого микросервиса должен иметь в зависимостях содержимое директорий shared и
+                            build-config!</p>
                         <p>Пример package.json для "shop" микросервиса(остальные имеют тот же принцип):</p>
                         <pre>
 {
@@ -30215,7 +30309,9 @@ export type {TBuildMode, IBuildPaths, IBuildOptions, TBuildPlatform} from './typ
   }
 }
                         </pre>
-                        <p>А каждый webpack.config.js/js иметь дополнительный плагин <a href="https://webpack.js.org/plugins/module-federation-plugin/" target="_blank">ModuleFederationPlugin</a>:</p>
+                        <p>А каждый webpack.config.js/js иметь дополнительный плагин <a
+                                href="https://webpack.js.org/plugins/module-federation-plugin/" target="_blank">ModuleFederationPlugin</a>:
+                        </p>
                         <pre>
 import path from "path";
 import webpack from 'webpack';
@@ -30281,26 +30377,48 @@ export default (env: IEncVariables) => {
                         <p>Где:</p>
                         <ul>
                             <li>name - имя контейнера</li>
-                            <li>filename -  задаёт имя файла, который будет содержать точку входа (entry point) для модуля или микрофронтенда.</li>
-                            <li>remotes - настройка удалённых модулей (микрофронтендов или модулей), которые могут быть загружены динамически в приложение.
-                                Она позволяет подключать другие приложения или модули, предоставленные как удалённые (remote),
-                                чтобы использовать их компоненты или функциональность. </li>
-                            <li>shared - используется для указания зависимостей, которые должны быть разделяемыми (shared)
-                                между приложением и подключаемыми удалёнными модулями.</li>
+                            <li>filename - задаёт имя файла, который будет содержать точку входа (entry point) для
+                                модуля или микрофронтенда.
+                            </li>
+                            <li>remotes - настройка удалённых модулей (микрофронтендов или модулей), которые могут быть
+                                загружены динамически в приложение.
+                                Она позволяет подключать другие приложения или модули, предоставленные как удалённые
+                                (remote),
+                                чтобы использовать их компоненты или функциональность.
+                            </li>
+                            <li>shared - используется для указания зависимостей, которые должны быть разделяемыми
+                                (shared)
+                                между приложением и подключаемыми удалёнными модулями.
+                            </li>
                         </ul>
-                        <p>Примечание для filename - Имя файла должно быть уникальным: Если в одном приложении подключается несколько удалённых модулей,
-                            убедитесь, что каждый из них использует уникальное имя для filename, чтобы избежать конфликтов.
+                        <p>Примечание для filename - Имя файла должно быть уникальным: Если в одном приложении
+                            подключается несколько удалённых модулей,
+                            убедитесь, что каждый из них использует уникальное имя для filename, чтобы избежать
+                            конфликтов.
                             Если filename не указано, Webpack по умолчанию создаст файл с именем remoteEntry.js.</p>
                         <p>shared имеет следующие опции:</p>
                         <ul>
-                            <li><code>singleton</code> (логическое значение): Указывает, что данная зависимость должна быть единственной для всех микрофронтендов.</li>
-                            <li><code>strictVersion</code> (логическое значение): Если true, Webpack выбросит ошибку, если версии библиотеки в разных приложениях не совпадают.</li>
-                            <li><code>requiredVersion</code> (строка): Указывает требуемую версию зависимости, с которой приложение совместимо.</li>
-                            <li><code>eager</code> (логическое значение): Если true, зависимость будет загружаться сразу же при загрузке приложения, а не по запросу. Это может быть полезно для критически важных модулей.</li>
-                            <li><code>import</code> (логическое значение или строка): Если false, зависимость не будет автоматически импортироваться из node_modules. Если это строка, указывается путь для импорта.</li>
+                            <li><code>singleton</code> (логическое значение): Указывает, что данная зависимость должна
+                                быть единственной для всех микрофронтендов.
+                            </li>
+                            <li><code>strictVersion</code> (логическое значение): Если true, Webpack выбросит ошибку,
+                                если версии библиотеки в разных приложениях не совпадают.
+                            </li>
+                            <li><code>requiredVersion</code> (строка): Указывает требуемую версию зависимости, с которой
+                                приложение совместимо.
+                            </li>
+                            <li><code>eager</code> (логическое значение): Если true, зависимость будет загружаться сразу
+                                же при загрузке приложения, а не по запросу. Это может быть полезно для критически
+                                важных модулей.
+                            </li>
+                            <li><code>import</code> (логическое значение или строка): Если false, зависимость не будет
+                                автоматически импортироваться из node_modules. Если это строка, указывается путь для
+                                импорта.
+                            </li>
                         </ul>
 
-                        <p>В каждом микросервисе код в index.tsx нужно переместить в bootstrap.tsx, а в самом index.tsx сделать следующий реэкспорт:</p>
+                        <p>В каждом микросервисе код в index.tsx нужно переместить в bootstrap.tsx, а в самом index.tsx
+                            сделать следующий реэкспорт:</p>
                         <pre>
 import('./bootstrap');
 export {}
@@ -30364,11 +30482,14 @@ export const router = createBrowserRouter([
     }
 ]);
                         </pre>
-                        <p>Для shopRoutes и adminRoutes нужно объявить модули в global.d.ts, и использовать их в children массиве,
-                            это ссылки на routes из дочерних микросервисов. Т.е. дочерние микросервисы монтируются на прямую в основной хостовый,
+                        <p>Для shopRoutes и adminRoutes нужно объявить модули в global.d.ts, и использовать их в
+                            children массиве,
+                            это ссылки на routes из дочерних микросервисов. Т.е. дочерние микросервисы монтируются на
+                            прямую в основной хостовый,
                             и да они при этом имеют свой отдельный порт.</p>
 
-                        <p>Весь код с <a href="https://github.com/Slipbang/monorepo-module-federation" target="_blank">monorepo-module-federation на Github</a>.</p>
+                        <p>Весь код с <a href="https://github.com/Slipbang/monorepo-module-federation" target="_blank">monorepo-module-federation
+                            на Github</a>.</p>
                     </div>
                 </section>
             </section>
@@ -30380,10 +30501,12 @@ export const router = createBrowserRouter([
                     <h4 id="viteGettingStarted">Getting Started</h4>
 
                     <div>
-                        <p>Конкретно с Vite разжевывать что-то смысла нет - это сборщик очень похожий на webpack, только упрощенный.</p>
+                        <p>Конкретно с Vite разжевывать что-то смысла нет - это сборщик очень похожий на webpack, только
+                            упрощенный.</p>
                         <p>Далее описан только quick start, т.к. документация сжатая, без воды и достаточно простая,
                             чтобы подключить что-либо по ходу написания проекта.</p>
-                        <p>Сайт с гайдом: <a href="https://vite.dev/guide/" target="_blank">https://vite.dev/guide/</a></p>
+                        <p>Сайт с гайдом: <a href="https://vite.dev/guide/" target="_blank">https://vite.dev/guide/</a>
+                        </p>
                         <p>Создание проекта:</p>
                         <pre>npm create vite@latest &lt;projectName&gt;</pre>
                         <p>Далее выбираем шаблон проекта, vanilla/vue/react и т.д., если надо то ts тоже в наличии.</p>
@@ -30530,7 +30653,8 @@ git config --global user.email &lt;user email&gt;
                         <p>Получение списка всех настроек Git:</p>
                         <pre>git config --list</pre>
 
-                        <p>Для создания нового Git репозитория либо открываем папку с помощью IDE и вводим команду ниже, либо с помощью Shell переходим к нужной папке и выполняем эту команду уже в консоли:</p>
+                        <p>Для создания нового Git репозитория либо открываем папку с помощью IDE и вводим команду ниже,
+                            либо с помощью Shell переходим к нужной папке и выполняем эту команду уже в консоли:</p>
                         <pre>git init</pre>
                         <p>В папке к которой мы применили git инициализацию, появляется скрытая папка .git</p>
                     </div>
@@ -30540,8 +30664,10 @@ git config --global user.email &lt;user email&gt;
                     <h4 id="gitAreas">Области гит</h4>
 
                     <div>
-                        <p>Рабочая директория(working directory) - та область Git, которая содержит файлы и папки, видимые в проекте.</p>
-                        <p>Индекс(staging area) - в эту область добавляются файлы, до сохранения в репозиторий(добавленные(new file) или измененные файлы(modified)).</p>
+                        <p>Рабочая директория(working directory) - та область Git, которая содержит файлы и папки,
+                            видимые в проекте.</p>
+                        <p>Индекс(staging area) - в эту область добавляются файлы, до сохранения в
+                            репозиторий(добавленные(new file) или измененные файлы(modified)).</p>
                         <p>Репозиторий(repository) - то, что находится в папке .git/objects.</p>
                     </div>
                 </section>
@@ -30550,7 +30676,8 @@ git config --global user.email &lt;user email&gt;
                     <h4 id="mainCommands">Подготовка и сохранение изменений и перемещение между версиями</h4>
 
                     <div>
-                        <p>Чтобы подготовить файлы к сохранению(добавить файлы в индекс), в консоль требуется ввести команду:</p>
+                        <p>Чтобы подготовить файлы к сохранению(добавить файлы в индекс), в консоль требуется ввести
+                            команду:</p>
                         <pre>
 git add &lt;file name&gt;
 // добавляет определенный файл
@@ -30596,7 +30723,8 @@ git add .
 
                         <p>Каждый объект в Git имеет уникальный id (SHA1 хэш)</p>
                         <p>Хэш SHA1 имеет фиксированную длину 160 бит, 40 шестнадцатеричных символов.</p>
-                        <p>Название tree папки основано на первых двух символах хеша, название файла внутри этой папки, основано на остальных символах.</p>
+                        <p>Название tree папки основано на первых двух символах хеша, название файла внутри этой папки,
+                            основано на остальных символах.</p>
                     </div>
                 </section>
 
@@ -30613,12 +30741,16 @@ git add .
                             <li>SHA1 хэш</li>
                             <li>Имя и email автора</li>
                             <li>Описание коммита</li>
-                            <li>Родительский(е) коммит(ы), каждый следующий коммит, ссылается на предыдущий(е) коммит(ы)!!!</li>
+                            <li>Родительский(е) коммит(ы), каждый следующий коммит, ссылается на предыдущий(е)
+                                коммит(ы)!!!
+                            </li>
                             <li>Дерево</li>
                         </ul>
 
-                        <p>Первый коммит - корневой коммит. Каждый коммит ссылается на предыдущий, и так до корневого, образуя структуру похожую на linked list.
-                            В Git есть определенный указатель - head, который ссылается на определенный коммит, благодаря head мы видим версию проекта,
+                        <p>Первый коммит - корневой коммит. Каждый коммит ссылается на предыдущий, и так до корневого,
+                            образуя структуру похожую на linked list.
+                            В Git есть определенный указатель - head, который ссылается на определенный коммит,
+                            благодаря head мы видим версию проекта,
                             на коммит которой ссылается head.</p>
                         <p>Но как правило head ссылается не на коммит, а на ветку, которая уже ссылается на коммит:</p>
                         <pre>
@@ -30722,18 +30854,22 @@ rootCommit(1) &lt;- commit2 &lt;- commit3 &lt;- commit4
                     <div>
                         <p>Ветка - ссылка на коммит.
 
-                        <p>Для того чтобы создать ветку и сразу к ней перейти можно использовать следующую консольную команду:</p>
+                        <p>Для того чтобы создать ветку и сразу к ней перейти можно использовать следующую консольную
+                            команду:</p>
                         <pre>git checkout -b &lt;branch name&gt;</pre>
 
-                        <p>Слияние веток необходимо когда разработка дополнительной ветки закончена, и требуется слияние в основную ветку.
-                            В таком случае создается коммит со слиянием, и этот коммит будет иметь двух предков, предыдущий и конечный коммит ветки слияния.
+                        <p>Слияние веток необходимо когда разработка дополнительной ветки закончена, и требуется слияние
+                            в основную ветку.
+                            В таком случае создается коммит со слиянием, и этот коммит будет иметь двух предков,
+                            предыдущий и конечный коммит ветки слияния.
                             Такой коммит называется merge(объединяющий) коммит</p>
                         <div class="smallScreenContainer">
                             <img src="./assets/mergeCommit.png" alt="mergeCommit">
                         </div>
                         <p>Команда слияния веток:</p>
                         <pre>git merge &lt;feature branch name&gt;</pre>
-                        <p>Следует перейти в ветку в которую будет merge(receiving branch), и ввести команду с именем ветки слияния(feature branch).</p>
+                        <p>Следует перейти в ветку в которую будет merge(receiving branch), и ввести команду с именем
+                            ветки слияния(feature branch).</p>
                     </div>
                 </section>
 
@@ -30742,19 +30878,24 @@ rootCommit(1) &lt;- commit2 &lt;- commit3 &lt;- commit4
 
                     <div>
                         <p>Origin - имя удаленного репозитория по-умолчанию</p>
-                        <p>После клонирования удаленного репозитория можно проверить в нем все ветки, включая те, что находятся в удаленных репозиториях:</p>
+                        <p>После клонирования удаленного репозитория можно проверить в нем все ветки, включая те, что
+                            находятся в удаленных репозиториях:</p>
                         <pre>git branch -a</pre>
                         <p>Для создания собственного репозитория в GitHub, в своей учетной записи заходим в:</p>
                         <code>&gt; Repositories &gt; New</code>
-                        <p>Заполняем <code>Repository name, Description</code> и тд, кликаем <code>Create repository</code>.</p>
-                        <p>Далее по полученной ссылке привязываем свой локальный УЖЕ ИНИЦИАЛИЗИРОВАННЫЙ репозиторий к удаленному:</p>
+                        <p>Заполняем <code>Repository name, Description</code> и тд, кликаем <code>Create
+                            repository</code>.</p>
+                        <p>Далее по полученной ссылке привязываем свой локальный УЖЕ ИНИЦИАЛИЗИРОВАННЫЙ репозиторий к
+                            удаленному:</p>
                         <pre>
 git remote add origin https://guthub.com/&lt;user-name&gt;/&lt;project-name&gt;.git
 git branch -M main
 git push -u origin main
                         </pre>
-                        <p>Чтобы иметь возможность пушить изменения нужен либо access токен, либо если IDE позволяет - зайти со своего аккаунта GitHub в IDE(например в WebStorm).</p>
-                        <p>Так же на самом GitHub в репозитории можно создавать файлы: <code>&gt; Add File &gt; Create new file &gt;</code>.
+                        <p>Чтобы иметь возможность пушить изменения нужен либо access токен, либо если IDE позволяет -
+                            зайти со своего аккаунта GitHub в IDE(например в WebStorm).</p>
+                        <p>Так же на самом GitHub в репозитории можно создавать файлы: <code>&gt; Add File &gt; Create
+                            new file &gt;</code>.
                             При создании файла можно записать имя с расширением и содержимое файла</p>
                     </div>
                 </section>
@@ -30767,11 +30908,14 @@ git push -u origin main
                         <pre>git remote add origin &lt;url&gt;</pre>
                         <p>Где "origin" это имя для репозитория, и называть его возможно как угодно.</p>
 
-                        <p>При первой загрузке изменений из локальной ветки main, на удаленный сервер под названием origin,
+                        <p>При первой загрузке изменений из локальной ветки main, на удаленный сервер под названием
+                            origin,
                             требуется связать локальную ветку main с соответствующей удаленной веткой:</p>
                         <pre>git push -u origin &lt;branch&gt;</pre>
-                        <p>При этом название локальной ветки и удаленной могут отличаться, но как правило они одинаковы</p>
-                        <p>После первого связывающего пуша, можно использовать обычный <code>git push</code> и <code>git pull</code>.</p>
+                        <p>При этом название локальной ветки и удаленной могут отличаться, но как правило они
+                            одинаковы</p>
+                        <p>После первого связывающего пуша, можно использовать обычный <code>git push</code> и <code>git
+                            pull</code>.</p>
                     </div>
                 </section>
             </section>
@@ -30791,8 +30935,10 @@ git push -u origin main
                     <h4 id="dockerInstall">Установка Docker в Linux и Windows</h4>
 
                     <div>
-                        <p>Все дистрибутивы и дефолт мануал можно найти на <a href="https://docs.docker.com">docs.docker.com</a></p>
-                        <p>Ру мануал по установке для <a href="https://youtu.be/O8N1lvkIjig?si=2phWaEFHQaCBp3eG&t=1170" target="_blank">Linux (Ubuntu) / Windows</a></p>
+                        <p>Все дистрибутивы и дефолт мануал можно найти на <a href="https://docs.docker.com">docs.docker.com</a>
+                        </p>
+                        <p>Ру мануал по установке для <a href="https://youtu.be/O8N1lvkIjig?si=2phWaEFHQaCBp3eG&t=1170"
+                                                         target="_blank">Linux (Ubuntu) / Windows</a></p>
                     </div>
                 </section>
 
@@ -30901,7 +31047,8 @@ git push -u origin main
                             </tr>
 
                             <tr>
-                                <td colspan="2"><code>docker network create --driver &lt;networkType&gt; &lt;networkName&gt;</code></td>
+                                <td colspan="2"><code>docker network create --driver &lt;networkType&gt; &lt;networkName&gt;</code>
+                                </td>
                                 <td>Создание сети</td>
                             </tr>
 
@@ -30916,12 +31063,14 @@ git push -u origin main
                             </tr>
 
                             <tr>
-                                <td colspan="2"><code>docker network connect &lt;networkName&gt; &lt;containerName/id&gt;</code></td>
+                                <td colspan="2"><code>docker network connect &lt;networkName&gt; &lt;containerName/id&gt;</code>
+                                </td>
                                 <td>Присоединение к сети</td>
                             </tr>
 
                             <tr>
-                                <td colspan="2"><code>network disconnect &lt;networkId&gt; &lt;containerName/id&gt;</code></td>
+                                <td colspan="2"><code>network disconnect &lt;networkId&gt;
+                                    &lt;containerName/id&gt;</code></td>
                                 <td>Отсоединение контейнера от сети</td>
                             </tr>
                             </tbody>
@@ -30933,7 +31082,8 @@ git push -u origin main
                     <h4 id="portMapping">Управление портами: Port Mapping</h4>
 
                     <div>
-                        <p>Для того чтобы открыть внешний порт контейнера, нужно использовать команду со следующей конфигурацией:</p>
+                        <p>Для того чтобы открыть внешний порт контейнера, нужно использовать команду со следующей
+                            конфигурацией:</p>
                         <pre>docker run <code>-p 8080:80</code> nginx</pre>
                         <p>Где 8080 это внешний порт, а 80 - порт контейнера.</p>
                         <div class="smallScreenContainer">
@@ -30948,7 +31098,8 @@ git push -u origin main
                     <div>
                         <p>Пример задания переменной при старте контейнера:</p>
                         <pre>docker run --name DB-mysql <code>-e MYSQL_ROOT_PASSWORD=pw123456qwerty</code> -d mysql</pre>
-                        <p>Как правило в документации(блок Environment Variables) контейнера указаны все переменные которые могут использоваться в нем.</p>
+                        <p>Как правило в документации(блок Environment Variables) контейнера указаны все переменные
+                            которые могут использоваться в нем.</p>
                         <p>Чтобы задать переменную можно использовать следующий синтаксис:</p>
                         <pre>export VARIABLE_NAME=variableValue</pre>
                     </div>
@@ -30958,8 +31109,10 @@ git push -u origin main
                     <h4 id="dockerVolumes">Постоянные данные: Docker Volumes</h4>
 
                     <div>
-                        <p>При запуске приложения, данные сохраняются в определенной директории, и в случае если контейнер останавливается или уничтожается - данные теряются.</p>
-                        <p>В случае если нужно оставить данные при остановке или уничтожении контейнера - данные нужно сохранять на самом сервере или на хосте.
+                        <p>При запуске приложения, данные сохраняются в определенной директории, и в случае если
+                            контейнер останавливается или уничтожается - данные теряются.</p>
+                        <p>В случае если нужно оставить данные при остановке или уничтожении контейнера - данные нужно
+                            сохранять на самом сервере или на хосте.
                             Такие данные называются сохраняющимися данными (<code>Persisting data</code>)</p>
 
                         <div class="smallScreenContainer">
@@ -30974,13 +31127,13 @@ git push -u origin main
                         </div>
 
                         <p><code>Anonymous Volumes:</code></p>
-                        
+
                         <div class="smallScreenContainer">
                             <img src="./assets/anonymousVolumes.png" alt="anonymousVolumes">
                         </div>
 
                         <p><code>Named Volumes:</code></p>
-                        
+
                         <div class="smallScreenContainer">
                             <img src="./assets/namedVolumes.png" alt="">
                         </div>
@@ -30993,7 +31146,8 @@ git push -u origin main
                             <li>Удаление volume по имени/id: <code>docker volume rm &lt;volumeName/id&gt;</code></li>
                         </ul>
 
-                        <p>Для сохранения данных обязательно нужно использовать или Host volumes или Named volumes!!!</p>
+                        <p>Для сохранения данных обязательно нужно использовать или Host volumes или Named
+                            volumes!!!</p>
                     </div>
                 </section>
 
@@ -31012,11 +31166,15 @@ git push -u origin main
                             <li><code>overlay</code> (Docker Swarm Cluster)</li>
                         </ul>
 
-                        <p><code>bridge</code> создается когда мы запускаем команду <code>docker run &lt;imageName&gt;</code></p>
-                        <p><code>host</code> создается когда мы запускаем команду <code>docker run &lt;imageName&gt; --network=host</code></p>
-                        <p><code>none</code> создается когда мы запускаем команду <code>docker run &lt;imageName&gt; --network=none</code></p>
+                        <p><code>bridge</code> создается когда мы запускаем команду <code>docker run
+                            &lt;imageName&gt;</code></p>
+                        <p><code>host</code> создается когда мы запускаем команду <code>docker run &lt;imageName&gt;
+                            --network=host</code></p>
+                        <p><code>none</code> создается когда мы запускаем команду <code>docker run &lt;imageName&gt;
+                            --network=none</code></p>
 
-                        <p>Для создания именования сети типа <code>bridge</code> нам требуется ввести следующие команды:</p>
+                        <p>Для создания именования сети типа <code>bridge</code> нам требуется ввести следующие команды:
+                        </p>
                         <pre>
 docker network create --driver bridge NAME
 docker run --net myNAME nginx
@@ -31039,9 +31197,9 @@ docker run --net myNAME nginx
                         <div class="smallScreenContainer">
                             <img src="./assets/networkSettings.png" alt="networkSettings">
                         </div>
-                        
+
                         <p>Устройство macvlan | ipvlan</p>
-                        
+
                         <div class="smallScreenContainer">
                             <img src="./assets/lanNetworkSettings.png" alt="lanNetworkSettings">
                         </div>
@@ -31049,11 +31207,15 @@ docker run --net myNAME nginx
                         <p>network команды:</p>
 
                         <ul>
-                            <li>Создание сети: <code>docker network create --driver &lt;networkType&gt; &lt;networkName&gt;</code></li>
-                            <li>Получение параметров сети: <code>docker network inspect &lt;networkName/Id&gt;</code></li>
+                            <li>Создание сети: <code>docker network create --driver &lt;networkType&gt; &lt;networkName&gt;</code>
+                            </li>
+                            <li>Получение параметров сети: <code>docker network inspect &lt;networkName/Id&gt;</code>
+                            </li>
                             <li>Удаление сети: <code>docker network rm &lt;networkName/Id&gt;</code></li>
-                            <li>Присоединение контейнера к сети: <code>docker network connect &lt;networkName&gt; &lt;containerName/id&gt;</code></li>
-                            <li>Отсоединение контейнера от сети: <code>network disconnect &lt;networkId&gt; &lt;containerName/id&gt;</code></li>
+                            <li>Присоединение контейнера к сети: <code>docker network connect &lt;networkName&gt; &lt;containerName/id&gt;</code>
+                            </li>
+                            <li>Отсоединение контейнера от сети: <code>network disconnect &lt;networkId&gt; &lt;containerName/id&gt;</code>
+                            </li>
                         </ul>
 
                         <p>Пример создание собственной сети, со своими параметрами:</p>
@@ -31078,7 +31240,8 @@ docker run --net myNAME nginx
                             <li>Работа с файлами: <code>RUN chmod +x /opt/script.sh</code></li>
                             <li>Указание переменных: <code>ENV OWNER="Slipbang" / ENV TYPE=demo</code></li>
                             <li>Порты: <code>EXPOSE 80</code></li>
-                            <li>Описание команд при запуске контейнера: <code>ENTRYPOINT ["echo"] / CMD ["Hello my first Docker"]</code></li>
+                            <li>Описание команд при запуске контейнера: <code>ENTRYPOINT ["echo"] / CMD ["Hello my first
+                                Docker"]</code></li>
                         </ul>
                         <p>Для построения образа из текущей директории с докерфайлом:</p>
                         <pre>docker build -t &lt;imageName&gt; .</pre>
@@ -31119,8 +31282,10 @@ docker run --net myNAME nginx
 
                     <div>
                         <p>Portainer - web-ориентированный графический интерфейс Docker для Windows и Linux</p>
-                        <p>Видео гайд по <a href="https://youtu.be/O8N1lvkIjig?si=sgo3DolAHL52oVUv&t=16349" target="_blank">portainer</a></p>
-                        <p>Установка <a href="https://docs.portainer.io/start/install/server" target="_blank">portainer.io</a></p>
+                        <p>Видео гайд по <a href="https://youtu.be/O8N1lvkIjig?si=sgo3DolAHL52oVUv&t=16349"
+                                            target="_blank">portainer</a></p>
+                        <p>Установка <a href="https://docs.portainer.io/start/install/server" target="_blank">portainer.io</a>
+                        </p>
                         <p>Для быстрого запуска portainer.io можно так же сделать docker compose:</p>
                         <pre>
 #docker run -d
@@ -31150,6 +31315,519 @@ services:
                 </section>
             </section>
         </section>
+
+        <section>
+            <h2 id="functionalProgramming">Функциональное программирование</h2>
+
+            <section>
+                <h3 id="procedures_functions">Общие понятия. Процедуры и функции</h3>
+
+                <div>
+                    <p>JavaScript - мультипарадигменный язык программирования.
+                        Поддерживает объектно-ориентированный, императивный и функциональный стили.</p>
+
+                    <p>Четыре основные вытекающие из ФП концепции:</p>
+                    <ol>
+                        <li>Декларативность</li>
+                        <li>Чистые функции</li>
+                        <li>Функции первого класса/ Функции высшего порядка</li>
+                        <li>Иммутабельность</li>
+                    </ol>
+
+                    <p>Условный псевдо-код процедуры:</p>
+                    <pre>
+                        procedure(a,b): void {
+                            number = read();
+                            result = sqrt(variable);
+                            writeFile(result);
+                        }
+                    </pre>
+
+                    <p>Условный псевдо-код функции:</p>
+                    <pre>
+                        function(a,b): number {
+                            number = read();
+                            result = sqrt(variable);
+                            return result;
+                        }
+                    </pre>
+
+                    <p>В функциональном программировании с функциями работают как с математическими функциями.</p>
+                    <pre>
+                        f(x) = x*x + x + 5;
+                        f(5) = 25 + 5 + 5;
+                        f(x,y) = x*y + 10;
+                        f(5,0) = 5*0 + 10;
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="declarativeness">Декларативность</h3>
+
+                <div>
+                    <p>Код можно писать в декларативном и императивном стиле.
+                        Декларативность простыми словами - что хотим получить? - Т.е. Описываем результат.
+                        Императивность - как хотим получить? - Описываем действия.</p>
+
+                    <p>В любом случае, на верхнем уровне будет императивный код, но, чем выше мы его будем поднимать,
+                        тем проще нам будет переиспользовать определенные куски кода и соответственно уменьшить общее
+                        его количество.</p>
+                    <p>Пример декларативного подхода:</p>
+                    <pre>
+                    const filterUserByField = (country) => (user): boolean => users.country === country;
+                    const calcAvgAge = (avg, user) => (avg += user.age);
+
+                    function calcUsersAverageAge(users, country) {
+                        return sortByAge(users)
+                            .filter(filterUsersByField(country))
+                            .reduce(calcAvgAge)
+                    }
+                </pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="pureFunctions">Чистые функции и сайд эффекты</h3>
+
+                <div>
+                    <p>Ярким примером чистой функции - обычная математическая функция:</p>
+                    <pre>
+                        f(x) = x*x + 5;
+                    </pre>
+
+                    <p>Суть чистой функции заключается в том, что если мы в нее передаем одни и те же аргументы,
+                        она <span class="underlinedT">всегда</span> возвращает один и тот же ответ.
+                        НО при этом у нее не должно быть никаких сайд эффектов!</p>
+                    <p>Тривиальный пример чистой функции:</p>
+                    <pre>
+                        function multiplyPure(a,b) {
+                            return a*b;
+                        }
+                    </pre>
+
+                    <p>Пример не чистой функции:</p>
+                    <pre>
+                        function multiplyImpure(a,b) {
+                            return a * b * Math.random();
+                        }
+                    </pre>
+                    <p>Так же такие функции не зависят от внешнего состояния и глобальных переменных.</p>
+
+                    <p>Пример не чистой функции с глобальной переменной:</p>
+                    <pre>
+                        const MODIFIER = 5;
+
+                        function multiplyImpureWithModifier(a, b) {
+                            return a * b * MODIFIER;
+                        }
+                    </pre>
+
+                    <p>Т.к. внешняя переменная может быть переписана, такая функция не может быть чистой!</p>
+
+                    <p>Так же функция не будет чистой если мы взяли глобальную переменную и изменили ее.
+                        Отпадает риск того что кто-то сломает функцию при изменении переменной, но теперь поломать код
+                        можем уже мы.</p>
+
+                    <pre>
+                        let MODIFIER = 10;
+
+                        function multiplyImpureWithLet(a, b) {
+                            MODIFIER = 15;
+                            return a * b * modifier;
+                        }
+                    </pre>
+
+                    <p>Последний критерий чистоты - отсутствие сайд эффектов:</p>
+
+                    <pre>
+                        async function multiplyImpureWithFetch(a,b) {
+                            const response = await fetch(input: '/get/modifier');
+                            const {modifier} = response.json;
+                            return a * b * modifier;
+                        }
+                    </pre>
+
+                    <p>Даже если сервер всегда возвращает одно и то же число, тем не менее, функция не может считаться
+                        чистой, ибо нет гарантии результата.</p>
+
+                    <p>Хороший пример чистой функции - стандартные redux редьюсеры:</p>
+                    <pre>
+                        function reducer(state = initialState, action) {
+                            switch(action.type) {
+                                case 'INCREASE_VALUE': {
+                                    return {...state, value: state.value + action.value}
+                                }
+                                case 'SET_DATA': {
+                                    return {...state, value: action.data}
+                                }
+                                default:
+                                    return state;
+                                }
+                        }
+                    </pre>
+                    <p>(P.s. Слава Аллаху в redux-toolkit в store завезли Immer.) Immer оборачивает объект в Proxy,
+                        благодаря чему функции можно писать в мутабельном стиле ибо proxy самостоятельно оперирует
+                        иммутабельностью под капотом.</p>
+                </div>
+
+            </section>
+
+            <section>
+                <h3 id="immutability">Иммутабельность</h3>
+
+                <div>
+                    <p>Иммутабельность - неизменяемость данных, в функциональных языкак программирования из коробки.
+                        В ФП - это аксиома, что данные мутировать НЕЛЬЗЯ.</p>
+
+                    <pre>
+                        const users = [{name: 'John'}, {name: 'Peter'}];
+
+                        function actionWIthUsers(userList) {
+                            userList.splice(1);
+                        }
+
+                        console.log(actionWithUsers(users)); // [{name: 'Peter'}]
+                        console.log(users); // [{name: 'John'}]
+                    </pre>
+                </div>
+
+                <p>splice функция является мутабельным методом, она вырезает элементы из массива с индекса переданного
+                    первым аргументом
+                    и возвращает массив с этим элементом по элемент с индексом переданным вторым аргументом.
+                    Без глубокой копии объектов данным методом оперировать не рекомендуется.</p>
+
+                <p>Мутабельные методы массивов:</p>
+                <ul>
+                    <li>push() – добавляет элементы в конец</li>
+                    <li>pop() – удаляет последний элемент</li>
+                    <li>shift() – удаляет первый элемент</li>
+                    <li>unshift() – добавляет элементы в начало</li>
+                    <li>splice(start, deleteCount, ...items) – удаляет/добавляет элементы</li>
+                    <li>sort(compareFn) – сортирует элементы (меняет порядок)</li>
+                    <li>reverse() – переворачивает массив</li>
+                    <li>fill(value, start, end) – заполняет массив значениями</li>
+                    <li>copyWithin(target, start, end) – копирует элементы внутри массива</li>
+                </ul>
+
+                <p>Иммутабельные методы массивов</p>
+                <ul>
+                    <li>map(callbackFn) – создает новый массив, применяя функцию</li>
+                    <li>filter(callbackFn) – создает новый массив с отфильтрованными элементами</li>
+                    <li>slice(start, end) – создает новый массив из части старого</li>
+                    <li>concat(...arrays) – объединяет массивы в новый</li>
+                    <li>reduce(callbackFn, initialValue) – сводит массив к одному значению</li>
+                    <li>flat(depth) – возвращает новый массив, разворачивая вложенные массивы</li>
+                    <li>flatMap(callbackFn) – аналог map(), но с объединением вложенных массивов</li>
+                    <li>toSorted(compareFn) – возвращает отсортированную копию массива (ES2023)</li>
+                    <li>toReversed() – возвращает перевернутую копию массива (ES2023)</li>
+                    <li>toSpliced(start, deleteCount, ...items) – изменяет копию массива (ES2023)</li>
+                </ul>
+
+                <p>Мутабельные методы объектов</p>
+                <ul>
+                    <li>Object.assign(target, source) – изменяет target, копируя свойства source
+                    <li>
+                    <li>Object.defineProperty(obj, key, descriptor) – изменяет свойства объекта
+                    <li>
+                    <li>Object.defineProperties(obj, descriptors) – изменяет несколько свойств
+                    <li>
+                    <li>delete obj.key – удаляет свойство из объекта
+                    <li>
+                    <li>Reflect.set(obj, key, value) – устанавливает значение свойства
+                    <li>
+                    <li>Reflect.deleteProperty(obj, key) – удаляет свойство объекта
+                    <li>
+                </ul>
+
+                <p>Иммутабельные методы объектов</p>
+                <ul>
+                    <li>Object.assign({}, obj) – создает копию объекта
+                    <li>
+                    <li>structuredClone(obj) – создает глубокую копию объекта
+                    <li>
+                    <li>{ ...obj } (spread) – поверхностное копирование объекта
+                    <li>
+                    <li>Object.create(proto, propertiesObject) – создает новый объект с указанным прототипом
+                    <li>
+                    <li>Object.freeze(obj) – делает объект неизменяемым
+                    <li>
+                    <li>Object.seal(obj) – запрещает добавление/удаление свойств, но разрешает изменение
+                    <li>
+                    <li>Object.getOwnPropertyDescriptors(obj) – получает все дескрипторы свойств
+                    <li>
+                    <li>JSON.parse(JSON.stringify(obj)) – глубокая копия (не всегда корректная)
+                    <li>
+                </ul>
+
+                <p>Пример неправильной функции сортировки:</p>
+                <pre>
+                    function actionWithUsers(userList) {
+                        const copyUsers = userList.sort();
+                        return copyUsers;
+                    }
+                </pre>
+                <p>Как было бы правильно:</p>
+                <pre>
+                    function actionWithUsers(userList) {
+                        const sortedUsersCopy = [...userList].sort();
+                        return sortedUsersCopy;
+                    }
+                </pre>
+
+                <p>Так же не стоит забывать, что spread, Object.assign создают <span
+                        class="underlinedT">не глубокие</span> копии!
+                    Глубокую копию создает structuredClone, но его поддержка еще не 100%.
+                    Метод JSON.stringify(JSON.parse(obj)) хорош где нет linked list и в целом ссылочных зависимостей.
+                    Для остальных кастомные библиотеки.</p>
+
+                <p>Почему мутировать данные плохо?</p>
+                <ul>
+                    <li>Несогласованность данных</li>
+                    <li>Неявные побочные эффекты</li>
+                    <li>Усложняет дебаг и тестирование</li>
+                </ul>
+
+                <p>Плюсы иммутабельности:</p>
+                <ul>
+                    <li>Иммутабельные структуры данных потокобезопасны</li>
+                    <li>Проще отслеживать жизненный цикл объекта</li>
+                </ul>
+
+                <p>(P.s. К плюсам так же можно отнести большое спасибо от клиентов с низкой частотой ЦП,
+                    офисники вообще в восторге будут, цветы слать, звонить поблагодарить за хороший сайт.
+                    Цикличный возврат глубокого клона конского массива объектов при заполнении новыми объектами это прям
+                    bestpractice.
+                    И ошибок самое главное нет.)</p>
+
+                <p>Желательно анализировать, где применять иммутабельность, иногда дешевле запушить новый объект в
+                    большой массив,
+                    нежели чем возвращать dipClone с изменениями на каждой итерации ибо сложность у пуша O(1),
+                    а при иммутабельном способе O(n * m * ... зависит от структуры).</p>
+
+
+            </section>
+
+            <section>
+                <h3 id="firstOrderFunctions">Функции первого класса</h3>
+
+                <div>
+                    <p>Функции - объекты первого класса, объект типа Function.
+                        Функции первого класса означают, что функции на этом языке рассматриваются как любая другая
+                        переменная.
+                        Т.е. мы можем возвращать ее в другой функции, передавать аргументом, присваивать переменной и
+                        т.д.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="highOrderFunctions">Функции высшего/первого порядка</h3>
+
+                <div>
+                    <p>Функции высшего порядка - функции которые принимают аргументом или возвращают другую функцию.</p>
+
+                    <pre>
+                        const firstOrderFunc = () => console.log("Hello, I am a First order function");
+                        const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
+                        higherOrder(firstOrderFunc);
+                    </pre>
+
+                    <p>Функция первого порядка — это функция, которая не принимает другую функцию
+                        в качестве аргумента и не возвращает функцию в качестве возвращаемого значения.</p>
+                    <pre>
+                        const firstOrder = () => console.log("I am a first order function!");
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="Composition_Pipe">Композиция/конвейер</h3>
+
+                <div>
+                    <p>Композиция(compose) - это функция, которая создает новую функцию в которой СПРАВА НА ЛЕВО
+                        передается результат
+                        выполнения переданным в качестве аргумента массиву функций</p>
+
+                    <pre>
+                        function compose(...functions: Function[]): Function {
+                            return function (firstArgument) {
+                                return functions.reduceRight((acc,fn) => fn(acc), firstArgument);
+                            }
+                        }
+
+                        const doubleSortedArray = compose(doubleNumbers, sortArr, compact);
+                        doubleSortedArray([1,5,3,1,2,4,undefined,0,null]) // [0,2,2,4,6,8,10]
+                    </pre>
+
+                    <p>Конвейер(pipe) - это функция, которая создает новую функцию, в которой СЛЕВА НА ПРАВО передается
+                        результат
+                        выполнения переданным в качестве аргумента массиву функций</p>
+
+                    <pre>
+                        function Pipe(...functions: Function[]): Function {
+                            return function (firstArgument) {
+                                return functions.reduce((acc,fn) => fn(acc), firstArgument);
+                            }
+                        }
+
+                        const doubleSortedArray = compose(compact, sortArr, doubleNumbers);
+                        doubleSortedArray([1,5,3,1,2,4,undefined,0,null]) // [0,2,2,4,6,8,10]
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="partialApplication_Currying">Частичное применение и каррирование</h3>
+
+                <div>
+                    <a href="#JSbasicsForEmployment14">Определение написано выше.</a>
+                    <p>Код функции каррирования:</p>
+                    <pre>
+                        function curry(fn) {
+                            return function curried(...args) {
+                                if (args.length => fn.length) {
+                                    return fn.apply(this, args);
+                                } else {
+                                    return function(...newArgs) {
+                                        return curried.apply(this, args.concat(newArgs));
+                                    }
+                                }
+                            }
+                        }
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="chaining">Chaining</h3>
+
+                <div>
+                    <p>Chaining - любые цепочки вызовов функций.</p>
+
+                    <p>Тривиальный пример кода с chaining</p>
+                    <pre>
+                        new Array(20)
+                            .map(callback)
+                            .filter(callback)
+                            .reduce(callback)
+                            .map(callback)
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="containers">Контейнеры</h3>
+
+                <div>
+                    <p>Код контейнера:</p>
+                    <pre>
+                        class Container {
+                            protected $value: number;
+
+                            private constructor(x: number) {
+                                this.$value = x;
+                            }
+
+                            static of(x: number) {
+                                return new Container(x);
+                            }
+
+                            map(fn: Function) {
+                                return Container.of(fn(this.$value));
+                            }
+
+                            join() {
+                                return this.$value;
+                            }
+
+                            chain(fn: Function) {
+                                return this.map(fn).join();
+                            }
+                        }
+
+                        const add5 = (x: number) => x + 5;
+                        const square = (x: number) => x * x;
+                        const contOf100 = Container.of(5).map(add5).chain(square);
+                        console.log(contOf100); // 100
+                    </pre>
+
+                    <p>Получается "инкапсуляция" данных внутри контейнера</p>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="functors_applicativeFunctors">Функторы и аппликативные функторы</h3>
+
+                <div>
+                    <p>Контейнер который написан в предыдущем разделе уже является функтором.</p>
+                    <p>Функтор - класс типов, для которых определена map функция и выполняется ряд правил:</p>
+                    <ul>
+                        <li>x.map(f).map(g) = f(g(x)) - закон композиции</li>
+                        <li>x.map(value => value) = x - закон идентичности</li>
+                    </ul>
+                    <p>Map - применяет функцию к внутреннему состоянию, сохраняя при этом свою структуру и поведение.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3 id="monads">Монады</h3>
+
+                <div>
+                    <p>Монады - реализация интерфейса функтора.(Either/Maybe)</p>
+                    <p>Из спецификации fantasy-land следует, что монады должны содержать в себе следующие методы:</p>
+                    <ul>
+                        <li>chain</li>
+                        <li>аппликативный функтор</li>
+                        <li>apply</li>
+                    </ul>
+
+                    <p>Пример монады Maybe</p>
+
+                    <pre>
+                        class Maybe {
+                            protected $value: any;
+                            constructor(x: any) {
+                                this.$value = x;
+                            }
+
+                            static of(x: number) {
+                                return new Maybe(x);
+                            }
+
+                            get isNothing() {
+                                return this.$value === null || this.$value === undefined;
+                            }
+
+                            join() {
+                                return this.$value;
+                            }
+
+                            map(fn: Function): Maybe {
+                                return this.isNothing ? this : Maybe.of(fn(this.$value));
+                            }
+
+                            chain(fn: Function) {
+                                return this.map(fn).join();
+                            }
+
+                            orElse(defaultValue: any, fn: Function) {
+                                return this.isNothing ? Maybe.of(defaultValue).map(fn) : this.map(fn);
+                            }
+                        }
+                    </pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>Спецификация Fantasy-Land</h3>
+
+                <div>
+                    <div class="smallScreenContainer">
+                        <img src="./assets/fantasyLand.png" alt="fantasyLand">
+                    </div>
+                </div>
+            </section>
+        </section>
     </div>
 </main>
 
@@ -31162,7 +31840,8 @@ services:
 </aside>
 
 <footer>
-    <p>Учебное пособие <a href="https://github.com/Slipbang" style="background-color: transparent" target="_blank">Slipbang</a></p>
+    <p>Учебное пособие <a href="https://github.com/Slipbang" style="background-color: transparent" target="_blank">Slipbang</a>
+    </p>
 </footer>
 </body>
 </html>

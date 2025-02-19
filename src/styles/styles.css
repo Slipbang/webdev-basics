@@ -1685,6 +1685,10 @@ footer a {
     color: white;
 }
 
+.underlinedT {
+    text-decoration: underline;
+}
+
 @media (max-width: 1055px) {
     aside {
         transform: translateX(-100%);
