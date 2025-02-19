@@ -31336,28 +31336,28 @@ services:
 
                     <p>Условный псевдо-код процедуры:</p>
                     <pre>
-                        procedure(a,b): void {
-                            number = read();
-                            result = sqrt(variable);
-                            writeFile(result);
-                        }
+procedure(a,b): void {
+    number = read();
+    result = sqrt(variable);
+    writeFile(result);
+}
                     </pre>
 
                     <p>Условный псевдо-код функции:</p>
                     <pre>
-                        function(a,b): number {
-                            number = read();
-                            result = sqrt(variable);
-                            return result;
-                        }
+function(a,b): number {
+    number = read();
+    result = sqrt(variable);
+    return result;
+}
                     </pre>
 
                     <p>В функциональном программировании с функциями работают как с математическими функциями.</p>
                     <pre>
-                        f(x) = x*x + x + 5;
-                        f(5) = 25 + 5 + 5;
-                        f(x,y) = x*y + 10;
-                        f(5,0) = 5*0 + 10;
+f(x) = x*x + x + 5;
+f(5) = 25 + 5 + 5;
+f(x,y) = x*y + 10;
+f(5,0) = 5*0 + 10;
                     </pre>
                 </div>
             </section>
@@ -31375,14 +31375,14 @@ services:
                         его количество.</p>
                     <p>Пример декларативного подхода:</p>
                     <pre>
-                    const filterUserByField = (country) => (user): boolean => users.country === country;
-                    const calcAvgAge = (avg, user) => (avg += user.age);
+const filterUserByField = (country) => (user): boolean => users.country === country;
+const calcAvgAge = (avg, user) => (avg += user.age);
 
-                    function calcUsersAverageAge(users, country) {
-                        return sortByAge(users)
-                            .filter(filterUsersByField(country))
-                            .reduce(calcAvgAge)
-                    }
+function calcUsersAverageAge(users, country) {
+    return sortByAge(users)
+        .filter(filterUsersByField(country))
+        .reduce(calcAvgAge)
+}
                 </pre>
                 </div>
             </section>
@@ -31393,7 +31393,7 @@ services:
                 <div>
                     <p>Ярким примером чистой функции - обычная математическая функция:</p>
                     <pre>
-                        f(x) = x*x + 5;
+f(x) = x*x + 5;
                     </pre>
 
                     <p>Суть чистой функции заключается в том, что если мы в нее передаем одни и те же аргументы,
@@ -31401,26 +31401,26 @@ services:
                         НО при этом у нее не должно быть никаких сайд эффектов!</p>
                     <p>Тривиальный пример чистой функции:</p>
                     <pre>
-                        function multiplyPure(a,b) {
-                            return a*b;
-                        }
+function multiplyPure(a,b) {
+    return a*b;
+}
                     </pre>
 
                     <p>Пример не чистой функции:</p>
                     <pre>
-                        function multiplyImpure(a,b) {
-                            return a * b * Math.random();
-                        }
+function multiplyImpure(a,b) {
+    return a * b * Math.random();
+}
                     </pre>
                     <p>Так же такие функции не зависят от внешнего состояния и глобальных переменных.</p>
 
                     <p>Пример не чистой функции с глобальной переменной:</p>
                     <pre>
-                        const MODIFIER = 5;
+const MODIFIER = 5;
 
-                        function multiplyImpureWithModifier(a, b) {
-                            return a * b * MODIFIER;
-                        }
+function multiplyImpureWithModifier(a, b) {
+    return a * b * MODIFIER;
+}
                     </pre>
 
                     <p>Т.к. внешняя переменная может быть переписана, такая функция не может быть чистой!</p>
@@ -31430,22 +31430,22 @@ services:
                         можем уже мы.</p>
 
                     <pre>
-                        let MODIFIER = 10;
+let MODIFIER = 10;
 
-                        function multiplyImpureWithLet(a, b) {
-                            MODIFIER = 15;
-                            return a * b * modifier;
-                        }
+function multiplyImpureWithLet(a, b) {
+    MODIFIER = 15;
+    return a * b * modifier;
+}
                     </pre>
 
                     <p>Последний критерий чистоты - отсутствие сайд эффектов:</p>
 
                     <pre>
-                        async function multiplyImpureWithFetch(a,b) {
-                            const response = await fetch(input: '/get/modifier');
-                            const {modifier} = response.json;
-                            return a * b * modifier;
-                        }
+async function multiplyImpureWithFetch(a,b) {
+    const response = await fetch(input: '/get/modifier');
+    const {modifier} = response.json;
+    return a * b * modifier;
+}
                     </pre>
 
                     <p>Даже если сервер всегда возвращает одно и то же число, тем не менее, функция не может считаться
@@ -31453,18 +31453,18 @@ services:
 
                     <p>Хороший пример чистой функции - стандартные redux редьюсеры:</p>
                     <pre>
-                        function reducer(state = initialState, action) {
-                            switch(action.type) {
-                                case 'INCREASE_VALUE': {
-                                    return {...state, value: state.value + action.value}
-                                }
-                                case 'SET_DATA': {
-                                    return {...state, value: action.data}
-                                }
-                                default:
-                                    return state;
-                                }
-                        }
+function reducer(state = initialState, action) {
+    switch(action.type) {
+        case 'INCREASE_VALUE': {
+            return {...state, value: state.value + action.value}
+        }
+        case 'SET_DATA': {
+            return {...state, value: action.data}
+        }
+        default:
+            return state;
+    }
+}
                     </pre>
                     <p>(P.s. Слава Аллаху в redux-toolkit в store завезли Immer.) Immer оборачивает объект в Proxy,
                         благодаря чему функции можно писать в мутабельном стиле ибо proxy самостоятельно оперирует
@@ -31481,14 +31481,14 @@ services:
                         В ФП - это аксиома, что данные мутировать НЕЛЬЗЯ.</p>
 
                     <pre>
-                        const users = [{name: 'John'}, {name: 'Peter'}];
+const users = [{name: 'John'}, {name: 'Peter'}];
 
-                        function actionWIthUsers(userList) {
-                            userList.splice(1);
-                        }
+function actionWIthUsers(userList) {
+    userList.splice(1);
+}
 
-                        console.log(actionWithUsers(users)); // [{name: 'Peter'}]
-                        console.log(users); // [{name: 'John'}]
+console.log(actionWithUsers(users)); // [{name: 'Peter'}]
+console.log(users); // [{name: 'John'}]
                     </pre>
                 </div>
 
@@ -31562,17 +31562,17 @@ services:
 
                 <p>Пример неправильной функции сортировки:</p>
                 <pre>
-                    function actionWithUsers(userList) {
-                        const copyUsers = userList.sort();
-                        return copyUsers;
-                    }
+function actionWithUsers(userList) {
+    const copyUsers = userList.sort();
+    return copyUsers;
+}
                 </pre>
                 <p>Как было бы правильно:</p>
                 <pre>
-                    function actionWithUsers(userList) {
-                        const sortedUsersCopy = [...userList].sort();
-                        return sortedUsersCopy;
-                    }
+function actionWithUsers(userList) {
+    const sortedUsersCopy = [...userList].sort();
+    return sortedUsersCopy;
+}
                 </pre>
 
                 <p>Так же не стоит забывать, что spread, Object.assign создают <span
@@ -31627,15 +31627,15 @@ services:
                     <p>Функции высшего порядка - функции которые принимают аргументом или возвращают другую функцию.</p>
 
                     <pre>
-                        const firstOrderFunc = () => console.log("Hello, I am a First order function");
-                        const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
-                        higherOrder(firstOrderFunc);
+const firstOrderFunc = () => console.log("Hello, I am a First order function");
+const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
+higherOrder(firstOrderFunc);
                     </pre>
 
                     <p>Функция первого порядка — это функция, которая не принимает другую функцию
                         в качестве аргумента и не возвращает функцию в качестве возвращаемого значения.</p>
                     <pre>
-                        const firstOrder = () => console.log("I am a first order function!");
+const firstOrder = () => console.log("I am a first order function!");
                     </pre>
                 </div>
             </section>
@@ -31649,14 +31649,14 @@ services:
                         выполнения переданным в качестве аргумента массиву функций</p>
 
                     <pre>
-                        function compose(...functions: Function[]): Function {
-                            return function (firstArgument) {
-                                return functions.reduceRight((acc,fn) => fn(acc), firstArgument);
-                            }
-                        }
+function compose(...functions: Function[]): Function {
+    return function (firstArgument) {
+        return functions.reduceRight((acc,fn) => fn(acc), firstArgument);
+    }
+}
 
-                        const doubleSortedArray = compose(doubleNumbers, sortArr, compact);
-                        doubleSortedArray([1,5,3,1,2,4,undefined,0,null]) // [0,2,2,4,6,8,10]
+const doubleSortedArray = compose(doubleNumbers, sortArr, compact);
+doubleSortedArray([1,5,3,1,2,4,undefined,0,null]) // [0,2,2,4,6,8,10]
                     </pre>
 
                     <p>Конвейер(pipe) - это функция, которая создает новую функцию, в которой СЛЕВА НА ПРАВО передается
@@ -31664,14 +31664,14 @@ services:
                         выполнения переданным в качестве аргумента массиву функций</p>
 
                     <pre>
-                        function Pipe(...functions: Function[]): Function {
-                            return function (firstArgument) {
-                                return functions.reduce((acc,fn) => fn(acc), firstArgument);
-                            }
-                        }
+function Pipe(...functions: Function[]): Function {
+    return function (firstArgument) {
+        return functions.reduce((acc,fn) => fn(acc), firstArgument);
+    }
+}
 
-                        const doubleSortedArray = compose(compact, sortArr, doubleNumbers);
-                        doubleSortedArray([1,5,3,1,2,4,undefined,0,null]) // [0,2,2,4,6,8,10]
+const doubleSortedArray = compose(compact, sortArr, doubleNumbers);
+doubleSortedArray([1,5,3,1,2,4,undefined,0,null]) // [0,2,2,4,6,8,10]
                     </pre>
                 </div>
             </section>
@@ -31683,17 +31683,17 @@ services:
                     <a href="#JSbasicsForEmployment14">Определение написано выше.</a>
                     <p>Код функции каррирования:</p>
                     <pre>
-                        function curry(fn) {
-                            return function curried(...args) {
-                                if (args.length => fn.length) {
-                                    return fn.apply(this, args);
-                                } else {
-                                    return function(...newArgs) {
-                                        return curried.apply(this, args.concat(newArgs));
-                                    }
-                                }
-                            }
-                        }
+function curry(fn) {
+    return function curried(...args) {
+        if (args.length => fn.length) {
+            return fn.apply(this, args);
+        } else {
+            return function(...newArgs) {
+                return curried.apply(this, args.concat(newArgs));
+            }
+        }
+    }
+}
                     </pre>
                 </div>
             </section>
@@ -31706,11 +31706,11 @@ services:
 
                     <p>Тривиальный пример кода с chaining</p>
                     <pre>
-                        new Array(20)
-                            .map(callback)
-                            .filter(callback)
-                            .reduce(callback)
-                            .map(callback)
+new Array(20)
+    .map(callback)
+    .filter(callback)
+    .reduce(callback)
+    .map(callback)
                     </pre>
                 </div>
             </section>
@@ -31721,34 +31721,34 @@ services:
                 <div>
                     <p>Код контейнера:</p>
                     <pre>
-                        class Container {
-                            protected $value: number;
+class Container {
+    protected $value: number;
 
-                            private constructor(x: number) {
-                                this.$value = x;
-                            }
+    private constructor(x: number) {
+        this.$value = x;
+    }
 
-                            static of(x: number) {
-                                return new Container(x);
-                            }
+    static of(x: number) {
+        return new Container(x);
+    }
 
-                            map(fn: Function) {
-                                return Container.of(fn(this.$value));
-                            }
+    map(fn: Function) {
+        return Container.of(fn(this.$value));
+    }
 
-                            join() {
-                                return this.$value;
-                            }
+    join() {
+        return this.$value;
+    }
 
-                            chain(fn: Function) {
-                                return this.map(fn).join();
-                            }
-                        }
+    chain(fn: Function) {
+        return this.map(fn).join();
+    }
+}
 
-                        const add5 = (x: number) => x + 5;
-                        const square = (x: number) => x * x;
-                        const contOf100 = Container.of(5).map(add5).chain(square);
-                        console.log(contOf100); // 100
+const add5 = (x: number) => x + 5;
+const square = (x: number) => x * x;
+const contOf100 = Container.of(5).map(add5).chain(square);
+console.log(contOf100); // 100
                     </pre>
 
                     <p>Получается "инкапсуляция" данных внутри контейнера</p>
@@ -31784,36 +31784,36 @@ services:
                     <p>Пример монады Maybe</p>
 
                     <pre>
-                        class Maybe {
-                            protected $value: any;
-                            constructor(x: any) {
-                                this.$value = x;
-                            }
+class Maybe {
+    protected $value: any;
+    constructor(x: any) {
+        this.$value = x;
+    }
 
-                            static of(x: number) {
-                                return new Maybe(x);
-                            }
+    static of(x: number) {
+        return new Maybe(x);
+    }
 
-                            get isNothing() {
-                                return this.$value === null || this.$value === undefined;
-                            }
+    get isNothing() {
+        return this.$value === null || this.$value === undefined;
+    }
 
-                            join() {
-                                return this.$value;
-                            }
+    join() {
+        return this.$value;
+    }
 
-                            map(fn: Function): Maybe {
-                                return this.isNothing ? this : Maybe.of(fn(this.$value));
-                            }
+    map(fn: Function): Maybe {
+        return this.isNothing ? this : Maybe.of(fn(this.$value));
+    }
 
-                            chain(fn: Function) {
-                                return this.map(fn).join();
-                            }
+    chain(fn: Function) {
+        return this.map(fn).join();
+    }
 
-                            orElse(defaultValue: any, fn: Function) {
-                                return this.isNothing ? Maybe.of(defaultValue).map(fn) : this.map(fn);
-                            }
-                        }
+    orElse(defaultValue: any, fn: Function) {
+        return this.isNothing ? Maybe.of(defaultValue).map(fn) : this.map(fn);
+    }
+}
                     </pre>
                 </div>
             </section>
