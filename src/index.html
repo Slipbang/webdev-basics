@@ -32,7 +32,6 @@
     <!--    <script src="../src/scripts/UI.js" defer></script>-->
     <!--    <script src="../src/scripts/tasks.js" defer></script>-->
     <!--    <script src="../src/scripts/OOPClasses.js" defer></script>-->
-
 </head>
 <body>
 <header>
@@ -31383,7 +31382,7 @@ function calcUsersAverageAge(users, country) {
         .filter(filterUsersByField(country))
         .reduce(calcAvgAge)
 }
-                </pre>
+                    </pre>
                 </div>
             </section>
 
@@ -31815,6 +31814,29 @@ class Maybe {
     }
 }
                     </pre>
+                </div>
+            </section>
+
+            <section>
+                <h4>Аппликативный функтор</h4>
+
+                <div>
+                    <p>Аппликативный функтор(Applicative functor) - функтор, который реализует метод apply (ap)</p>
+                    <pre>
+map(fn: Function) {
+    return this.isNothing ? this : Maybe.of(fn(this.$value));
+}
+
+ap(functor: Maybe) {
+    return functor.map(this.$value);
+}
+                    </pre>
+
+                    <pre>
+Maybe.of(curriedSum).ap(Maybe.of(25)).ap(Maybe.of(7)); {$value: 32};
+                    </pre>
+
+                    <p>ap работает с КОНТЕЙНЕРАМИ!</p>
                 </div>
             </section>
 
